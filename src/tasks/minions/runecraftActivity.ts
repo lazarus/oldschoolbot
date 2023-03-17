@@ -62,9 +62,7 @@ export const runecraftTask: MinionTask = {
 			runeQuantity += bonusQuantity;
 		}
 
-		const loot = new Bank({
-			[rune.id]: runeQuantity
-		});
+		const loot = new Bank().add(rune.id, runeQuantity);
 		const { petDropRate } = skillingPetDropRate(user, SkillsEnum.Runecraft, 1_795_758);
 		if (roll(petDropRate / essenceQuantity)) {
 			loot.add('Rift guardian');

@@ -20,9 +20,7 @@ export const smithingTask: MinionTask = {
 			duration
 		});
 
-		const loot = new Bank({
-			[smithedItem.id]: quantity * smithedItem.outputMultiple
-		});
+		const loot = new Bank().add(smithedItem.id, quantity * smithedItem.outputMultiple);
 
 		let str = `${user}, ${user.minionName} finished smithing, you received ${loot}. ${xpRes}`;
 

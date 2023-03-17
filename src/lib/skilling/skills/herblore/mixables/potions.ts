@@ -20,10 +20,7 @@ const Potions: Mixable[] = [
 		id: itemID('Antipoison (3)'),
 		level: 5,
 		xp: 37.5,
-		inputItems: new Bank({
-			'Marrentill potion (unf)': 1,
-			'Unicorn horn dust': 1
-		}),
+		inputItems: new Bank().add('Marrentill potion (unf)', 1).add('Unicorn horn dust', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -63,10 +60,7 @@ const Potions: Mixable[] = [
 		id: itemID('restore potion (3)'),
 		level: 22,
 		xp: 62.5,
-		inputItems: new Bank({
-			'Harralander potion (unf)': 1,
-			"red spiders' eggs": 1
-		}),
+		inputItems: new Bank().add('Harralander potion (unf)', 1).add("red spiders' eggs", 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -76,11 +70,7 @@ const Potions: Mixable[] = [
 		id: itemID('Guthix balance (3)'),
 		level: 22,
 		xp: 50,
-		inputItems: new Bank({
-			'Restore potion (3)': 1,
-			garlic: 1,
-			'silver dust': 1
-		}),
+		inputItems: new Bank().add('Restore potion (3)', 1).add('Garlic', 1).add('silver dust', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -90,10 +80,7 @@ const Potions: Mixable[] = [
 		id: itemID('Energy potion (3)'),
 		level: 26,
 		xp: 67.5,
-		inputItems: new Bank({
-			'Harralander potion (unf)': 1,
-			'chocolate dust': 1
-		}),
+		inputItems: new Bank().add('Harralander potion (unf)', 1).add('chocolate dust', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -123,10 +110,7 @@ const Potions: Mixable[] = [
 		id: itemID('Combat potion (3)'),
 		level: 36,
 		xp: 84,
-		inputItems: new Bank({
-			'Harralander potion (unf)': 1,
-			'goat horn dust': 1
-		}),
+		inputItems: new Bank().add('Harralander potion (unf)', 1).add('goat horn dust', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -216,10 +200,7 @@ const Potions: Mixable[] = [
 		id: itemID('Super restore (3)'),
 		level: 63,
 		xp: 142.5,
-		inputItems: new Bank({
-			'Snapdragon potion (unf)': 1,
-			"Red spiders' eggs": 1
-		}),
+		inputItems: new Bank().add('Snapdragon potion (unf)', 1).add("Red spiders' eggs", 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -249,10 +230,7 @@ const Potions: Mixable[] = [
 		id: itemID('Antifire potion (3)'),
 		level: 69,
 		xp: 157.5,
-		inputItems: new Bank({
-			'Lantadyme potion (unf)': 1,
-			'Dragon scale dust': 1
-		}),
+		inputItems: new Bank().add('Lantadyme potion (unf)', 1).add('Dragon scale dust', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -262,10 +240,7 @@ const Potions: Mixable[] = [
 		id: itemID('Ranging potion (3)'),
 		level: 72,
 		xp: 162.5,
-		inputItems: new Bank({
-			'Dwarf weed potion (unf)': 1,
-			'Wine of zamorak': 1
-		}),
+		inputItems: new Bank().add('Dwarf weed potion (unf)', 1).add('Wine of zamorak', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -275,11 +250,7 @@ const Potions: Mixable[] = [
 		id: itemID('Weapon poison(+)'),
 		level: 73,
 		xp: 165,
-		inputItems: new Bank({
-			'Coconut milk': 1,
-			'Cactus spine': 1,
-			"Red spiders' eggs": 1
-		}),
+		inputItems: new Bank().add('Coconut milk', 1).add('Cactus spine', 1).add("Red spiders' eggs", 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -319,11 +290,7 @@ const Potions: Mixable[] = [
 		id: itemID('Antidote++ (4)'),
 		level: 79,
 		xp: 177.5,
-		inputItems: new Bank({
-			'Coconut milk': 1,
-			'Irit leaf': 1,
-			'Magic roots': 1
-		}),
+		inputItems: new Bank().add('Coconut milk', 1).add('Irit leaf', 1).add('Magic roots', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.45
 	},
@@ -333,10 +300,7 @@ const Potions: Mixable[] = [
 		id: itemID('Cadantine blood potion (unf)'),
 		level: 80,
 		xp: 0,
-		inputItems: new Bank({
-			'Vial of blood': 1,
-			Cadantine: 1
-		}),
+		inputItems: new Bank().add('Vial of blood', 1).add('Cadantine', 1),
 		tickRate: 1,
 		bankTimePerPotion: 0.3
 	},
@@ -346,10 +310,7 @@ const Potions: Mixable[] = [
 		id: itemID('Bastion potion (3)'),
 		level: 80,
 		xp: 155,
-		inputItems: new Bank({
-			'Cadantine blood potion (unf)': 1,
-			'Wine of zamorak': 1
-		}),
+		inputItems: new Bank().add('Cadantine blood potion (unf)', 1).add('Wine of zamorak', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -359,10 +320,7 @@ const Potions: Mixable[] = [
 		id: itemID('Battlemage potion (3)'),
 		level: 80,
 		xp: 155,
-		inputItems: new Bank({
-			'Cadantine blood potion (unf)': 1,
-			'Potato cactus': 1
-		}),
+		inputItems: new Bank().add('Cadantine blood potion (unf)', 1).add('Potato cactus', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -372,10 +330,7 @@ const Potions: Mixable[] = [
 		id: itemID('Saradomin brew (3)'),
 		level: 81,
 		xp: 180,
-		inputItems: new Bank({
-			'Toadflax potion (unf)': 1,
-			'Crushed nest': 1
-		}),
+		inputItems: new Bank().add('Toadflax potion (unf)', 1).add('Crushed nest', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -385,11 +340,7 @@ const Potions: Mixable[] = [
 		id: itemID('Weapon poison(++)'),
 		level: 82,
 		xp: 165,
-		inputItems: new Bank({
-			'Coconut milk': 1,
-			'Cave nightshade': 1,
-			'Poison ivy berries': 1
-		}),
+		inputItems: new Bank().add('Coconut milk', 1).add('Cave nightshade', 1).add('Poison ivy berries', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.3
 	},
@@ -429,12 +380,11 @@ const Potions: Mixable[] = [
 		id: itemID('Super combat potion (4)'),
 		level: 90,
 		xp: 150,
-		inputItems: new Bank({
-			'Super attack(4)': 1,
-			'Super strength (4)': 1,
-			'Super defence (4)': 1,
-			Torstol: 1
-		}),
+		inputItems: new Bank()
+			.add('Super attack(4)', 1)
+			.add('Super strength (4)', 1)
+			.add('Super defence (4)', 1)
+			.add('Torstol', 1),
 		tickRate: 2,
 		bankTimePerPotion: 0.5
 	},
@@ -444,10 +394,7 @@ const Potions: Mixable[] = [
 		id: itemID('Super antifire potion (4)'),
 		level: 92,
 		xp: 130,
-		inputItems: new Bank({
-			'Antifire potion(4)': 1,
-			'Crushed superior dragon bones': 1
-		}),
+		inputItems: new Bank().add('Antifire potion(4)', 1).add('Crushed superior dragon bones', 1),
 		tickRate: 2,
 		qpRequired: 205,
 		bankTimePerPotion: 0.3
@@ -468,10 +415,7 @@ const Potions: Mixable[] = [
 		id: itemID('Extended super antifire (4)'),
 		level: 98,
 		xp: 160,
-		inputItems: new Bank({
-			'Super antifire potion(4)': 1,
-			'Lava scale shard': 4
-		}),
+		inputItems: new Bank().add('Super antifire potion(4)', 1).add('Lava scale shard', 4),
 		tickRate: 2,
 		qpRequired: 205,
 		bankTimePerPotion: 0.3
@@ -482,12 +426,11 @@ const Potions: Mixable[] = [
 		id: itemID('Sanfew serum(4)'),
 		level: 65,
 		xp: 192,
-		inputItems: new Bank({
-			'Super restore(4)': 1,
-			'Unicorn horn dust': 1,
-			'Snake weed': 1,
-			'Nail beast nails': 1
-		}),
+		inputItems: new Bank()
+			.add('Super restore(4)', 1)
+			.add('Unicorn horn dust', 1)
+			.add('Snake weed', 1)
+			.add('Nail beast nails', 1),
 		tickRate: 10,
 		bankTimePerPotion: 0.5
 	}

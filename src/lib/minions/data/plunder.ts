@@ -122,9 +122,7 @@ export const plunderRooms = [
 	}
 ];
 
-export const plunderBoosts = new Bank({
-	"Pharaoh's sceptre": 5
-});
+export const plunderBoosts = new Bank().add("Pharaoh's sceptre", 5);
 
 export function lootRoom(user: MUserClass, room: number): [ItemBank, number] {
 	const loot = new Bank();

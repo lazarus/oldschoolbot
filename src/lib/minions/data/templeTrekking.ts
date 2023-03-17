@@ -85,9 +85,7 @@ export const difficulties: TrekDifficulty[] = [
 	}
 ];
 
-export const trekBankBoosts = new Bank({
-	'Salve amulet (e)': 5
-});
+export const trekBankBoosts = new Bank().add('Salve amulet (e)', 5);
 
 export const ivandisRequirements: Skills = {
 	attack: 40,

@@ -106,11 +106,16 @@ export async function butlerCommand(user: MUser, plankName: string, quantity: nu
 		}
 	}
 
-	const consumedItems = new Bank({
-		...(earthRuneCost > 0 ? { 'Earth rune': earthRuneCost } : {}),
-		...(airRuneCost > 0 ? { 'Air rune': airRuneCost } : {}),
-		...(lawRuneCost > 0 ? { 'Law rune': lawRuneCost } : {})
-	});
+	const consumedItems = new Bank();
+	if (earthRuneCost) {
+		consumedItems.add('Earth rune', earthRuneCost);
+	}
+	if (airRuneCost) {
+		consumedItems.add('Air rune', airRuneCost);
+	}
+	if (lawRuneCost) {
+		consumedItems.add('Law rune', lawRuneCost);
+	}
 
 	const userBank = user.bank;
 

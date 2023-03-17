@@ -51,43 +51,41 @@ const backgroundImages: BankBackground[] = [
 		name: 'Bandos',
 		image: null,
 		available: true,
-		collectionLogItemsNeeded: new Bank({
-			'Armadyl hilt': 1,
-			'Zamorak hilt': 1,
-			'Bandos hilt': 1,
-			'Saradomin hilt': 1,
-			'Armadyl helmet': 1,
-			'Armadyl chestplate': 1,
-			'Armadyl chainskirt': 1,
-			'Saradomin sword': 1,
-			"Saradomin's light": 1,
-			'Armadyl crossbow': 1,
-			'Bandos chestplate': 1,
-			'Bandos tassets': 1,
-			'Bandos boots': 1,
-			'Steam battlestaff': 1,
-			'Zamorakian spear': 1,
-			'Staff of the dead': 1,
-			'Pet general graardor': 1,
-			"Pet k'ril tsutsaroth": 1,
-			"Pet kree'arra": 1,
-			'Pet zilyana': 1,
-			Nexling: 1,
-			'Ancient hilt': 1,
-			'Nihil horn': 1,
-			'Zaryte vambraces': 1,
-			'Torva full helm (damaged)': 1,
-			'Torva platebody (damaged)': 1,
-			'Torva platelegs (damaged)': 1,
-			'Nihil shard': 1
-		}),
-		itemCost: new Bank({
-			'Armadyl godsword': 1,
-			'Zamorak godsword': 1,
-			'Bandos godsword': 1,
-			'Saradomin godsword': 1,
-			'Ancient godsword': 1
-		}),
+		collectionLogItemsNeeded: new Bank()
+			.add('Armadyl hilt', 1)
+			.add('Zamorak hilt', 1)
+			.add('Bandos hilt', 1)
+			.add('Saradomin hilt', 1)
+			.add('Armadyl helmet', 1)
+			.add('Armadyl chestplate', 1)
+			.add('Armadyl chainskirt', 1)
+			.add('Saradomin sword', 1)
+			.add("Saradomin's light", 1)
+			.add('Armadyl crossbow', 1)
+			.add('Bandos chestplate', 1)
+			.add('Bandos tassets', 1)
+			.add('Bandos boots', 1)
+			.add('Steam battlestaff', 1)
+			.add('Zamorakian spear', 1)
+			.add('Staff of the dead', 1)
+			.add('Pet general graardor', 1)
+			.add("Pet k'ril tsutsaroth", 1)
+			.add("Pet kree'arra", 1)
+			.add('Pet zilyana', 1)
+			.add('Nexling', 1)
+			.add('Ancient hilt', 1)
+			.add('Nihil horn', 1)
+			.add('Zaryte vambraces', 1)
+			.add('Torva full helm (damaged)', 1)
+			.add('Torva platebody (damaged)', 1)
+			.add('Torva platelegs (damaged)', 1)
+			.add('Nihil shard', 1),
+		itemCost: new Bank()
+			.add('Armadyl godsword', 1)
+			.add('Zamorak godsword', 1)
+			.add('Bandos godsword', 1)
+			.add('Saradomin godsword', 1)
+			.add('Ancient godsword', 1),
 		gpCost: 100_000_000
 	},
 	{
@@ -95,20 +93,18 @@ const backgroundImages: BankBackground[] = [
 		name: 'Corporeal Beast',
 		image: null,
 		available: true,
-		collectionLogItemsNeeded: new Bank({
-			'Spirit shield': 4,
-			'Holy elixir': 4,
-			'Spectral sigil': 1,
-			'Arcane sigil': 1,
-			'Elysian sigil': 1,
-			'Pet dark core': 1,
-			'Jar of spirits': 1
-		}),
-		itemCost: new Bank({
-			'Spectral spirit shield': 1,
-			'Arcane spirit shield': 1,
-			'Elysian spirit shield': 1
-		}),
+		collectionLogItemsNeeded: new Bank()
+			.add('Spirit shield', 4)
+			.add('Holy elixir', 4)
+			.add('Spectral sigil', 1)
+			.add('Arcane sigil', 1)
+			.add('Elysian sigil', 1)
+			.add('Pet dark core', 1)
+			.add('Jar of spirits', 1),
+		itemCost: new Bank()
+			.add('Spectral spirit shield', 1)
+			.add('Arcane spirit shield', 1)
+			.add('Elysian spirit shield', 1),
 		gpCost: 100_000_000
 	},
 	{
@@ -116,12 +112,11 @@ const backgroundImages: BankBackground[] = [
 		name: 'Casket',
 		image: null,
 		available: true,
-		collectionLogItemsNeeded: new Bank({
-			'Large spade': 1,
-			'Clueless scroll': 1,
-			'Heavy casket': 1,
-			'Scroll sack': 1
-		}),
+		collectionLogItemsNeeded: new Bank()
+			.add('Large spade', 1)
+			.add('Clueless scroll', 1)
+			.add('Heavy casket', 1)
+			.add('Scroll sack', 1),
 		gpCost: 100_000_000
 	},
 	{
@@ -129,25 +124,20 @@ const backgroundImages: BankBackground[] = [
 		name: 'Nightmare',
 		image: null,
 		available: true,
-		collectionLogItemsNeeded: new Bank({
-			'Little nightmare': 1,
-			'Jar of dreams': 1,
-			'Nightmare staff': 1,
-			"Inquisitor's great helm": 1,
-			"Inquisitor's hauberk": 1,
-			"Inquisitor's plateskirt": 1,
-			"Inquisitor's mace": 1,
-			'Eldritch orb': 1,
-			'Harmonised orb': 1,
-			'Volatile orb': 1,
-			'Slepey tablet': 1,
-			'Parasitic egg': 1
-		}),
-		itemCost: new Bank({
-			'Eldritch orb': 1,
-			'Harmonised orb': 1,
-			'Volatile orb': 1
-		}),
+		collectionLogItemsNeeded: new Bank()
+			.add('Little nightmare', 1)
+			.add('Jar of dreams', 1)
+			.add('Nightmare staff', 1)
+			.add("Inquisitor's great helm", 1)
+			.add("Inquisitor's hauberk", 1)
+			.add("Inquisitor's plateskirt", 1)
+			.add("Inquisitor's mace", 1)
+			.add('Eldritch orb', 1)
+			.add('Harmonised orb', 1)
+			.add('Volatile orb', 1)
+			.add('Slepey tablet', 1)
+			.add('Parasitic egg', 1),
+		itemCost: new Bank().add('Eldritch orb', 1).add('Harmonised orb', 1).add('Volatile orb', 1),
 		gpCost: 100_000_000
 	},
 	{
@@ -196,40 +186,38 @@ const backgroundImages: BankBackground[] = [
 		image: null,
 		available: true,
 		perkTierNeeded: PerkTier.Four,
-		collectionLogItemsNeeded: new Bank({
-			'Dragon pickaxe': 1,
-			'Dragon med helm': 1,
-			'Kbd heads': 1,
-			'Draconic visage': 1,
-			'Prince black dragon': 1,
-			'Dragon 2h sword': 1,
-			'Pet chaos elemental': 1,
-			'Malediction shard 1': 1,
-			'Odium shard 1': 1,
-			'Malediction shard 2': 1,
-			'Odium shard 2': 1,
-			Fedora: 1,
-			'Malediction shard 3': 1,
-			'Odium shard 3': 1,
-			"Scorpia's offspring": 1,
-			'Treasonous ring': 1,
-			'Venenatis spiderling': 1,
-			'Tyrannical ring': 1,
-			'Callisto cub': 1,
-			'Ring of the gods': 1,
-			"Vet'ion jr.": 1
-		}),
-		itemCost: new Bank({
-			'Dragon pickaxe': 1,
-			'Dragon med helm': 1,
-			'Draconic visage': 1,
-			'Dragon 2h sword': 1,
-			'Odium ward ': 1,
-			'Malediction ward': 1,
-			'Treasonous ring': 1,
-			'Tyrannical ring': 1,
-			'Ring of the gods': 1
-		}),
+		collectionLogItemsNeeded: new Bank()
+			.add('Dragon pickaxe', 1)
+			.add('Dragon med helm', 1)
+			.add('Kbd heads', 1)
+			.add('Draconic visage', 1)
+			.add('Prince black dragon', 1)
+			.add('Dragon 2h sword', 1)
+			.add('Pet chaos elemental', 1)
+			.add('Malediction shard 1', 1)
+			.add('Odium shard 1', 1)
+			.add('Malediction shard 2', 1)
+			.add('Odium shard 2', 1)
+			.add('Fedora', 1)
+			.add('Malediction shard 3', 1)
+			.add('Odium shard 3', 1)
+			.add("Scorpia's offspring", 1)
+			.add('Treasonous ring', 1)
+			.add('Venenatis spiderling', 1)
+			.add('Tyrannical ring', 1)
+			.add('Callisto cub', 1)
+			.add('Ring of the gods', 1)
+			.add("Vet'ion jr.", 1),
+		itemCost: new Bank()
+			.add('Dragon pickaxe', 1)
+			.add('Dragon med helm', 1)
+			.add('Draconic visage', 1)
+			.add('Dragon 2h sword', 1)
+			.add('Odium ward ', 1)
+			.add('Malediction ward', 1)
+			.add('Treasonous ring', 1)
+			.add('Tyrannical ring', 1)
+			.add('Ring of the gods', 1),
 		gpCost: 100_000_000
 	},
 	{
@@ -247,9 +235,7 @@ const backgroundImages: BankBackground[] = [
 		image: null,
 		available: true,
 		perkTierNeeded: PerkTier.Four,
-		collectionLogItemsNeeded: new Bank({
-			Tangleroot: 1
-		}),
+		collectionLogItemsNeeded: new Bank().add('Tangleroot', 1),
 		gpCost: 100_000_000,
 		skillsNeeded: {
 			farming: 99

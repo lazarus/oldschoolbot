@@ -73,10 +73,7 @@ const Gold: Craftable[] = [
 		id: itemID('Sapphire amulet (u)'),
 		level: 24,
 		xp: 65,
-		inputItems: new Bank({
-			Sapphire: 1,
-			'Gold bar': 1
-		}),
+		inputItems: new Bank().add('Sapphire', 1).add('Gold bar', 1),
 		tickRate: 3
 	},
 	{
@@ -84,10 +81,7 @@ const Gold: Craftable[] = [
 		id: itemID('Sapphire amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({
-			'Sapphire amulet (u)': 1,
-			'Ball of wool': 1
-		}),
+		inputItems: new Bank().add('Sapphire amulet (u)', 1).add('Ball of wool', 1),
 		tickRate: 2
 	},
 	{
@@ -119,10 +113,7 @@ const Gold: Craftable[] = [
 		id: itemID('Emerald amulet (u)'),
 		level: 31,
 		xp: 70,
-		inputItems: new Bank({
-			Emerald: 1,
-			'Gold bar': 1
-		}),
+		inputItems: new Bank().add('Emerald', 1).add('Gold bar', 1),
 		tickRate: 3
 	},
 	{
@@ -130,10 +121,7 @@ const Gold: Craftable[] = [
 		id: itemID('Emerald amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({
-			'Emerald amulet (u)': 1,
-			'Ball of wool': 1
-		}),
+		inputItems: new Bank().add('Emerald amulet (u)', 1).add('Ball of wool', 1),
 		tickRate: 2
 	},
 	{
@@ -205,10 +193,7 @@ const Gold: Craftable[] = [
 		id: itemID('Diamond amulet (u)'),
 		level: 70,
 		xp: 100,
-		inputItems: new Bank({
-			Diamond: 1,
-			'Gold bar': 1
-		}),
+		inputItems: new Bank().add('Diamond', 1).add('Gold bar', 1),
 		tickRate: 3
 	},
 	{
@@ -216,10 +201,7 @@ const Gold: Craftable[] = [
 		id: itemID('Diamond amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({
-			'Diamond amulet (u)': 1,
-			'Ball of wool': 1
-		}),
+		inputItems: new Bank().add('Diamond amulet (u)', 1).add('Ball of wool', 1),
 		tickRate: 2
 	},
 	{
@@ -252,10 +234,7 @@ const Gold: Craftable[] = [
 		id: itemID('Dragonstone amulet (u)'),
 		level: 80,
 		xp: 150,
-		inputItems: new Bank({
-			Dragonstone: 1,
-			'Gold bar': 1
-		}),
+		inputItems: new Bank().add('Dragonstone', 1).add('Gold bar', 1),
 		tickRate: 3
 	},
 	{
@@ -263,10 +242,7 @@ const Gold: Craftable[] = [
 		id: itemID('Dragonstone amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({
-			'Dragonstone amulet (u)': 1,
-			'Ball of wool': 1
-		}),
+		inputItems: new Bank().add('Dragonstone amulet (u)', 1).add('Ball of wool', 1),
 		tickRate: 2
 	},
 	{

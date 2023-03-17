@@ -31,12 +31,12 @@ export enum SlayerActivityConstants {
 	IceBurst,
 	Cannon
 }
-export const CombatCannonItemBank = new Bank({
-	'Cannon barrels': 1,
-	'Cannon base': 1,
-	'Cannon furnace': 1,
-	'Cannon stand': 1
-}).freeze();
+export const CombatCannonItemBank = new Bank()
+	.add('Cannon barrels', 1)
+	.add('Cannon base', 1)
+	.add('Cannon furnace', 1)
+	.add('Cannon stand', 1)
+	.freeze();
 
 export const cannonBanks = [
 	CombatCannonItemBank,

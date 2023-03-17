@@ -73,10 +73,11 @@ export async function alchCommand(
 	}
 
 	const alchValue = quantity * osItem.highalch;
-	const consumedItems = new Bank({
-		...(fireRuneCost > 0 ? { 'Fire rune': fireRuneCost } : {}),
-		'Nature rune': quantity
-	});
+	const consumedItems = new Bank();
+	consumedItems.add('Nature rune', quantity);
+	if (fireRuneCost) {
+		consumedItems.add('Fire rune', fireRuneCost);
+	}
 	consumedItems.add(osItem.id, quantity);
 
 	if (!user.owns(consumedItems)) {

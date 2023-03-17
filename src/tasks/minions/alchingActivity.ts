@@ -28,9 +28,7 @@ export const alchingTask: MinionTask = {
 			}
 
 			if (savedRunes > 0) {
-				const returnedRunes = new Bank({
-					'Nature rune': savedRunes
-				});
+				const returnedRunes = new Bank().add('Nature rune', savedRunes);
 
 				loot.add(returnedRunes);
 			}

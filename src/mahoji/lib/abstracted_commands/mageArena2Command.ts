@@ -17,14 +17,13 @@ export async function mageArena2Command(user: MUser, channelID: string) {
 	}
 	const duration = randomVariation(Time.Minute * 25, 3);
 
-	const itemsNeeded = new Bank({
-		'Saradomin brew(4)': 1,
-		'Super restore(4)': 3,
-		'Stamina potion(4)': 1,
-		'Fire rune': 800,
-		'Air rune': 500,
-		'Blood rune': 300
-	});
+	const itemsNeeded = new Bank()
+		.add('Saradomin brew(4)', 1)
+		.add('Super restore(4)', 3)
+		.add('Stamina potion(4)', 1)
+		.add('Fire rune', 800)
+		.add('Air rune', 500)
+		.add('Blood rune', 300);
 
 	if (!user.owns(itemsNeeded)) {
 		return `You don't own the needed items to do the Mage Arena II, you need: ${itemsNeeded}.`;

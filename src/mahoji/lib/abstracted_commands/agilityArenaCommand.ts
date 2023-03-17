@@ -37,23 +37,21 @@ const ticketQuantities = {
 	1000: 320
 };
 
-const plainGraceful = new Bank({
-	'Graceful hood': 1,
-	'Graceful top': 1,
-	'Graceful legs': 1,
-	'Graceful gloves': 1,
-	'Graceful boots': 1,
-	'Graceful cape': 1
-});
+const plainGraceful = new Bank()
+	.add('Graceful hood', 1)
+	.add('Graceful top', 1)
+	.add('Graceful legs', 1)
+	.add('Graceful gloves', 1)
+	.add('Graceful boots', 1)
+	.add('Graceful cape', 1);
 
-const brimhavenGraceful = new Bank({
-	'Brimhaven graceful hood': 1,
-	'Brimhaven graceful top': 1,
-	'Brimhaven graceful legs': 1,
-	'Brimhaven graceful gloves': 1,
-	'Brimhaven graceful boots': 1,
-	'Brimhaven graceful cape': 1
-});
+const brimhavenGraceful = new Bank()
+	.add('Brimhaven graceful hood', 1)
+	.add('Brimhaven graceful top', 1)
+	.add('Brimhaven graceful legs', 1)
+	.add('Brimhaven graceful gloves', 1)
+	.add('Brimhaven graceful boots', 1)
+	.add('Brimhaven graceful cape', 1);
 
 export function determineXPFromTickets(qty: number, user: MUser, hasDiary: boolean) {
 	let baseXP = ticketQuantities[qty as keyof typeof ticketQuantities] ?? ticketQuantities[1000];

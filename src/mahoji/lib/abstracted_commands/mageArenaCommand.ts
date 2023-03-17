@@ -14,12 +14,11 @@ export async function mageArenaCommand(user: MUser, channelID: string) {
 	}
 	const duration = randomVariation(Time.Minute * 10, 5);
 
-	const itemsNeeded = new Bank({
-		'Blood rune': 100,
-		'Air rune': 500,
-		'Fire rune': 500,
-		'Prayer potion(4)': 2
-	});
+	const itemsNeeded = new Bank()
+		.add('Blood rune', 100)
+		.add('Air rune', 500)
+		.add('Fire rune', 500)
+		.add('Prayer potion(4)', 2);
 
 	if (!user.owns(itemsNeeded)) {
 		return `You don't own the needed items to do the Mage Arena, you need: ${itemsNeeded}.`;

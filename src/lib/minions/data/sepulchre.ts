@@ -117,13 +117,12 @@ export const sepulchreFloors = [
 	}
 ];
 
-export const sepulchreBoosts = new Bank({
-	'Strange old lockpick': 1,
-	'Hallowed grapple': 4,
-	'Hallowed focus': 4,
-	'Hallowed symbol': 4,
-	'Hallowed hammer': 4
-});
+export const sepulchreBoosts = new Bank()
+	.add('Strange old lockpick', 1)
+	.add('Hallowed grapple', 4)
+	.add('Hallowed focus', 4)
+	.add('Hallowed symbol', 4)
+	.add('Hallowed hammer', 4);
 
 const pages = resolveItems([
 	'Mysterious page 1',

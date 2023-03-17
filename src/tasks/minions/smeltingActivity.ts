@@ -45,9 +45,7 @@ export const smeltingTask: MinionTask = {
 			str += `\n\n${oldQuantity - quantity} ${bar.name}s failed to smelt.`;
 		}
 
-		const loot = new Bank({
-			[bar.id]: quantity
-		});
+		const loot = new Bank().add(bar.id, quantity);
 
 		await transactItems({
 			userID: user.id,

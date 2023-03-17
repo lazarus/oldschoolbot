@@ -25,11 +25,7 @@ export const collectables: Collectable[] = [
 	{
 		item: getOSItem('Blue dragon scale'),
 		quantity: 26,
-		itemCost: new Bank({
-			'Water rune': 1,
-			'Air rune': 3,
-			'Law rune': 1
-		}),
+		itemCost: new Bank().add('Water rune', 1).add('Air rune', 3).add('Law rune', 1),
 		skillReqs: {
 			agility: 70,
 			magic: 37
@@ -39,10 +35,7 @@ export const collectables: Collectable[] = [
 	{
 		item: getOSItem('Mort myre fungus'),
 		quantity: 100,
-		itemCost: new Bank({
-			'Prayer potion(4)': 1,
-			'Ring of dueling(8)': 1
-		}),
+		itemCost: new Bank().add('Prayer potion(4)', 1).add('Ring of dueling(8)', 1),
 		skillReqs: {
 			prayer: 50
 		},
@@ -62,9 +55,7 @@ export const collectables: Collectable[] = [
 	{
 		item: getOSItem("Red spiders' eggs"),
 		quantity: 80,
-		itemCost: new Bank({
-			'Stamina potion(4)': 1
-		}),
+		itemCost: new Bank().add('Stamina potion(4)', 1),
 		duration: Time.Minute * 8.5
 	},
 	{
@@ -84,38 +75,28 @@ export const collectables: Collectable[] = [
 	{
 		item: getOSItem('Snape grass'),
 		quantity: 120,
-		itemCost: new Bank({
-			'Law rune': 12,
-			'Astral rune': 12
-		}),
+		itemCost: new Bank().add('Law rune', 12).add('Astral rune', 12),
 		duration: Time.Minute * 6.5,
 		qpRequired: 72
 	},
 	{
 		item: getOSItem('Snake weed'),
 		quantity: 150,
-		itemCost: new Bank({
-			'Ring of dueling(8)': 1
-		}),
+		itemCost: new Bank().add('Ring of dueling(8)', 1),
 		duration: Time.Minute * 30,
 		qpRequired: 3
 	},
 	{
 		item: getOSItem('Bucket of sand'),
 		quantity: 30,
-		itemCost: new Bank({
-			'Law rune': 1,
-			Coins: 30 * 25
-		}),
+		itemCost: new Bank().add('Law rune', 1).add('Coins', 30 * 25),
 		duration: Time.Minute,
 		qpRequired: 30
 	},
 	{
 		item: getOSItem('Jangerberries'),
 		quantity: 224,
-		itemCost: new Bank({
-			'Ring of dueling(8)': 1
-		}),
+		itemCost: new Bank().add('Ring of dueling(8)', 1),
 		skillReqs: {
 			agility: 10
 		},
@@ -125,9 +106,7 @@ export const collectables: Collectable[] = [
 	{
 		item: getOSItem("Tarn's diary"),
 		quantity: 1,
-		itemCost: new Bank({
-			'Prayer potion(4)': 2
-		}),
+		itemCost: new Bank().add('Prayer potion(4)', 2),
 		skillReqs: {
 			slayer: 40,
 			attack: 60,

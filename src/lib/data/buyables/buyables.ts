@@ -7,7 +7,6 @@ import { Favours } from '../../minions/data/kourendFavour';
 import { MinigameName } from '../../settings/settings';
 import { getToaKCs } from '../../simulation/toa';
 import { Skills } from '../../types';
-import itemID from '../../util/itemID';
 import { allTeamCapes } from '../misc';
 import { aerialFishBuyables } from './aerialFishBuyables';
 import { canifisClothes } from './canifisClothes';
@@ -44,32 +43,18 @@ export interface Buyable {
 const randomEventBuyables: Buyable[] = [
 	{
 		name: 'Prince outfit',
-		itemCost: new Bank({
-			'Frog token': 1
-		}),
-		outputItems: new Bank({
-			'Prince tunic': 1,
-			'Prince leggings': 1
-		})
+		itemCost: new Bank().add('Frog token', 1),
+		outputItems: new Bank().add('Prince tunic', 1).add('Prince leggings', 1)
 	},
 	{
 		name: 'Princess outfit',
-		itemCost: new Bank({
-			'Frog token': 1
-		}),
-		outputItems: new Bank({
-			'Princess blouse': 1,
-			'Princess skirt': 1
-		})
+		itemCost: new Bank().add('Frog token', 1),
+		outputItems: new Bank().add('Princess blouse', 1).add('Princess skirt', 1)
 	},
 	{
 		name: 'Frog mask',
-		itemCost: new Bank({
-			'Frog token': 1
-		}),
-		outputItems: new Bank({
-			'Frog mask': 1
-		})
+		itemCost: new Bank().add('Frog token', 1),
+		outputItems: new Bank().add('Frog mask', 1)
 	}
 ];
 
@@ -320,9 +305,7 @@ const magicBuyables: Buyable[] = [
 const questBuyables: Buyable[] = [
 	{
 		name: 'Goldsmith gauntlets',
-		outputItems: new Bank({
-			'Goldsmith gauntlets': 1
-		}),
+		outputItems: new Bank().add('Goldsmith gauntlets', 1),
 		qpRequired: 25,
 		gpCost: 1_000_000,
 		ironmanPrice: 25_000
@@ -382,9 +365,7 @@ const questBuyables: Buyable[] = [
 	},
 	{
 		name: 'Rune gloves',
-		outputItems: new Bank({
-			'Rune gloves': 1
-		}),
+		outputItems: new Bank().add('Rune gloves', 1),
 		qpRequired: 85,
 		gpCost: 700_000,
 		ironmanPrice: 6500
@@ -468,9 +449,7 @@ const questBuyables: Buyable[] = [
 	},
 	{
 		name: 'Monkey',
-		outputItems: new Bank({
-			19_556: 1
-		}),
+		outputItems: new Bank().add(19_556, 1),
 		gpCost: 1_000_000,
 		qpRequired: 182
 	},
@@ -491,92 +470,79 @@ const questBuyables: Buyable[] = [
 	},
 	{
 		name: 'Lunar Outfit',
-		outputItems: new Bank({
-			'Lunar boots': 1,
-			'Lunar cape': 1,
-			'Lunar gloves': 1,
-			'Lunar helm': 1,
-			'Lunar legs': 1,
-			'Lunar torso': 1,
-			'Lunar amulet': 1,
-			'Lunar ring': 1,
-			'Lunar staff': 1
-		}),
+		outputItems: new Bank()
+			.add('Lunar boots', 1)
+			.add('Lunar cape', 1)
+			.add('Lunar gloves', 1)
+			.add('Lunar helm', 1)
+			.add('Lunar legs', 1)
+			.add('Lunar torso', 1)
+			.add('Lunar amulet', 1)
+			.add('Lunar ring', 1)
+			.add('Lunar staff', 1),
 		gpCost: 5_000_000,
 		qpRequired: 120
 	},
 	{
 		name: 'Moonclan Outfit',
-		outputItems: new Bank({
-			'Moonclan boots': 1,
-			'Moonclan cape': 1,
-			'Moonclan gloves': 1,
-			'Moonclan helm': 1,
-			'Moonclan hat': 1,
-			'Moonclan skirt': 1,
-			'Moonclan armour': 1
-		}),
+		outputItems: new Bank()
+			.add('Moonclan boots', 1)
+			.add('Moonclan cape', 1)
+			.add('Moonclan gloves', 1)
+			.add('Moonclan helm', 1)
+			.add('Moonclan hat', 1)
+			.add('Moonclan skirt', 1)
+			.add('Moonclan armour', 1),
 		gpCost: 5_000_000,
 		qpRequired: 120
 	},
 	{
 		name: 'Jester Outfit',
-		outputItems: new Bank({
-			'Silly jester hat': 1,
-			'Silly jester top': 1,
-			'Silly jester tights': 1,
-			'Silly jester boots': 1
-		}),
+		outputItems: new Bank()
+			.add('Silly jester hat', 1)
+			.add('Silly jester top', 1)
+			.add('Silly jester tights', 1)
+			.add('Silly jester boots', 1),
 		gpCost: 5_000_000,
 		qpRequired: 89
 	},
 	{
 		name: 'Ardougne Knight Outfit',
-		outputItems: new Bank({
-			'Ardougne knight helm': 1,
-			'Ardougne knight platebody': 1,
-			'Ardougne knight platelegs': 1
-		}),
+		outputItems: new Bank()
+			.add('Ardougne knight helm', 1)
+			.add('Ardougne knight platebody', 1)
+			.add('Ardougne knight platelegs', 1),
 		gpCost: 5_000_000,
 		qpRequired: 200
 	},
 	{
 		name: 'Desert Outfit',
-		outputItems: new Bank({
-			Fez: 1,
-			'Desert top': 1,
-			'Desert legs': 1,
-			'Desert robes': 1,
-			'Desert boots': 1,
-			'Desert shirt': 1,
-			'Desert robe': 1
-		}),
+		outputItems: new Bank()
+			.add('Fez', 1)
+			.add('Desert top', 1)
+			.add('Desert legs', 1)
+			.add('Desert robes', 1)
+			.add('Desert boots', 1)
+			.add('Desert shirt', 1)
+			.add('Desert robe', 1),
 		gpCost: 1_000_000,
 		qpRequired: 20
 	},
 	{
 		name: 'Pirate boots',
-		outputItems: new Bank({
-			'Pirate boots': 1
-		}),
+		outputItems: new Bank().add('Pirate boots', 1),
 		gpCost: 100_000,
 		qpRequired: 20
 	},
 	{
 		name: 'Vyrewatch outfit',
-		outputItems: new Bank({
-			'Vyrewatch top': 1,
-			'Vyrewatch legs': 1,
-			'Vyrewatch shoes': 1
-		}),
+		outputItems: new Bank().add('Vyrewatch top', 1).add('Vyrewatch legs', 1).add('Vyrewatch shoes', 1),
 		gpCost: 1_000_000,
 		qpRequired: 92
 	},
 	{
 		name: 'Climbing boots',
-		outputItems: new Bank({
-			'Climbing boots': 1
-		}),
+		outputItems: new Bank().add('Climbing boots', 1),
 		gpCost: 100_000,
 		qpRequired: 20
 	},
@@ -631,22 +597,17 @@ const questBuyables: Buyable[] = [
 	},
 	{
 		name: 'Initiate outfit',
-		outputItems: new Bank({
-			'Initiate sallet': 1,
-			'Initiate hauberk': 1,
-			'Initiate cuisse': 1
-		}),
+		outputItems: new Bank().add('Initiate sallet', 1).add('Initiate hauberk', 1).add('Initiate cuisse', 1),
 		gpCost: 250_000,
 		qpRequired: 35
 	},
 	{
 		name: 'Proselyte outfit',
-		outputItems: new Bank({
-			'Proselyte sallet': 1,
-			'Proselyte hauberk': 1,
-			'Proselyte cuisse': 1,
-			'Proselyte tasset': 1
-		}),
+		outputItems: new Bank()
+			.add('Proselyte sallet', 1)
+			.add('Proselyte hauberk', 1)
+			.add('Proselyte cuisse', 1)
+			.add('Proselyte tasset', 1),
 		gpCost: 500_000,
 		qpRequired: 75
 	},
@@ -733,10 +694,7 @@ const noveltyFood: Buyable[] = [
 const Buyables: Buyable[] = [
 	{
 		name: 'Quest point cape',
-		outputItems: new Bank({
-			[itemID('Quest point cape')]: 1,
-			[itemID('Quest point hood')]: 1
-		}),
+		outputItems: new Bank().add('Quest point cape').add('Quest point hood'),
 		aliases: ['quest cape'],
 		qpRequired: MAX_QP,
 		gpCost: 99_000
@@ -814,9 +772,7 @@ const Buyables: Buyable[] = [
 	},
 	{
 		name: 'Amylase pack',
-		outputItems: new Bank({
-			'Amylase crystal': 100
-		}),
+		outputItems: new Bank().add('Amylase crystal', 100),
 		itemCost: new Bank().add('Mark of grace', 10)
 	},
 	{
@@ -826,9 +782,7 @@ const Buyables: Buyable[] = [
 	},
 	{
 		name: 'Fishbowl pet',
-		outputItems: new Bank({
-			6672: 1
-		}),
+		outputItems: new Bank().add(6672, 1),
 		gpCost: 500_000
 	},
 	{
@@ -866,12 +820,8 @@ const Buyables: Buyable[] = [
 	},
 	{
 		name: 'Raw shark',
-		itemCost: new Bank({
-			Minnow: 40
-		}),
-		outputItems: new Bank({
-			'Raw shark': 1
-		})
+		itemCost: new Bank().add('Minnow', 40),
+		outputItems: new Bank().add('Raw shark', 1)
 	},
 	{
 		name: 'Bronze pickaxe',
@@ -905,20 +855,14 @@ const Buyables: Buyable[] = [
 	},
 	{
 		name: 'Flower crown',
-		itemCost: new Bank({
-			Coins: 5000
-		}),
-		outputItems: new Bank({
-			'Flower crown': 1
-		})
+		itemCost: new Bank().add('Coins', 5000),
+		outputItems: new Bank().add('Flower crown', 1)
 	},
 	{
 		name: 'Mithril seeds',
 		gpCost: 3000,
 		ironmanPrice: 600,
-		outputItems: new Bank({
-			'Mithril seeds': 1
-		})
+		outputItems: new Bank().add('Mithril seeds', 1)
 	},
 	{
 		name: 'Brown apron',
@@ -987,23 +931,21 @@ const Buyables: Buyable[] = [
 		name: 'Menaphite purple outfit',
 		gpCost: 5000,
 		ironmanPrice: 600,
-		outputItems: new Bank({
-			'Menaphite purple hat': 1,
-			'Menaphite purple top': 1,
-			'Menaphite purple robe': 1,
-			'Menaphite purple kilt': 1
-		})
+		outputItems: new Bank()
+			.add('Menaphite purple hat', 1)
+			.add('Menaphite purple top', 1)
+			.add('Menaphite purple robe', 1)
+			.add('Menaphite purple kilt', 1)
 	},
 	{
 		name: 'Menaphite red outfit',
 		gpCost: 5000,
 		ironmanPrice: 600,
-		outputItems: new Bank({
-			'Menaphite red hat': 1,
-			'Menaphite red top': 1,
-			'Menaphite red robe': 1,
-			'Menaphite red kilt': 1
-		})
+		outputItems: new Bank()
+			.add('Menaphite red hat', 1)
+			.add('Menaphite red top', 1)
+			.add('Menaphite red robe', 1)
+			.add('Menaphite red kilt', 1)
 	},
 	{
 		name: 'Bone club',

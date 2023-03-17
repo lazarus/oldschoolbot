@@ -9,9 +9,7 @@ export const butlerTask: MinionTask = {
 		const { userID, channelID, plankID, plankQuantity } = data;
 		const user = await mUserFetch(userID);
 
-		const loot = new Bank({
-			[plankID]: plankQuantity
-		});
+		const loot = new Bank().add(plankID, plankQuantity);
 
 		let str = `${user}, ${user.minionName} finished creating planks, you received ${loot}.`;
 

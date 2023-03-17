@@ -182,12 +182,11 @@ const minTOAStats: Skills = {
 	prayer: 90,
 	ranged: 90
 };
-const minimumSuppliesNeeded = new Bank({
-	'Saradomin brew(4)': 10,
-	'Super restore(4)': 5,
-	'Ranging potion(4)': 1,
-	'Super combat potion(4)': 1
-});
+const minimumSuppliesNeeded = new Bank()
+	.add('Saradomin brew(4)', 10)
+	.add('Super restore(4)', 5)
+	.add('Ranging potion(4)', 1)
+	.add('Super combat potion(4)', 1);
 
 const miscBoosts = [
 	['Lightbearer', 5, null],

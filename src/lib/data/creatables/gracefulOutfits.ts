@@ -165,60 +165,42 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Dark Graceful hood',
-		inputItems: new Bank({
-			'Graceful hood': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful hood', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful hood')]: 1
 		}
 	},
 	{
 		name: 'Dark graceful top',
-		inputItems: new Bank({
-			'Graceful top': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful top', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful top')]: 1
 		}
 	},
 	{
 		name: 'Dark graceful legs',
-		inputItems: new Bank({
-			'Graceful legs': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful legs', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful legs')]: 1
 		}
 	},
 	{
 		name: 'Dark graceful gloves',
-		inputItems: new Bank({
-			'Graceful gloves': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful gloves', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful gloves')]: 1
 		}
 	},
 	{
 		name: 'Dark graceful boots',
-		inputItems: new Bank({
-			'Graceful boots': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful boots', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful boots')]: 1
 		}
 	},
 	{
 		name: 'Dark graceful cape',
-		inputItems: new Bank({
-			'Graceful cape': 1,
-			'Dark dye': 1
-		}),
+		inputItems: new Bank().add('Graceful cape', 1).add('Dark dye', 1),
 		outputItems: {
 			[itemID('Dark graceful cape')]: 1
 		}

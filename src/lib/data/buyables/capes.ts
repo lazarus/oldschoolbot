@@ -6,11 +6,10 @@ import { Buyable } from './buyables';
 export const capeBuyables: Buyable[] = [
 	{
 		name: 'Achievement diary cape',
-		outputItems: new Bank({
-			'Achievement diary cape': 1,
-			'Achievement diary cape(t)': 1,
-			'Achievement diary hood': 1
-		}),
+		outputItems: new Bank()
+			.add('Achievement diary cape', 1)
+			.add('Achievement diary cape(t)', 1)
+			.add('Achievement diary hood', 1),
 		gpCost: 1_000_000,
 		customReq: async user => {
 			for (const diary of diaries.map(d => d.elite)) {
@@ -24,10 +23,7 @@ export const capeBuyables: Buyable[] = [
 	},
 	{
 		name: 'Max cape',
-		outputItems: new Bank({
-			'Max cape': 1,
-			'Max hood': 1
-		}),
+		outputItems: new Bank().add('Max cape', 1).add('Max hood', 1),
 		gpCost: 2_277_000,
 		customReq: async user => {
 			if (user.totalLevel < 2277) {

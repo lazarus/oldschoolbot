@@ -230,11 +230,10 @@ export function calculateUserGearPercents(user: MUser) {
 	};
 }
 
-export const minimumCoxSuppliesNeeded = new Bank({
-	'Stamina potion(4)': 3,
-	'Saradomin brew(4)': 10,
-	'Super restore(4)': 5
-});
+export const minimumCoxSuppliesNeeded = new Bank()
+	.add('Stamina potion(4)', 3)
+	.add('Saradomin brew(4)', 10)
+	.add('Super restore(4)', 5);
 
 export async function checkCoxTeam(users: MUser[], cm: boolean, quantity: number = 1): Promise<string | null> {
 	const hasHerbalist = users.some(u => u.skillLevel(SkillsEnum.Herblore) >= 78);

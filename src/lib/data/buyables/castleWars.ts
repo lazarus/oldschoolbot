@@ -46,10 +46,6 @@ const items = [
 
 export const castleWarsBuyables: Buyable[] = items.map(i => ({
 	name: i[0],
-	outputItems: new Bank({
-		[i[0]]: 1
-	}),
-	itemCost: new Bank({
-		'Castle wars ticket': i[1]
-	})
+	outputItems: new Bank().add(i[0], 1),
+	itemCost: new Bank().add('Castle wars ticket', i[1])
 }));

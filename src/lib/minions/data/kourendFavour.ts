@@ -46,22 +46,15 @@ export const KourendFavours: KourendFavour[] = [
 		alias: ['arce', 'arceu', 'arceuu', 'arceuus'],
 		duration: 30 * Time.Minute,
 		pointsGain: 50,
-		itemCost: new Bank({
-			'Stamina potion(4)': 2
-		}),
-		itemsReceived: new Bank({
-			'Book of arcane knowledge': 13
-		})
+		itemCost: new Bank().add('Stamina potion(4)', 2),
+		itemsReceived: new Bank().add('Book of arcane knowledge', 13)
 	},
 	{
 		name: 'Hosidius',
 		alias: ['hosi', 'hosid', 'hosidi', 'hosidius'],
 		duration: 20 * Time.Minute,
 		pointsGain: 50,
-		itemCost: new Bank({
-			Compost: 475,
-			Saltpetre: 475
-		}),
+		itemCost: new Bank().add('Compost', 475).add('Saltpetre', 475),
 		itemsReceived: null
 	},
 	{
@@ -73,9 +66,7 @@ export const KourendFavours: KourendFavour[] = [
 			mining: 65,
 			smithing: 73
 		},
-		itemsReceived: new Bank({
-			'Volcanic sulphur': 9
-		})
+		itemsReceived: new Bank().add('Volcanic sulphur', 9)
 	},
 	{
 		name: 'Piscarilius',
@@ -86,10 +77,7 @@ export const KourendFavours: KourendFavour[] = [
 			crafting: 30,
 			hunter: 15
 		},
-		itemCost: new Bank({
-			Plank: 45,
-			'Steel bar': 25
-		}),
+		itemCost: new Bank().add('Plank', 45).add('Steel bar', 25),
 		itemsReceived: null
 	},
 	{
@@ -104,13 +92,8 @@ export const KourendFavours: KourendFavour[] = [
 			hitpoints: 50,
 			prayer: 43
 		},
-		itemCost: new Bank({
-			'Stamina potion(4)': 2,
-			'Prayer potion(4)': 2
-		}),
-		itemsReceived: new Bank({
-			'Training manual': 3
-		})
+		itemCost: new Bank().add('Stamina potion(4)', 2).add('Prayer potion(4)', 2),
+		itemsReceived: new Bank().add('Training manual', 3)
 	}
 ];
 

@@ -7,128 +7,86 @@ import { Createable } from '../createables';
 export const slayerCreatables: Createable[] = [
 	{
 		name: 'Dark totem',
-		inputItems: new Bank({
-			'Dark totem base': 1,
-			'Dark totem middle': 1,
-			'Dark totem top': 1
-		}),
+		inputItems: new Bank().add('Dark totem base', 1).add('Dark totem middle', 1).add('Dark totem top', 1),
 		outputItems: new Bank().add('Dark totem'),
 		GPCost: 0
 	},
 	{
 		name: 'Dragon hunter lance',
-		inputItems: new Bank({
-			"Hydra's claw": 1,
-			'Zamorakian hasta': 1
-		}),
+		inputItems: new Bank().add("Hydra's claw", 1).add('Zamorakian hasta', 1),
 		outputItems: new Bank().add('Dragon hunter lance'),
 		GPCost: 0
 	},
 	{
 		name: 'Ferocious gloves',
-		inputItems: new Bank({
-			'Hydra leather': 1
-		}),
+		inputItems: new Bank().add('Hydra leather', 1),
 		outputItems: new Bank().add('Ferocious gloves'),
 		GPCost: 0
 	},
 	{
 		name: 'Revert ferocious gloves',
-		inputItems: new Bank({
-			'Ferocious gloves': 1
-		}),
+		inputItems: new Bank().add('Ferocious gloves', 1),
 		outputItems: new Bank().add('Hydra leather'),
 		GPCost: 0,
 		noCl: true
 	},
 	{
 		name: 'Uncut zenyte',
-		inputItems: new Bank({
-			Onyx: 1,
-			'Zenyte shard': 1
-		}),
+		inputItems: new Bank().add('Onyx', 1).add('Zenyte shard', 1),
 		outputItems: new Bank().add('Uncut zenyte'),
 		GPCost: 0
 	},
 	{
 		name: 'Neitiznot faceguard',
-		inputItems: new Bank({
-			'Basilisk jaw': 1,
-			'Helm of neitiznot': 1
-		}),
+		inputItems: new Bank().add('Basilisk jaw', 1).add('Helm of neitiznot', 1),
 		outputItems: new Bank().add('Neitiznot faceguard'),
 		GPCost: 0
 	},
 	{
 		name: 'Revert neitiznot faceguard',
 		inputItems: new Bank().add('Neitiznot faceguard'),
-		outputItems: new Bank({
-			'Basilisk jaw': 1,
-			'Helm of neitiznot': 1
-		}),
+		outputItems: new Bank().add('Basilisk jaw', 1).add('Helm of neitiznot', 1),
 		GPCost: 0
 	},
 	{
 		name: 'Arclight',
-		inputItems: new Bank({
-			Darklight: 1,
-			'Ancient shard': 3
-		}),
+		inputItems: new Bank().add('Darklight', 1).add('Ancient shard', 3),
 		outputItems: new Bank().add('Arclight'),
 		GPCost: 0
 	},
 	{
 		name: 'Boots of brimstone',
-		inputItems: new Bank({
-			"Drake's claw": 1,
-			'Boots of stone': 1
-		}),
+		inputItems: new Bank().add("Drake's claw", 1).add('Boots of stone', 1),
 		outputItems: new Bank().add('Boots of brimstone'),
 		GPCost: 0
 	},
 	{
 		name: 'Devout boots',
-		inputItems: new Bank({
-			"Drake's tooth": 1,
-			'Holy sandals': 1
-		}),
+		inputItems: new Bank().add("Drake's tooth", 1).add('Holy sandals', 1),
 		outputItems: new Bank().add('Devout boots'),
 		GPCost: 0
 	},
 	{
 		name: 'Uncharged toxic trident',
-		inputItems: new Bank({
-			'Magic fang': 1,
-			'Uncharged trident': 1
-		}),
+		inputItems: new Bank().add('Magic fang', 1).add('Uncharged trident', 1),
 		outputItems: new Bank().add('Uncharged toxic trident'),
 		GPCost: 0
 	},
 	{
 		name: "Bryophyta's staff",
-		inputItems: new Bank({
-			'Nature rune': 1000,
-			"Bryophyta's essence": 1,
-			Battlestaff: 1
-		}),
+		inputItems: new Bank().add('Nature rune', 1000).add("Bryophyta's essence", 1).add('Battlestaff', 1),
 		outputItems: new Bank().add("Bryophyta's staff"),
 		GPCost: 0
 	},
 	{
 		name: 'Toxic staff (uncharged)',
-		inputItems: new Bank({
-			'Magic fang': 1,
-			'Staff of the dead': 1
-		}),
+		inputItems: new Bank().add('Magic fang', 1).add('Staff of the dead', 1),
 		outputItems: new Bank().add('Toxic staff (uncharged)'),
 		GPCost: 0
 	},
 	{
 		name: 'Abyssal tentacle',
-		inputItems: new Bank({
-			'Kraken tentacle': 1,
-			'Abyssal whip': 1
-		}),
+		inputItems: new Bank().add('Kraken tentacle', 1).add('Abyssal whip', 1),
 		outputItems: new Bank().add('Abyssal tentacle'),
 		GPCost: 0,
 		maxCanOwn: 1,
@@ -144,47 +102,31 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Brimstone ring',
-		inputItems: new Bank({
-			"Hydra's eye": 1,
-			"Hydra's fang": 1,
-			"Hydra's heart": 1
-		}),
+		inputItems: new Bank().add("Hydra's eye", 1).add("Hydra's fang", 1).add("Hydra's heart", 1),
 		outputItems: new Bank().add('Brimstone ring'),
 		GPCost: 0
 	},
 	{
 		name: 'Guardian boots',
-		inputItems: new Bank({
-			'Black tourmaline core': 1,
-			'Bandos boots': 1
-		}),
+		inputItems: new Bank().add('Black tourmaline core', 1).add('Bandos boots', 1),
 		outputItems: new Bank().add('Guardian boots'),
 		GPCost: 0
 	},
 	{
 		name: 'Abyssal bludgeon',
-		inputItems: new Bank({
-			'Bludgeon claw': 1,
-			'Bludgeon spine': 1,
-			'Bludgeon axon': 1
-		}),
+		inputItems: new Bank().add('Bludgeon claw', 1).add('Bludgeon spine', 1).add('Bludgeon axon', 1),
 		outputItems: new Bank().add('Abyssal bludgeon'),
 		GPCost: 0
 	},
 	{
 		name: 'Uncharged black mask',
-		inputItems: new Bank({
-			'Black mask (10)': 1
-		}),
+		inputItems: new Bank().add('Black mask (10)', 1),
 		outputItems: new Bank().add('Black mask'),
 		GPCost: 0
 	},
 	{
 		name: 'Slayer ring (8)',
-		inputItems: new Bank({
-			'Gold bar': 1,
-			'Enchanted gem': 1
-		}),
+		inputItems: new Bank().add('Gold bar', 1).add('Enchanted gem', 1),
 		outputItems: new Bank().add('Slayer ring (8)'),
 		GPCost: 0,
 		requiredSkills: {
@@ -194,10 +136,7 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Slayer ring (eternal)',
-		inputItems: new Bank({
-			'Gold bar': 1,
-			'Eternal gem': 1
-		}),
+		inputItems: new Bank().add('Gold bar', 1).add('Eternal gem', 1),
 		outputItems: new Bank().add('Slayer ring (eternal)'),
 		GPCost: 0,
 		requiredSkills: {
@@ -207,14 +146,13 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Slayer helmet',
-		inputItems: new Bank({
-			'Black mask': 1,
-			Earmuffs: 1,
-			Facemask: 1,
-			'Nose peg': 1,
-			'Spiny helmet': 1,
-			'Enchanted gem': 1
-		}),
+		inputItems: new Bank()
+			.add('Black mask', 1)
+			.add('Earmuffs', 1)
+			.add('Facemask', 1)
+			.add('Nose peg', 1)
+			.add('Spiny helmet', 1)
+			.add('Enchanted gem', 1),
 		requiredSkills: {
 			crafting: 55
 		},
@@ -224,14 +162,13 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Slayer helmet (i)',
-		inputItems: new Bank({
-			'Black mask (i)': 1,
-			Earmuffs: 1,
-			Facemask: 1,
-			'Nose peg': 1,
-			'Spiny helmet': 1,
-			'Enchanted gem': 1
-		}),
+		inputItems: new Bank()
+			.add('Black mask (i)', 1)
+			.add('Earmuffs', 1)
+			.add('Facemask', 1)
+			.add('Nose peg', 1)
+			.add('Spiny helmet', 1)
+			.add('Enchanted gem', 1),
 		outputItems: new Bank().add('Slayer helmet (i)'),
 		GPCost: 0,
 		requiredSkills: {
@@ -242,14 +179,13 @@ export const slayerCreatables: Createable[] = [
 	{
 		name: 'Revert slayer helmet',
 		inputItems: new Bank().add('Slayer helmet'),
-		outputItems: new Bank({
-			'Black mask': 1,
-			Earmuffs: 1,
-			Facemask: 1,
-			'Nose peg': 1,
-			'Spiny helmet': 1,
-			'Enchanted gem': 1
-		}),
+		outputItems: new Bank()
+			.add('Black mask', 1)
+			.add('Earmuffs', 1)
+			.add('Facemask', 1)
+			.add('Nose peg', 1)
+			.add('Spiny helmet', 1)
+			.add('Enchanted gem', 1),
 		requiredSkills: {
 			crafting: 55
 		},
@@ -260,14 +196,13 @@ export const slayerCreatables: Createable[] = [
 	{
 		name: 'Revert slayer helmet (i)',
 		inputItems: new Bank().add('Slayer helmet (i)'),
-		outputItems: new Bank({
-			'Black mask (i)': 1,
-			Earmuffs: 1,
-			Facemask: 1,
-			'Nose peg': 1,
-			'Spiny helmet': 1,
-			'Enchanted gem': 1
-		}),
+		outputItems: new Bank()
+			.add('Black mask (i)', 1)
+			.add('Earmuffs', 1)
+			.add('Facemask', 1)
+			.add('Nose peg', 1)
+			.add('Spiny helmet', 1)
+			.add('Enchanted gem', 1),
 		requiredSkills: {
 			crafting: 55
 		},

@@ -6,27 +6,17 @@ import { Createable } from '../createables';
 export const toaCreatables: Createable[] = [
 	{
 		name: 'Masori assembler',
-		inputItems: new Bank({
-			'Masori crafting kit': 1,
-			"Ava's assembler": 1
-		}),
+		inputItems: new Bank().add('Masori crafting kit', 1).add("Ava's assembler", 1),
 		outputItems: new Bank().add('Masori assembler')
 	},
 	{
 		name: "Osmumten's fang (or)",
-		inputItems: new Bank({
-			"Osmumten's fang": 1,
-			'Cursed phalanx': 1
-		}),
+		inputItems: new Bank().add("Osmumten's fang", 1).add('Cursed phalanx', 1),
 		outputItems: new Bank().add("Osmumten's fang (or)")
 	},
 	{
 		name: "Elidinis' ward (f)",
-		inputItems: new Bank({
-			"Elidinis' ward": 1,
-			'Arcane sigil': 1,
-			'Soul rune': 10_000
-		}),
+		inputItems: new Bank().add("Elidinis' ward", 1).add('Arcane sigil', 1).add('Soul rune', 10_000),
 		outputItems: new Bank().add("Elidinis' ward (f)"),
 		requiredSkills: {
 			prayer: 90,
@@ -36,111 +26,73 @@ export const toaCreatables: Createable[] = [
 	{
 		name: "Revert Elidinis' ward (f))",
 		inputItems: new Bank().add("Elidinis' ward (f)"),
-		outputItems: new Bank({
-			"Elidinis' ward": 1,
-			'Arcane sigil': 1
-		}),
+		outputItems: new Bank().add("Elidinis' ward", 1).add('Arcane sigil', 1),
 		noCl: true
 	},
 	{
 		name: "Elidinis' ward (or)",
-		inputItems: new Bank({
-			"Elidinis' ward (f)": 1,
-			'Menaphite ornament kit': 1
-		}),
+		inputItems: new Bank().add("Elidinis' ward (f)", 1).add('Menaphite ornament kit', 1),
 		outputItems: new Bank().add("Elidinis' ward (or)")
 	},
 	{
 		name: "Revert Elidinis' ward (or)",
 		inputItems: new Bank().add("Elidinis' ward (or)"),
-		outputItems: new Bank({
-			"Elidinis' ward (f)": 1,
-			'Menaphite ornament kit': 1
-		}),
+		outputItems: new Bank().add("Elidinis' ward (f)", 1).add('Menaphite ornament kit', 1),
 		noCl: true
 	},
 	{
 		name: 'Divine rune pouch',
-		inputItems: new Bank({
-			'Rune pouch': 1,
-			'Thread of elidinis': 1
-		}),
+		inputItems: new Bank().add('Rune pouch', 1).add('Thread of elidinis', 1),
 		outputItems: new Bank().add('Divine rune pouch')
 	},
 	{
 		name: 'Masori mask (f)',
-		inputItems: new Bank({
-			'Armadylean plate': 1,
-			'Masori mask': 1
-		}),
+		inputItems: new Bank().add('Armadylean plate', 1).add('Masori mask', 1),
 		outputItems: new Bank().add('Masori mask (f)')
 	},
 	{
 		name: 'Masori body (f)',
-		inputItems: new Bank({
-			'Armadylean plate': 4,
-			'Masori body': 1
-		}),
+		inputItems: new Bank().add('Armadylean plate', 4).add('Masori body', 1),
 		outputItems: new Bank().add('Masori body (f)')
 	},
 	{
 		name: 'Masori chaps (f)',
-		inputItems: new Bank({
-			'Armadylean plate': 3,
-			'Masori chaps': 1
-		}),
+		inputItems: new Bank().add('Armadylean plate', 3).add('Masori chaps', 1),
 		outputItems: new Bank().add('Masori chaps (f)')
 	},
 	{
 		name: 'Revert Armadyl helmet',
-		inputItems: new Bank({
-			'Armadyl helmet': 1
-		}),
+		inputItems: new Bank().add('Armadyl helmet', 1),
 		outputItems: new Bank().add('Armadylean plate')
 	},
 	{
 		name: 'Revert Armadyl chestplate',
-		inputItems: new Bank({
-			'Armadyl chestplate': 1
-		}),
+		inputItems: new Bank().add('Armadyl chestplate', 1),
 		outputItems: new Bank().add('Armadylean plate', 4)
 	},
 	{
 		name: 'Revert Armadyl chainskirt',
-		inputItems: new Bank({
-			'Armadyl chainskirt': 1
-		}),
+		inputItems: new Bank().add('Armadyl chainskirt', 1),
 		outputItems: new Bank().add('Armadylean plate', 3)
 	},
 	{
 		name: 'Keris partisan of breaching',
-		inputItems: new Bank({
-			'Keris partisan': 1,
-			'Breach of the scarab': 1
-		}),
+		inputItems: new Bank().add('Keris partisan', 1).add('Breach of the scarab', 1),
 		outputItems: new Bank().add('Keris partisan of breaching')
 	},
 	{
 		name: 'Keris partisan of corruption',
-		inputItems: new Bank({
-			'Keris partisan': 1,
-			'Eye of the corruptor': 1
-		}),
+		inputItems: new Bank().add('Keris partisan', 1).add('Eye of the corruptor', 1),
 		outputItems: new Bank().add('Keris partisan of corruption')
 	},
 	{
 		name: 'Keris partisan of the sun',
-		inputItems: new Bank({
-			'Keris partisan': 1,
-			'Jewel of the sun': 1
-		}),
+		inputItems: new Bank().add('Keris partisan', 1).add('Jewel of the sun', 1),
 		outputItems: new Bank().add('Keris partisan of the sun')
 	},
 	{
 		name: 'Revert Masori assembler',
-		inputItems: new Bank({
-			'Masori assembler': 1
-		}),
+		inputItems: new Bank().add('Masori assembler', 1),
 		outputItems: new Bank().add('Masori crafting kit').add("Ava's assembler"),
 		noCl: true
 	}

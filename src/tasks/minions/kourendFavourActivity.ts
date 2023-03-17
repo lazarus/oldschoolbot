@@ -29,33 +29,32 @@ export const kourendTask: MinionTask = {
 		const loot = confirmedFavour.itemsReceived?.clone().multiply(quantity);
 		if (shayzienDone && loot) {
 			loot.add(
-				new Bank({
-					'Shayzien boots (1)': 5,
-					'Shayzien gloves (1)': 5,
-					'Shayzien greaves (1)': 5,
-					'Shayzien helm (1)': 5,
-					'Shayzien platebody (1)': 5,
-					'Shayzien boots (2)': 5,
-					'Shayzien gloves (2)': 5,
-					'Shayzien greaves (2)': 5,
-					'Shayzien helm (2)': 5,
-					'Shayzien platebody (2)': 5,
-					'Shayzien boots (3)': 5,
-					'Shayzien gloves (3)': 5,
-					'Shayzien greaves (3)': 5,
-					'Shayzien helm (3)': 5,
-					'Shayzien platebody (3)': 5,
-					'Shayzien boots (4)': 5,
-					'Shayzien gloves (4)': 5,
-					'Shayzien greaves (4)': 5,
-					'Shayzien helm (4)': 5,
-					'Shayzien platebody (4)': 5,
-					'Shayzien boots (5)': 5,
-					'Shayzien gloves (5)': 5,
-					'Shayzien greaves (5)': 5,
-					'Shayzien helm (5)': 5,
-					'Shayzien body (5)': 5
-				})
+				new Bank()
+					.add('Shayzien boots (1)', 5)
+					.add('Shayzien gloves (1)', 5)
+					.add('Shayzien greaves (1)', 5)
+					.add('Shayzien helm (1)', 5)
+					.add('Shayzien platebody (1)', 5)
+					.add('Shayzien boots (2)', 5)
+					.add('Shayzien gloves (2)', 5)
+					.add('Shayzien greaves (2)', 5)
+					.add('Shayzien helm (2)', 5)
+					.add('Shayzien platebody (2)', 5)
+					.add('Shayzien boots (3)', 5)
+					.add('Shayzien gloves (3)', 5)
+					.add('Shayzien greaves (3)', 5)
+					.add('Shayzien helm (3)', 5)
+					.add('Shayzien platebody (3)', 5)
+					.add('Shayzien boots (4)', 5)
+					.add('Shayzien gloves (4)', 5)
+					.add('Shayzien greaves (4)', 5)
+					.add('Shayzien helm (4)', 5)
+					.add('Shayzien platebody (4)', 5)
+					.add('Shayzien boots (5)', 5)
+					.add('Shayzien gloves (5)', 5)
+					.add('Shayzien greaves (5)', 5)
+					.add('Shayzien helm (5)', 5)
+					.add('Shayzien body (5)', 5)
 			);
 		}
 		if (loot) {

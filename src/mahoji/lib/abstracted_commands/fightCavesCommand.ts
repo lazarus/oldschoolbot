@@ -11,11 +11,10 @@ import addSubTaskToActivityTask from '../../../lib/util/addSubTaskToActivityTask
 import { newChatHeadImage } from '../../../lib/util/chatHeadImage';
 import { updateBankSetting } from '../../../lib/util/updateBankSetting';
 
-export const fightCavesCost = new Bank({
-	'Prayer potion(4)': 10,
-	'Saradomin brew(4)': 6,
-	'Super restore(4)': 4
-});
+export const fightCavesCost = new Bank()
+	.add('Prayer potion(4)', 10)
+	.add('Saradomin brew(4)', 6)
+	.add('Super restore(4)', 4);
 
 function determineDuration(user: MUser): [number, string] {
 	let baseTime = Time.Hour * 2;

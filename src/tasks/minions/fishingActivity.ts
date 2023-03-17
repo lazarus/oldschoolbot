@@ -154,9 +154,7 @@ export const fishingTask: MinionTask = {
 			}
 		}
 
-		let loot = new Bank({
-			[fish.id]: lootQuantity
-		});
+		let loot = new Bank().add(fish.id, lootQuantity);
 
 		// Add clue scrolls
 		if (fish.clueScrollChance) {

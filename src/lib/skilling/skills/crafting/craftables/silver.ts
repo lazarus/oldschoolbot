@@ -113,10 +113,7 @@ const Silver: Craftable[] = [
 		id: itemID('Topaz amulet (u)'),
 		level: 45,
 		xp: 84,
-		inputItems: new Bank({
-			'Red topaz': 1,
-			'Silver bar': 1
-		}),
+		inputItems: new Bank().add('Red topaz', 1).add('Silver bar', 1),
 		tickRate: 3
 	},
 	{
@@ -124,10 +121,7 @@ const Silver: Craftable[] = [
 		id: itemID('Topaz amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({
-			'Topaz amulet (u)': 1,
-			'Ball of wool': 1
-		}),
+		inputItems: new Bank().add('Topaz amulet (u)', 1).add('Ball of wool', 1),
 		tickRate: 2
 	},
 	{

@@ -15,9 +15,7 @@ export const animatedArmorTask: MinionTask = {
 			armour.name
 		} armour and received ${quantity * armour.tokens}x Warrior guild tokens.`;
 
-		const loot = new Bank({
-			'Warrior guild token': quantity * armour.tokens
-		});
+		const loot = new Bank().add('Warrior guild token', quantity * armour.tokens);
 
 		await transactItems({
 			userID: user.id,

@@ -27,9 +27,9 @@ import { tobCreatables } from './creatables/tob';
 
 export interface Createable {
 	name: string;
-	outputItems: ItemBank | Bank;
-	inputItems: ItemBank | Bank;
-	cantHaveItems?: ItemBank;
+	outputItems: Bank;
+	inputItems: Bank;
+	cantHaveItems?: Bank;
 	requiredSkills?: Skills;
 	QPRequired?: number;
 	noCl?: boolean;
@@ -78,65 +78,36 @@ for (const [bbPart, sbPart, bloodRunes, lvlReq] of bloodBarkPairs) {
 const goldenProspectorCreatables: Createable[] = [
 	{
 		name: 'Golden prospector boots',
-		inputItems: new Bank({
-			'Prospector boots': 1,
-			'Star fragment': 1
-		}),
-		outputItems: new Bank({
-			'Golden prospector boots': 1
-		})
+		inputItems: new Bank().add('Prospector boots', 1).add('Star fragment', 1),
+		outputItems: new Bank().add('Golden prospector boots', 1)
 	},
 	{
 		name: 'Golden prospector helmet',
-		inputItems: new Bank({
-			'Prospector helmet': 1,
-			'Star fragment': 1
-		}),
-		outputItems: new Bank({
-			'Golden prospector helmet': 1
-		})
+		inputItems: new Bank().add('Prospector helmet', 1).add('Star fragment', 1),
+		outputItems: new Bank().add('Golden prospector helmet', 1)
 	},
 	{
 		name: 'Golden prospector jacket',
-		inputItems: new Bank({
-			'Prospector jacket': 1,
-			'Star fragment': 1
-		}),
-		outputItems: new Bank({
-			'Golden prospector jacket': 1
-		})
+		inputItems: new Bank().add('Prospector jacket', 1).add('Star fragment', 1),
+		outputItems: new Bank().add('Golden prospector jacket', 1)
 	},
 	{
 		name: 'Golden prospector legs',
-		inputItems: new Bank({
-			'Prospector legs': 1,
-			'Star fragment': 1
-		}),
-		outputItems: new Bank({
-			'Golden prospector legs': 1
-		})
+		inputItems: new Bank().add('Prospector legs', 1).add('Star fragment', 1),
+		outputItems: new Bank().add('Golden prospector legs', 1)
 	}
 ];
 
 const revWeapons: Createable[] = [
 	{
 		name: 'Bracelet of ethereum',
-		inputItems: new Bank({
-			'Bracelet of ethereum (uncharged)': 1,
-			'Revenant ether': 2000
-		}),
-		outputItems: new Bank({
-			'Bracelet of ethereum': 1
-		})
+		inputItems: new Bank().add('Bracelet of ethereum (uncharged)', 1).add('Revenant ether', 2000),
+		outputItems: new Bank().add('Bracelet of ethereum', 1)
 	},
 	{
 		name: 'Revenant ether',
-		inputItems: new Bank({
-			'Bracelet of ethereum (uncharged)': 1
-		}),
-		outputItems: new Bank({
-			'Revenant ether': 250
-		}),
+		inputItems: new Bank().add('Bracelet of ethereum (uncharged)', 1),
+		outputItems: new Bank().add('Revenant ether', 250),
 		noCl: true
 	}
 ];
@@ -403,10 +374,7 @@ const crystalTools: Createable[] = [
 	},
 	{
 		name: 'Crystal halberd',
-		inputItems: new Bank({
-			'Crystal weapon seed': 1,
-			'Crystal shard': 40
-		}),
+		inputItems: new Bank().add('Crystal weapon seed', 1).add('Crystal shard', 40),
 		outputItems: {
 			[itemID('Crystal halberd')]: 1
 		},
@@ -416,10 +384,7 @@ const crystalTools: Createable[] = [
 	},
 	{
 		name: 'Crystal bow',
-		inputItems: new Bank({
-			'Crystal weapon seed': 1,
-			'Crystal shard': 40
-		}),
+		inputItems: new Bank().add('Crystal weapon seed', 1).add('Crystal shard', 40),
 		outputItems: {
 			[itemID('Crystal bow')]: 1
 		},
@@ -429,10 +394,7 @@ const crystalTools: Createable[] = [
 	},
 	{
 		name: 'Crystal helm',
-		inputItems: new Bank({
-			'Crystal armour seed': 1,
-			'Crystal shard': 150
-		}),
+		inputItems: new Bank().add('Crystal armour seed', 1).add('Crystal shard', 150),
 		outputItems: {
 			[itemID('Crystal helm')]: 1
 		},
@@ -442,10 +404,7 @@ const crystalTools: Createable[] = [
 	},
 	{
 		name: 'Crystal legs',
-		inputItems: new Bank({
-			'Crystal armour seed': 2,
-			'Crystal shard': 300
-		}),
+		inputItems: new Bank().add('Crystal armour seed', 2).add('Crystal shard', 300),
 		outputItems: {
 			[itemID('Crystal legs')]: 1
 		},
@@ -455,10 +414,7 @@ const crystalTools: Createable[] = [
 	},
 	{
 		name: 'Crystal body',
-		inputItems: new Bank({
-			'Crystal armour seed': 3,
-			'Crystal shard': 450
-		}),
+		inputItems: new Bank().add('Crystal armour seed', 3).add('Crystal shard', 450),
 		outputItems: {
 			[itemID('Crystal body')]: 1
 		},
@@ -665,35 +621,20 @@ const Reverteables: Createable[] = [
 	},
 	{
 		name: 'Revert volatile nightmare staff',
-		outputItems: new Bank({
-			'Nightmare staff': 1,
-			'Volatile orb': 1
-		}),
-		inputItems: new Bank({
-			'Volatile nightmare staff': 1
-		}),
+		outputItems: new Bank().add('Nightmare staff', 1).add('Volatile orb', 1),
+		inputItems: new Bank().add('Volatile nightmare staff', 1),
 		noCl: true
 	},
 	{
 		name: 'Revert harmonised nightmare staff',
-		outputItems: new Bank({
-			'Nightmare staff': 1,
-			'Harmonised orb': 1
-		}),
-		inputItems: new Bank({
-			'Harmonised nightmare staff': 1
-		}),
+		outputItems: new Bank().add('Nightmare staff', 1).add('Harmonised orb', 1),
+		inputItems: new Bank().add('Harmonised nightmare staff', 1),
 		noCl: true
 	},
 	{
 		name: 'Revert eldritch nightmare staff',
-		outputItems: new Bank({
-			'Nightmare staff': 1,
-			'Eldritch orb': 1
-		}),
-		inputItems: new Bank({
-			'Eldritch nightmare staff': 1
-		}),
+		outputItems: new Bank().add('Nightmare staff', 1).add('Eldritch orb', 1),
+		inputItems: new Bank().add('Eldritch nightmare staff', 1),
 		noCl: true
 	},
 	{
@@ -1099,12 +1040,8 @@ const Reverteables: Createable[] = [
 	},
 	{
 		name: 'Revert zamorakian hasta',
-		inputItems: new Bank({
-			'Zamorakian hasta': 1
-		}),
-		outputItems: new Bank({
-			'Zamorakian spear': 1
-		}),
+		inputItems: new Bank().add('Zamorakian hasta', 1),
+		outputItems: new Bank().add('Zamorakian spear', 1),
 		noCl: true
 	},
 	{
@@ -1152,9 +1089,7 @@ const Reverteables: Createable[] = [
 	},
 	{
 		name: 'Revert Fish sack barrel',
-		inputItems: new Bank({
-			[itemID('Fish sack barrel')]: 1
-		}),
+		inputItems: new Bank().add('Fish sack barrel'),
 		outputItems: {
 			[itemID('Fish sack')]: 1,
 			[itemID('Fish barrel')]: 1
@@ -1336,13 +1271,8 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Crystal key',
-		inputItems: {
-			[itemID('Loop half of key')]: 1,
-			[itemID('Tooth half of key')]: 1
-		},
-		outputItems: {
-			[itemID('Crystal key')]: 1
-		}
+		inputItems: new Bank().add('Loop half of key', 1).add('Tooth half of key', 1),
+		outputItems: new Bank().add('Crystal key')
 	},
 	{
 		name: 'Master clue',
@@ -1499,167 +1429,112 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Holy book',
-		inputItems: new Bank({
-			'Saradomin page 1': 1,
-			'Saradomin page 2': 1,
-			'Saradomin page 3': 1,
-			'Saradomin page 4': 1
-		}),
-		outputItems: new Bank({
-			'Holy book': 1
-		}),
+		inputItems: new Bank()
+			.add('Saradomin page 1', 1)
+			.add('Saradomin page 2', 1)
+			.add('Saradomin page 3', 1)
+			.add('Saradomin page 4', 1),
+		outputItems: new Bank().add('Holy book', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: 'Book of balance',
-		inputItems: new Bank({
-			'Guthix page 1': 1,
-			'Guthix page 2': 1,
-			'Guthix page 3': 1,
-			'Guthix page 4': 1
-		}),
-		outputItems: new Bank({
-			'Book of balance': 1
-		}),
+		inputItems: new Bank()
+			.add('Guthix page 1', 1)
+			.add('Guthix page 2', 1)
+			.add('Guthix page 3', 1)
+			.add('Guthix page 4', 1),
+		outputItems: new Bank().add('Book of balance', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: 'Unholy book',
-		inputItems: new Bank({
-			'Zamorak page 1': 1,
-			'Zamorak page 2': 1,
-			'Zamorak page 3': 1,
-			'Zamorak page 4': 1
-		}),
-		outputItems: new Bank({
-			'Unholy book': 1
-		}),
+		inputItems: new Bank()
+			.add('Zamorak page 1', 1)
+			.add('Zamorak page 2', 1)
+			.add('Zamorak page 3', 1)
+			.add('Zamorak page 4', 1),
+		outputItems: new Bank().add('Unholy book', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: 'Book of law',
-		inputItems: new Bank({
-			'Armadyl page 1': 1,
-			'Armadyl page 2': 1,
-			'Armadyl page 3': 1,
-			'Armadyl page 4': 1
-		}),
-		outputItems: new Bank({
-			'Book of law': 1
-		}),
+		inputItems: new Bank()
+			.add('Armadyl page 1', 1)
+			.add('Armadyl page 2', 1)
+			.add('Armadyl page 3', 1)
+			.add('Armadyl page 4', 1),
+		outputItems: new Bank().add('Book of law', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: 'Book of war',
-		inputItems: new Bank({
-			'Bandos page 1': 1,
-			'Bandos page 2': 1,
-			'Bandos page 3': 1,
-			'Bandos page 4': 1
-		}),
-		outputItems: new Bank({
-			'Book of war': 1
-		}),
+		inputItems: new Bank()
+			.add('Bandos page 1', 1)
+			.add('Bandos page 2', 1)
+			.add('Bandos page 3', 1)
+			.add('Bandos page 4', 1),
+		outputItems: new Bank().add('Book of war', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: 'Book of darkness',
-		inputItems: new Bank({
-			'Ancient page 1': 1,
-			'Ancient page 2': 1,
-			'Ancient page 3': 1,
-			'Ancient page 4': 1
-		}),
-		outputItems: new Bank({
-			'Book of darkness': 1
-		}),
+		inputItems: new Bank()
+			.add('Ancient page 1', 1)
+			.add('Ancient page 2', 1)
+			.add('Ancient page 3', 1)
+			.add('Ancient page 4', 1),
+		outputItems: new Bank().add('Book of darkness', 1),
 		requiredSkills: { agility: 35 },
 		QPRequired: 5
 	},
 	{
 		name: "Ava's accumulator",
-		inputItems: new Bank({
-			'Steel arrow': 75
-		}),
-		outputItems: new Bank({
-			"Ava's accumulator": 1
-		}),
+		inputItems: new Bank().add('Steel arrow', 75),
+		outputItems: new Bank().add("Ava's accumulator", 1),
 		QPRequired: 30
 	},
 	{
 		name: "Ava's assembler",
-		inputItems: new Bank({
-			'Mithril arrow': 75,
-			"Ava's accumulator": 1,
-			"Vorkath's head": 1
-		}),
-		outputItems: new Bank({
-			"Ava's assembler": 1
-		}),
+		inputItems: new Bank().add('Mithril arrow', 75).add("Ava's accumulator", 1).add("Vorkath's head", 1),
+		outputItems: new Bank().add("Ava's assembler", 1),
 		QPRequired: 205
 	},
 	{
 		name: 'Dragon sq shield',
-		inputItems: new Bank({
-			'Shield right half': 1,
-			'Shield left half': 1
-		}),
-		outputItems: new Bank({
-			'Dragon sq shield': 1
-		}),
+		inputItems: new Bank().add('Shield right half', 1).add('Shield left half', 1),
+		outputItems: new Bank().add('Dragon sq shield', 1),
 		QPRequired: 111,
 		requiredSkills: { smithing: 60 }
 	},
 	{
 		name: 'Dragon kiteshield',
-		inputItems: new Bank({
-			'Dragon sq shield': 1,
-			'Dragon metal shard': 1,
-			'Dragon metal slice': 1
-		}),
-		outputItems: new Bank({
-			'Dragon kiteshield': 1
-		}),
+		inputItems: new Bank().add('Dragon sq shield', 1).add('Dragon metal shard', 1).add('Dragon metal slice', 1),
+		outputItems: new Bank().add('Dragon kiteshield', 1),
 		QPRequired: 205,
 		requiredSkills: { smithing: 75 }
 	},
 	{
 		name: 'Dragon platebody',
-		inputItems: new Bank({
-			'Dragon chainbody': 1,
-			'Dragon metal shard': 1,
-			'Dragon metal lump': 1
-		}),
-		outputItems: new Bank({
-			'Dragon platebody': 1
-		}),
+		inputItems: new Bank().add('Dragon chainbody', 1).add('Dragon metal shard', 1).add('Dragon metal lump', 1),
+		outputItems: new Bank().add('Dragon platebody', 1),
 		QPRequired: 205,
 		requiredSkills: { smithing: 90 }
 	},
 	{
 		name: 'Coconut milk',
-		inputItems: new Bank({
-			Vial: 1,
-			Coconut: 1
-		}),
-		outputItems: new Bank({
-			'Coconut milk': 1,
-			'Coconut shell': 1
-		})
+		inputItems: new Bank().add('Vial', 1).add('Coconut', 1),
+		outputItems: new Bank().add('Coconut milk', 1).add('Coconut shell', 1)
 	},
 	{
 		name: 'Zamorakian hasta',
-		inputItems: new Bank({
-			'Zamorakian spear': 1
-		}),
-		outputItems: new Bank({
-			'Zamorakian hasta': 1
-		}),
+		inputItems: new Bank().add('Zamorakian spear', 1),
+		outputItems: new Bank().add('Zamorakian hasta', 1),
 		QPRequired: 3,
 		requiredSkills: {
 			fishing: 55,
@@ -1671,200 +1546,111 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Ultracompost',
-		inputItems: new Bank({
-			Supercompost: 1,
-			'Volcanic ash': 2
-		}),
-		outputItems: new Bank({
-			Ultracompost: 1
-		})
+		inputItems: new Bank().add('Supercompost', 1).add('Volcanic ash', 2),
+		outputItems: new Bank().add('Ultracompost', 1)
 	},
 	{
 		name: 'Tomatoes(5)',
-		inputItems: new Bank({
-			Tomato: 5
-		}),
-		outputItems: new Bank({
-			'Tomatoes(5)': 1
-		})
+		inputItems: new Bank().add('Tomato', 5),
+		outputItems: new Bank().add('Tomatoes(5)', 1)
 	},
 	{
 		name: 'Tomato',
-		inputItems: new Bank({
-			'Tomatoes(5)': 1
-		}),
-		outputItems: new Bank({
-			Tomato: 5
-		})
+		inputItems: new Bank().add('Tomatoes(5)', 1),
+		outputItems: new Bank().add('Tomato', 5)
 	},
 	{
 		name: 'Apples(5)',
-		inputItems: new Bank({
-			'Cooking apple': 5
-		}),
-		outputItems: new Bank({
-			'Apples(5)': 1
-		})
+		inputItems: new Bank().add('Cooking apple', 5),
+		outputItems: new Bank().add('Apples(5)', 1)
 	},
 	{
 		name: 'Cooking apple',
-		inputItems: new Bank({
-			'Apples(5)': 1
-		}),
-		outputItems: new Bank({
-			'Cooking Apple': 5
-		})
+		inputItems: new Bank().add('Apples(5)', 1),
+		outputItems: new Bank().add('Cooking Apple', 5)
 	},
 	{
 		name: 'Bananas(5)',
-		inputItems: new Bank({
-			Banana: 5
-		}),
-		outputItems: new Bank({
-			'Bananas(5)': 1
-		})
+		inputItems: new Bank().add('Banana', 5),
+		outputItems: new Bank().add('Bananas(5)', 1)
 	},
 	{
 		name: 'Banana',
-		inputItems: new Bank({
-			'Bananas(5)': 1
-		}),
-		outputItems: new Bank({
-			Banana: 5
-		})
+		inputItems: new Bank().add('Bananas(5)', 1),
+		outputItems: new Bank().add('Banana', 5)
 	},
 	{
 		name: 'Strawberries(5)',
-		inputItems: new Bank({
-			Strawberry: 5
-		}),
-		outputItems: new Bank({
-			'Strawberries(5)': 1
-		})
+		inputItems: new Bank().add('Strawberry', 5),
+		outputItems: new Bank().add('Strawberries(5)', 1)
 	},
 	{
 		name: 'Strawberry',
-		inputItems: new Bank({
-			'Strawberries(5)': 1
-		}),
-		outputItems: new Bank({
-			Strawberry: 5
-		})
+		inputItems: new Bank().add('Strawberries(5)', 1),
+		outputItems: new Bank().add('Strawberry', 5)
 	},
 	{
 		name: 'Oranges(5)',
-		inputItems: new Bank({
-			Orange: 5
-		}),
-		outputItems: new Bank({
-			'Oranges(5)': 1
-		})
+		inputItems: new Bank().add('Orange', 5),
+		outputItems: new Bank().add('Oranges(5)', 1)
 	},
 	{
 		name: 'Orange',
-		inputItems: new Bank({
-			'Oranges(5)': 1
-		}),
-		outputItems: new Bank({
-			Orange: 5
-		})
+		inputItems: new Bank().add('Oranges(5)', 1),
+		outputItems: new Bank().add('Orange', 5)
 	},
 	{
 		name: 'Potatoes(10)',
-		inputItems: new Bank({
-			Potato: 10
-		}),
-		outputItems: new Bank({
-			'Potatoes(10)': 1
-		})
+		inputItems: new Bank().add('Potato', 10),
+		outputItems: new Bank().add('Potatoes(10)', 1)
 	},
 	{
 		name: 'Potato',
-		inputItems: new Bank({
-			'Potatoes(10)': 1
-		}),
-		outputItems: new Bank({
-			Potato: 10
-		})
+		inputItems: new Bank().add('Potatoes(10)', 1),
+		outputItems: new Bank().add('Potato', 10)
 	},
 	{
 		name: 'Onions(10)',
-		inputItems: new Bank({
-			Onion: 10
-		}),
-		outputItems: new Bank({
-			'Onions(10)': 1
-		})
+		inputItems: new Bank().add('Onion', 10),
+		outputItems: new Bank().add('Onions(10)', 1)
 	},
 	{
 		name: 'Onion',
-		inputItems: new Bank({
-			'Onions(10)': 1
-		}),
-		outputItems: new Bank({
-			Onion: 10
-		})
+		inputItems: new Bank().add('Onions(10)', 1),
+		outputItems: new Bank().add('Onion', 10)
 	},
 	{
 		name: 'Cabbages(10)',
-		inputItems: new Bank({
-			Cabbage: 10
-		}),
-		outputItems: new Bank({
-			'Cabbages(10)': 1
-		})
+		inputItems: new Bank().add('Cabbage', 10),
+		outputItems: new Bank().add('Cabbages(10)', 1)
 	},
 	{
 		name: 'Cabbage',
-		inputItems: new Bank({
-			'Cabbages(10)': 1
-		}),
-		outputItems: new Bank({
-			Cabbage: 10
-		})
+		inputItems: new Bank().add('Cabbages(10)', 1),
+		outputItems: new Bank().add('Cabbage', 10)
 	},
 	{
 		name: 'Bucket of sand (1kg)',
-		inputItems: new Bank({
-			'Sandstone (1kg)': 1,
-			Bucket: 1
-		}),
-		outputItems: new Bank({
-			'Bucket of sand': 1
-		}),
+		inputItems: new Bank().add('Sandstone (1kg)', 1).add('Bucket', 1),
+		outputItems: new Bank().add('Bucket of sand', 1),
 		GPCost: 50
 	},
 	{
 		name: 'Bucket of sand (2kg)',
-		inputItems: new Bank({
-			'Sandstone (2kg)': 1,
-			Bucket: 2
-		}),
-		outputItems: new Bank({
-			'Bucket of sand': 2
-		}),
+		inputItems: new Bank().add('Sandstone (2kg)', 1).add('Bucket', 2),
+		outputItems: new Bank().add('Bucket of sand', 2),
 		GPCost: 100
 	},
 	{
 		name: 'Bucket of sand (5kg)',
-		inputItems: new Bank({
-			'Sandstone (5kg)': 1,
-			Bucket: 4
-		}),
-		outputItems: new Bank({
-			'Bucket of sand': 4
-		}),
+		inputItems: new Bank().add('Sandstone (5kg)', 1).add('Bucket', 4),
+		outputItems: new Bank().add('Bucket of sand', 4),
 		GPCost: 200
 	},
 	{
 		name: 'Bucket of sand (10kg)',
-		inputItems: new Bank({
-			'Sandstone (10kg)': 1,
-			Bucket: 8
-		}),
-		outputItems: new Bank({
-			'Bucket of sand': 8
-		}),
+		inputItems: new Bank().add('Sandstone (10kg)', 1).add('Bucket', 8),
+		outputItems: new Bank().add('Bucket of sand', 8),
 		GPCost: 400
 	},
 	/* {
@@ -1879,49 +1665,29 @@ const Createables: Createable[] = [
 	}, */
 	{
 		name: 'Eldritch nightmare staff',
-		inputItems: new Bank({
-			'Nightmare staff': 1,
-			'Eldritch orb': 1
-		}),
-		outputItems: new Bank({
-			'Eldritch nightmare staff': 1
-		})
+		inputItems: new Bank().add('Nightmare staff', 1).add('Eldritch orb', 1),
+		outputItems: new Bank().add('Eldritch nightmare staff', 1)
 	},
 	{
 		name: 'Harmonised nightmare staff',
-		inputItems: new Bank({
-			'Nightmare staff': 1,
-			'Harmonised orb': 1
-		}),
-		outputItems: new Bank({
-			'Harmonised nightmare staff': 1
-		})
+		inputItems: new Bank().add('Nightmare staff', 1).add('Harmonised orb', 1),
+		outputItems: new Bank().add('Harmonised nightmare staff', 1)
 	},
 	{
 		name: 'Volatile nightmare staff',
-		inputItems: new Bank({
-			'Nightmare staff': 1,
-			'Volatile orb': 1
-		}),
-		outputItems: new Bank({
-			'Volatile nightmare staff': 1
-		})
+		inputItems: new Bank().add('Nightmare staff', 1).add('Volatile orb', 1),
+		outputItems: new Bank().add('Volatile nightmare staff', 1)
 	},
 	{
 		name: "Zamorak's grapes",
-		inputItems: new Bank({
-			Grapes: 1,
-			"Bologa's blessing": 1
-		}),
+		inputItems: new Bank().add('Grapes', 1).add("Bologa's blessing", 1),
 		outputItems: {
 			[itemID("Zamorak's grapes")]: 1
 		}
 	},
 	{
 		name: "Toad's legs",
-		inputItems: new Bank({
-			'Swamp toad': 1
-		}),
+		inputItems: new Bank().add('Swamp toad', 1),
 		outputItems: {
 			[itemID("Toad's legs")]: 1
 		}
@@ -2045,40 +1811,28 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Bottled dragonbreath',
-		inputItems: new Bank({
-			Dragonfruit: 10,
-			Vial: 1
-		}),
+		inputItems: new Bank().add('Dragonfruit', 10).add('Vial', 1),
 		outputItems: {
 			[itemID('Bottled dragonbreath')]: 1
 		}
 	},
 	{
 		name: 'Ring of endurance',
-		inputItems: new Bank({
-			'Ring of endurance (uncharged)': 1,
-			'Stamina potion (4)': 125
-		}),
+		inputItems: new Bank().add('Ring of endurance (uncharged)', 1).add('Stamina potion (4)', 125),
 		outputItems: {
 			[itemID('Ring of endurance')]: 1
 		}
 	},
 	{
 		name: 'Fish sack barrel',
-		inputItems: new Bank({
-			'Fish sack': 1,
-			'Fish barrel': 1
-		}),
+		inputItems: new Bank().add('Fish sack', 1).add('Fish barrel', 1),
 		outputItems: {
 			[itemID('Fish sack barrel')]: 1
 		}
 	},
 	{
 		name: 'Salve amulet (e)',
-		inputItems: new Bank({
-			'Salve amulet': 1,
-			"Tarn's diary": 1
-		}),
+		inputItems: new Bank().add('Salve amulet', 1).add("Tarn's diary", 1),
 		outputItems: {
 			[itemID('Salve amulet (e)')]: 1,
 			[itemID("Tarn's diary")]: 1
@@ -2086,10 +1840,7 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Salve amulet(ei)',
-		inputItems: new Bank({
-			'Salve amulet(i)': 1,
-			"Tarn's diary": 1
-		}),
+		inputItems: new Bank().add('Salve amulet(i)', 1).add("Tarn's diary", 1),
 		outputItems: {
 			[itemID('Salve amulet(ei)')]: 1,
 			[itemID("Tarn's diary")]: 1
@@ -2097,66 +1848,52 @@ const Createables: Createable[] = [
 	},
 	{
 		name: 'Strange hallowed tome',
-		inputItems: new Bank({
-			'Mysterious page 1': 1,
-			'Mysterious page 2': 1,
-			'Mysterious page 3': 1,
-			'Mysterious page 4': 1,
-			'Mysterious page 5': 1
-		}),
+		inputItems: new Bank()
+			.add('Mysterious page 1', 1)
+			.add('Mysterious page 2', 1)
+			.add('Mysterious page 3', 1)
+			.add('Mysterious page 4', 1)
+			.add('Mysterious page 5', 1),
 		outputItems: {
 			[itemID('Strange hallowed tome')]: 1
 		}
 	},
 	{
 		name: 'Frozen key',
-		inputItems: new Bank({
-			'Frozen key piece (bandos)': 1,
-			'Frozen key piece (saradomin)': 1,
-			'Frozen key piece (zamorak)': 1,
-			'Frozen key piece (armadyl)': 1
-		}),
+		inputItems: new Bank()
+			.add('Frozen key piece (bandos)', 1)
+			.add('Frozen key piece (saradomin)', 1)
+			.add('Frozen key piece (zamorak)', 1)
+			.add('Frozen key piece (armadyl)', 1),
 		outputItems: {
 			[itemID('Frozen key')]: 1
 		}
 	},
 	{
 		name: 'Ecumenical key',
-		inputItems: new Bank({
-			'Ecumenical key shard': 50
-		}),
+		inputItems: new Bank().add('Ecumenical key shard', 50),
 		outputItems: {
 			[itemID('Ecumenical key')]: 1
 		}
 	},
 	{
 		name: 'Daeyalt essence',
-		inputItems: new Bank({
-			'Daeyalt shard': 1
-		}),
-		outputItems: new Bank({
-			'Daeyalt essence': 1
-		})
+		inputItems: new Bank().add('Daeyalt shard', 1),
+		outputItems: new Bank().add('Daeyalt essence', 1)
 	},
 	{
 		name: 'Celestial signet',
-		inputItems: new Bank({
-			'Celestial ring': 1,
-			'Elven signet': 1,
-			Stardust: 1000,
-			'Crystal shard': 100
-		}),
+		inputItems: new Bank()
+			.add('Celestial ring', 1)
+			.add('Elven signet', 1)
+			.add('Stardust', 1000)
+			.add('Crystal shard', 100),
 		outputItems: new Bank().add('Celestial signet')
 	},
 	{
 		name: 'Eternal teleport crystal',
-		inputItems: new Bank({
-			'Enhanced crystal teleport seed': 1,
-			'Crystal shard': 100
-		}),
-		outputItems: new Bank({
-			'Eternal teleport crystal': 1
-		}),
+		inputItems: new Bank().add('Enhanced crystal teleport seed', 1).add('Crystal shard', 100),
+		outputItems: new Bank().add('Eternal teleport crystal', 1),
 		requiredSkills: { smithing: 80, crafting: 80 },
 		QPRequired: 150
 	},

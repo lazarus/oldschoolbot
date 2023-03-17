@@ -69,132 +69,124 @@ export const pickaxes = [
 const gloves = [
 	{
 		id: itemID('Expert mining gloves'),
-		Percentages: new Bank({
-			'Silver ore': 50,
-			Coal: 40,
-			'Gold ore': 33.33,
-			'Mithril ore': 25,
-			'Adamantite ore': 16.66,
-			'Runite ore': 12.5,
-			Amethyst: 25
-		})
+		Percentages: new Bank()
+			.add('Silver ore', 50)
+			.add('Coal', 40)
+			.add('Gold ore', 33.33)
+			.add('Mithril ore', 25)
+			.add('Adamantite ore', 16.66)
+			.add('Runite ore', 12.5)
+			.add('Amethyst', 25)
 	},
 	{
 		id: itemID('Superior mining gloves'),
-		Percentages: new Bank({
-			'Silver ore': 0,
-			Coal: 0,
-			'Gold ore': 0,
-			'Mithril ore': 25,
-			'Adamantite ore': 16.66,
-			'Runite ore': 12.5,
-			Amethyst: 0
-		})
+		Percentages: new Bank()
+			.add('Silver ore', 0)
+			.add('Coal', 0)
+			.add('Gold ore', 0)
+			.add('Mithril ore', 25)
+			.add('Adamantite ore', 16.66)
+			.add('Runite ore', 12.5)
+			.add('Amethyst', 0)
 	},
 	{
 		id: itemID('Mining gloves'),
-		Percentages: new Bank({
-			'Silver ore': 50,
-			Coal: 40,
-			'Gold ore': 33.33,
-			'Mithril ore': 0,
-			'Adamantite ore': 0,
-			'Runite ore': 0,
-			Amethyst: 0
-		})
+		Percentages: new Bank()
+			.add('Silver ore', 50)
+			.add('Coal', 40)
+			.add('Gold ore', 33.33)
+			.add('Mithril ore', 0)
+			.add('Adamantite ore', 0)
+			.add('Runite ore', 0)
+			.add('Amethyst', 0)
 	}
 ];
 
 export const varrockArmours = [
 	{
 		id: itemID('Varrock armour 4'),
-		Percentages: new Bank({
-			Clay: 10,
-			'Copper ore': 10,
-			'Tin ore': 10,
-			'Iron ore': 10,
-			'Silver ore': 10,
-			Coal: 10,
-			'Sandstone (5kg)': 10,
-			'Gold ore': 10,
-			'Granite (5kg)': 10,
-			'Mithril ore': 10,
-			'Adamantite ore': 10,
-			'Runite ore': 10,
-			Amethyst: 10
-		})
+		Percentages: new Bank()
+			.add('Clay', 10)
+			.add('Copper ore', 10)
+			.add('Tin ore', 10)
+			.add('Iron ore', 10)
+			.add('Silver ore', 10)
+			.add('Coal', 10)
+			.add('Sandstone (5kg)', 10)
+			.add('Gold ore', 10)
+			.add('Granite (5kg)', 10)
+			.add('Mithril ore', 10)
+			.add('Adamantite ore', 10)
+			.add('Runite ore', 10)
+			.add('Amethyst', 10)
 	},
 	{
 		id: itemID('Varrock armour 3'),
-		Percentages: new Bank({
-			Clay: 10,
-			'Copper ore': 10,
-			'Tin ore': 10,
-			'Iron ore': 10,
-			'Silver ore': 10,
-			Coal: 10,
-			'Sandstone (5kg)': 10,
-			'Gold ore': 10,
-			'Granite (5kg)': 10,
-			'Mithril ore': 10,
-			'Adamantite ore': 10,
-			'Runite ore': 0,
-			Amethyst: 0
-		})
+		Percentages: new Bank()
+			.add('Clay', 10)
+			.add('Copper ore', 10)
+			.add('Tin ore', 10)
+			.add('Iron ore', 10)
+			.add('Silver ore', 10)
+			.add('Coal', 10)
+			.add('Sandstone (5kg)', 10)
+			.add('Gold ore', 10)
+			.add('Granite (5kg)', 10)
+			.add('Mithril ore', 10)
+			.add('Adamantite ore', 10)
+			.add('Runite ore', 0)
+			.add('Amethyst', 0)
 	},
 	{
 		id: itemID('Varrock armour 2'),
-		Percentages: new Bank({
-			Clay: 10,
-			'Copper ore': 10,
-			'Tin ore': 10,
-			'Iron ore': 10,
-			'Silver ore': 10,
-			Coal: 10,
-			'Sandstone (5kg)': 10,
-			'Gold ore': 10,
-			'Granite (5kg)': 10,
-			'Mithril ore': 10,
-			'Adamantite ore': 0,
-			'Runite ore': 0,
-			Amethyst: 0
-		})
+		Percentages: new Bank()
+			.add('Clay', 10)
+			.add('Copper ore', 10)
+			.add('Tin ore', 10)
+			.add('Iron ore', 10)
+			.add('Silver ore', 10)
+			.add('Coal', 10)
+			.add('Sandstone (5kg)', 10)
+			.add('Gold ore', 10)
+			.add('Granite (5kg)', 10)
+			.add('Mithril ore', 10)
+			.add('Adamantite ore', 0)
+			.add('Runite ore', 0)
+			.add('Amethyst', 0)
 	},
 	{
 		id: itemID('Varrock armour 1'),
-		Percentages: new Bank({
-			Clay: 10,
-			'Copper ore': 10,
-			'Tin ore': 10,
-			'Iron ore': 10,
-			'Silver ore': 10,
-			Coal: 10,
-			'Sandstone (5kg)': 0,
-			'Gold ore': 0,
-			'Granite (5kg)': 0,
-			'Mithril ore': 0,
-			'Adamantite ore': 0,
-			'Runite ore': 0,
-			Amethyst: 0
-		})
+		Percentages: new Bank()
+			.add('Clay', 10)
+			.add('Copper ore', 10)
+			.add('Tin ore', 10)
+			.add('Iron ore', 10)
+			.add('Silver ore', 10)
+			.add('Coal', 10)
+			.add('Sandstone (5kg)', 0)
+			.add('Gold ore', 0)
+			.add('Granite (5kg)', 0)
+			.add('Mithril ore', 0)
+			.add('Adamantite ore', 0)
+			.add('Runite ore', 0)
+			.add('Amethyst', 0)
 	}
 ];
 
-const miningCapeOreEffect: Bank = new Bank({
-	Clay: 5,
-	'Copper ore': 5,
-	'Tin ore': 5,
-	'Iron ore': 5,
-	'Silver ore': 5,
-	Coal: 5,
-	'Sandstone (5kg)': 5,
-	'Gold ore': 5,
-	'Granite (5kg)': 5,
-	'Mithril ore': 5,
-	'Adamantite ore': 5,
-	'Runite ore': 0,
-	Amethyst: 0
-});
+const miningCapeOreEffect: Bank = new Bank()
+	.add('Clay', 5)
+	.add('Copper ore', 5)
+	.add('Tin ore', 5)
+	.add('Iron ore', 5)
+	.add('Silver ore', 5)
+	.add('Coal', 5)
+	.add('Sandstone (5kg)', 5)
+	.add('Gold ore', 5)
+	.add('Granite (5kg)', 5)
+	.add('Mithril ore', 5)
+	.add('Adamantite ore', 5)
+	.add('Runite ore', 0)
+	.add('Amethyst', 0);
 
 const daeyaltEssenceSkillRequirements: Skills = {
 	woodcutting: 62,

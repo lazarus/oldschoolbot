@@ -21,9 +21,7 @@ export const tiaraRunecraftTask: MinionTask = {
 		})}`;
 		let str = `${user}, ${user.minionName} finished crafting ${tiaraQuantity} ${tiara.name}. ${xpRes}`;
 
-		const loot = new Bank({
-			[tiara.id]: tiaraQuantity
-		});
+		const loot = new Bank().add(tiara.id, tiaraQuantity);
 
 		str += `\n\nYou received: ${loot}.`;
 

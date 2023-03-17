@@ -18,9 +18,7 @@ export const slayerBuyables: Buyable[] = [
 		name: 'Broad arrowhead pack',
 		gpCost: 22_500,
 		ironmanPrice: 5500,
-		outputItems: new Bank({
-			'Broad arrowheads': 100
-		})
+		outputItems: new Bank().add('Broad arrowheads', 100)
 	},
 	{
 		name: 'Unfinished broad bolts',
@@ -29,9 +27,7 @@ export const slayerBuyables: Buyable[] = [
 	{
 		name: 'Unfinished broad bolt pack',
 		gpCost: 22_500,
-		outputItems: new Bank({
-			'Unfinished broad bolts': 100
-		})
+		outputItems: new Bank().add('Unfinished broad bolts', 100)
 	},
 	{
 		name: 'Enchanted gem',

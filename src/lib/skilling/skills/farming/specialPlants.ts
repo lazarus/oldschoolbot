@@ -887,11 +887,7 @@ const specialPlants: Plant[] = [
 		chance1: 0,
 		chance99: 0,
 		chanceOfDeath: 8,
-		protectionPayment: new Bank({
-			'Monkey nuts': 5,
-			'Monkey bar': 1,
-			'Ground tooth': 1
-		}).freeze(),
+		protectionPayment: new Bank().add('Monkey nuts', 5).add('Monkey bar', 1).add('Ground tooth', 1).freeze(),
 		needsChopForHarvest: true,
 		fixedOutput: false,
 		givesLogs: false,

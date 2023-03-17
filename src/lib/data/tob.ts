@@ -261,10 +261,7 @@ export function calculateTOBUserGearPercents(user: MUser) {
 	};
 }
 
-export const minimumTOBSuppliesNeeded = new Bank({
-	'Saradomin brew(4)': 10,
-	'Super restore(4)': 5
-});
+export const minimumTOBSuppliesNeeded = new Bank().add('Saradomin brew(4)', 10).add('Super restore(4)', 5);
 
 export const TENTACLE_CHARGES_PER_RAID = 400;
 
