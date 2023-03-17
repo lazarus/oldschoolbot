@@ -9,7 +9,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Shortbow (u)'),
 		level: 5,
 		xp: 5,
-		inputItems: new Bank({ Logs: 1 }),
+		inputItems: new Bank().add('Logs'),
 		tickRate: 3
 	},
 	{
@@ -17,7 +17,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Shortbow'),
 		level: 5,
 		xp: 5,
-		inputItems: new Bank({ 'Shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -25,7 +25,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Longbow (u)'),
 		level: 10,
 		xp: 10,
-		inputItems: new Bank({ Logs: 1 }),
+		inputItems: new Bank().add('Logs'),
 		tickRate: 3
 	},
 	{
@@ -33,7 +33,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Longbow'),
 		level: 10,
 		xp: 10,
-		inputItems: new Bank({ 'Longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -41,7 +41,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Oak shortbow (u)'),
 		level: 20,
 		xp: 16.5,
-		inputItems: new Bank({ 'Oak logs': 1 }),
+		inputItems: new Bank().add('Oak logs'),
 		tickRate: 3
 	},
 	{
@@ -49,7 +49,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Oak shortbow'),
 		level: 20,
 		xp: 16.5,
-		inputItems: new Bank({ 'Oak shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Oak shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -57,7 +57,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Oak longbow (u)'),
 		level: 25,
 		xp: 25,
-		inputItems: new Bank({ 'Oak logs': 1 }),
+		inputItems: new Bank().add('Oak logs'),
 		tickRate: 3
 	},
 	{
@@ -65,7 +65,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Oak longbow'),
 		level: 25,
 		xp: 25,
-		inputItems: new Bank({ 'Oak longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Oak longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -73,7 +73,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Willow shortbow (u)'),
 		level: 35,
 		xp: 33.3,
-		inputItems: new Bank({ 'Willow logs': 1 }),
+		inputItems: new Bank().add('Willow logs'),
 		tickRate: 3
 	},
 	{
@@ -81,7 +81,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Willow shortbow'),
 		level: 35,
 		xp: 33.3,
-		inputItems: new Bank({ 'Willow shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Willow shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -89,7 +89,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Willow longbow (u)'),
 		level: 40,
 		xp: 41.5,
-		inputItems: new Bank({ 'Willow logs': 1 }),
+		inputItems: new Bank().add('Willow logs'),
 		tickRate: 3
 	},
 	{
@@ -97,7 +97,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Willow longbow'),
 		level: 40,
 		xp: 41.5,
-		inputItems: new Bank({ 'Willow longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Willow longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -105,7 +105,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Maple shortbow (u)'),
 		level: 50,
 		xp: 50,
-		inputItems: new Bank({ 'Maple logs': 1 }),
+		inputItems: new Bank().add('Maple logs'),
 		tickRate: 3
 	},
 	{
@@ -113,7 +113,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Maple shortbow'),
 		level: 50,
 		xp: 50,
-		inputItems: new Bank({ 'Maple shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Maple shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -121,7 +121,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Maple longbow (u)'),
 		level: 55,
 		xp: 58.3,
-		inputItems: new Bank({ 'Maple logs': 1 }),
+		inputItems: new Bank().add('Maple logs'),
 		tickRate: 3
 	},
 	{
@@ -129,7 +129,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Maple longbow'),
 		level: 55,
 		xp: 58.2,
-		inputItems: new Bank({ 'Maple longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Maple longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -137,7 +137,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Yew shortbow (u)'),
 		level: 65,
 		xp: 67.5,
-		inputItems: new Bank({ 'Yew logs': 1 }),
+		inputItems: new Bank().add('Yew logs'),
 		tickRate: 3
 	},
 	{
@@ -145,7 +145,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Yew shortbow'),
 		level: 65,
 		xp: 67.5,
-		inputItems: new Bank({ 'Yew shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Yew shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -153,7 +153,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Yew longbow (u)'),
 		level: 70,
 		xp: 75,
-		inputItems: new Bank({ 'Yew logs': 1 }),
+		inputItems: new Bank().add('Yew logs'),
 		tickRate: 3
 	},
 	{
@@ -161,7 +161,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Yew longbow'),
 		level: 70,
 		xp: 75,
-		inputItems: new Bank({ 'Yew longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Yew longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -169,7 +169,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Magic shortbow (u)'),
 		level: 80,
 		xp: 83.3,
-		inputItems: new Bank({ 'Magic logs': 1 }),
+		inputItems: new Bank().add('Magic logs'),
 		tickRate: 3
 	},
 	{
@@ -177,7 +177,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Magic shortbow'),
 		level: 80,
 		xp: 83.3,
-		inputItems: new Bank({ 'Magic shortbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Magic shortbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -185,7 +185,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Magic longbow (u)'),
 		level: 85,
 		xp: 91.5,
-		inputItems: new Bank({ 'Magic logs': 1 }),
+		inputItems: new Bank().add('Magic logs'),
 		tickRate: 3
 	},
 	{
@@ -193,7 +193,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Magic longbow'),
 		level: 85,
 		xp: 91.5,
-		inputItems: new Bank({ 'Magic longbow (u)': 1, 'Bow string': 1 }),
+		inputItems: new Bank().add('Magic longbow (u)').add('Bow string'),
 		tickRate: 2
 	},
 	{
@@ -201,7 +201,7 @@ const Bows: Fletchable[] = [
 		id: itemID('Toxic blowpipe (empty)'),
 		level: 53,
 		xp: 120,
-		inputItems: new Bank({ 'Tanzanite fang': 1 }),
+		inputItems: new Bank().add('Tanzanite fang'),
 		tickRate: 2
 	}
 ];

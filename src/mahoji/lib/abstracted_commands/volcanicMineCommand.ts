@@ -21,69 +21,69 @@ export const VolcanicMineGameTime = Time.Minute * 10;
 export const VolcanicMineShop: { name: string; output: Bank; cost: number; clOnly?: boolean; addToCl?: true }[] = [
 	{
 		name: 'Iron ore',
-		output: new Bank({ 'Iron ore': 1 }),
+		output: new Bank().add('Iron ore'),
 		cost: 30
 	},
 	{
 		name: 'Silver ore',
-		output: new Bank({ 'Silver ore': 1 }),
+		output: new Bank().add('Silver ore'),
 		cost: 55
 	},
 	{
 		name: 'Coal',
-		output: new Bank({ Coal: 1 }),
+		output: new Bank().add('Coal'),
 		cost: 60
 	},
 	{
 		name: 'Gold ore',
-		output: new Bank({ 'Gold ore': 1 }),
+		output: new Bank().add('Gold ore'),
 		cost: 150
 	},
 	{
 		name: 'Mithril ore',
-		output: new Bank({ 'Mithril ore': 1 }),
+		output: new Bank().add('Mithril ore'),
 		cost: 150
 	},
 	{
 		name: 'Adamantite ore',
-		output: new Bank({ 'Adamantite ore': 1 }),
+		output: new Bank().add('Adamantite ore'),
 		cost: 300
 	},
 	{
 		name: 'Runite ore',
-		output: new Bank({ 'Runite ore': 1 }),
+		output: new Bank().add('Runite ore'),
 		cost: 855
 	},
 	{
 		name: 'Volcanic ash',
-		output: new Bank({ 'Volcanic ash': 1 }),
+		output: new Bank().add('Volcanic ash'),
 		cost: 40
 	},
 	{
 		name: 'Calcite',
-		output: new Bank({ Calcite: 1 }),
+		output: new Bank().add('Calcite'),
 		cost: 70
 	},
 	{
 		name: 'Pyrophosphite',
-		output: new Bank({ Pyrophosphite: 1 }),
+		output: new Bank().add('Pyrophosphite'),
 		cost: 70
 	},
 	{
 		name: 'Volcanic mine teleport',
-		output: new Bank({ 'Volcanic mine teleport': 1 }),
+		output: new Bank().add('Volcanic mine teleport'),
 		cost: 200,
 		addToCl: true
 	},
 	{
 		name: 'Large water container',
-		output: new Bank({ 'Large water container': 1 }),
+		output: new Bank().add('Large water container'),
 		cost: 10_000,
 		clOnly: true
 	},
 	{
 		name: 'Ash covered tome',
-		output: new Bank({ 'Ash covered tome': 1 }),
+		output: new Bank().add('Ash covered tome'),
 		cost: 40_000,
 		clOnly: true
 	}

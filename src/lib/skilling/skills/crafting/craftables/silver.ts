@@ -9,7 +9,7 @@ const Silver: Craftable[] = [
 		id: itemID('Opal ring'),
 		level: 1,
 		xp: 10,
-		inputItems: new Bank({ Opal: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Opal').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -17,7 +17,7 @@ const Silver: Craftable[] = [
 		id: itemID('Opal necklace'),
 		level: 16,
 		xp: 35,
-		inputItems: new Bank({ Opal: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Opal').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -25,7 +25,7 @@ const Silver: Craftable[] = [
 		id: itemID('Opal bracelet'),
 		level: 22,
 		xp: 45,
-		inputItems: new Bank({ Opal: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Opal').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -33,7 +33,7 @@ const Silver: Craftable[] = [
 		id: itemID('Opal amulet (u)'),
 		level: 27,
 		xp: 59,
-		inputItems: new Bank({ Opal: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Opal').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -41,7 +41,7 @@ const Silver: Craftable[] = [
 		id: itemID('Opal amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Opal amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Opal amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -49,7 +49,7 @@ const Silver: Craftable[] = [
 		id: itemID('Jade ring'),
 		level: 13,
 		xp: 32,
-		inputItems: new Bank({ Jade: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Jade').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -57,7 +57,7 @@ const Silver: Craftable[] = [
 		id: itemID('Jade necklace'),
 		level: 25,
 		xp: 54,
-		inputItems: new Bank({ Jade: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Jade').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -65,7 +65,7 @@ const Silver: Craftable[] = [
 		id: itemID('Jade bracelet'),
 		level: 29,
 		xp: 60,
-		inputItems: new Bank({ Jade: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Jade').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -73,7 +73,7 @@ const Silver: Craftable[] = [
 		id: itemID('Jade amulet (u)'),
 		level: 34,
 		xp: 74,
-		inputItems: new Bank({ Jade: 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Jade').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -81,7 +81,7 @@ const Silver: Craftable[] = [
 		id: itemID('Jade amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Jade amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Jade amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -89,7 +89,7 @@ const Silver: Craftable[] = [
 		id: itemID('Topaz ring'),
 		level: 16,
 		xp: 35,
-		inputItems: new Bank({ 'Red topaz': 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Red topaz').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -97,7 +97,7 @@ const Silver: Craftable[] = [
 		id: itemID('Topaz necklace'),
 		level: 32,
 		xp: 70,
-		inputItems: new Bank({ 'Red topaz': 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Red topaz').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -105,7 +105,7 @@ const Silver: Craftable[] = [
 		id: itemID('Topaz bracelet'),
 		level: 18,
 		xp: 75,
-		inputItems: new Bank({ 'Red topaz': 1, 'Silver bar': 1 }),
+		inputItems: new Bank().add('Red topaz').add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -135,7 +135,7 @@ const Silver: Craftable[] = [
 		id: itemID('Unstrung symbol'),
 		level: 16,
 		xp: 50,
-		inputItems: new Bank({ 'Silver bar': 1 }),
+		inputItems: new Bank().add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -143,7 +143,7 @@ const Silver: Craftable[] = [
 		id: itemID('Unblessed symbol'),
 		level: 16,
 		xp: 4,
-		inputItems: new Bank({ 'Unstrung symbol': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Unstrung symbol').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -151,7 +151,7 @@ const Silver: Craftable[] = [
 		id: itemID('Unstrung emblem'),
 		level: 17,
 		xp: 50,
-		inputItems: new Bank({ 'Silver bar': 1 }),
+		inputItems: new Bank().add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -159,7 +159,7 @@ const Silver: Craftable[] = [
 		id: itemID('Unpowered symbol'),
 		level: 17,
 		xp: 4,
-		inputItems: new Bank({ 'Unstrung emblem': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Unstrung emblem').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -167,7 +167,7 @@ const Silver: Craftable[] = [
 		id: itemID('Silver sickle'),
 		level: 18,
 		xp: 50,
-		inputItems: new Bank({ 'Silver bar': 1 }),
+		inputItems: new Bank().add('Silver bar'),
 		tickRate: 3
 	},
 	{
@@ -175,7 +175,7 @@ const Silver: Craftable[] = [
 		id: itemID('Tiara'),
 		level: 23,
 		xp: 52.5,
-		inputItems: new Bank({ 'Silver bar': 1 }),
+		inputItems: new Bank().add('Silver bar'),
 		tickRate: 3
 	}
 ];

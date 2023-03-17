@@ -9,7 +9,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Bronze dart'),
 		level: 10,
 		xp: 1.8,
-		inputItems: new Bank({ 'Bronze dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Bronze dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -17,7 +17,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Iron dart'),
 		level: 22,
 		xp: 3.8,
-		inputItems: new Bank({ 'Iron dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Iron dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -25,7 +25,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Steel dart'),
 		level: 37,
 		xp: 7.5,
-		inputItems: new Bank({ 'Steel dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Steel dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -33,7 +33,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Mithril dart'),
 		level: 52,
 		xp: 11.2,
-		inputItems: new Bank({ 'Mithril dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Mithril dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -41,7 +41,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Adamant dart'),
 		level: 67,
 		xp: 15,
-		inputItems: new Bank({ 'Adamant dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Adamant dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -49,7 +49,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Rune dart'),
 		level: 81,
 		xp: 18.8,
-		inputItems: new Bank({ 'Rune dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Rune dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -57,7 +57,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Amethyst dart'),
 		level: 90,
 		xp: 21,
-		inputItems: new Bank({ 'Amethyst dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Amethyst dart tip').add('Feather'),
 		tickRate: 0.08
 	},
 	{
@@ -65,7 +65,7 @@ const Darts: Fletchable[] = [
 		id: itemID('Dragon dart'),
 		level: 95,
 		xp: 25,
-		inputItems: new Bank({ 'Dragon dart tip': 1, Feather: 1 }),
+		inputItems: new Bank().add('Dragon dart tip').add('Feather'),
 		tickRate: 0.08
 	}
 ];

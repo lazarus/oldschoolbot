@@ -86,7 +86,7 @@ export const fightCavesTask: MinionTask = {
 		}
 
 		if (diedToJad) {
-			const failBank = new Bank({ [TokkulID]: tokkulReward });
+			const failBank = new Bank().add(TokkulID, tokkulReward);
 			await transactItems({ userID: user.id, collectionLog: true, itemsToAdd: failBank });
 
 			const rangeXP = await user.addXP({ skillName: SkillsEnum.Ranged, amount: 46_080, duration });

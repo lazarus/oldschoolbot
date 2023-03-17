@@ -33,7 +33,7 @@ export async function buryCommand(user: MUser, channelID: string, boneName: stri
 		quantity = Math.min(Math.floor(maxTripLength / timeToBuryABone), amountOfBonesOwned);
 	}
 
-	const cost = new Bank({ [bone.inputId]: quantity });
+	const cost = new Bank().add(bone.inputId, quantity);
 
 	if (!user.owns(cost)) {
 		return `You dont have ${cost}.`;

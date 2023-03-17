@@ -39,7 +39,7 @@ export const cookingTask: MinionTask = {
 			str += `\n\n${burnedAmount}x ${cookable.name} failed to cook.`;
 		}
 
-		const loot = new Bank({ [cookable.id]: quantity });
+		const loot = new Bank().add(cookable.id, quantity);
 		loot.remove(cookable.id, burnedAmount);
 		loot.add(cookable.burntCookable, burnedAmount);
 

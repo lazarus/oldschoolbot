@@ -10,7 +10,7 @@ const Crush: Mixable[] = [
 		id: itemID('Unicorn horn dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Unicorn horn': 1 }),
+		inputItems: new Bank().add('Unicorn horn'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -21,7 +21,7 @@ const Crush: Mixable[] = [
 		id: itemID('Chocolate dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Chocolate bar': 1 }),
+		inputItems: new Bank().add('Chocolate bar'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -32,7 +32,7 @@ const Crush: Mixable[] = [
 		id: itemID('Kebbit teeth dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Kebbit teeth': 1 }),
+		inputItems: new Bank().add('Kebbit teeth'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -43,7 +43,7 @@ const Crush: Mixable[] = [
 		id: itemID('Crushed nest'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 5075: 1 }),
+		inputItems: new Bank().add(5075),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -54,7 +54,7 @@ const Crush: Mixable[] = [
 		id: itemID('Goat horn dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Desert goat horn': 1 }),
+		inputItems: new Bank().add('Desert goat horn'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -65,7 +65,7 @@ const Crush: Mixable[] = [
 		id: itemID('Silver dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Silver bar': 1 }),
+		inputItems: new Bank().add('Silver bar'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: false
@@ -82,7 +82,7 @@ const Crush: Mixable[] = [
 		id: itemID('Crushed superior dragon bones'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Superior dragon bones': 1 }),
+		inputItems: new Bank().add('Superior dragon bones'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -93,7 +93,7 @@ const Crush: Mixable[] = [
 		id: itemID('Dragon scale dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Blue dragon scale': 1 }),
+		inputItems: new Bank().add('Blue dragon scale'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true
@@ -104,7 +104,7 @@ const Crush: Mixable[] = [
 		id: itemID('Nihil dust'),
 		level: 1,
 		xp: 0,
-		inputItems: new Bank({ 'Nihil shard': 1 }),
+		inputItems: new Bank().add('Nihil shard'),
 		tickRate: 1,
 		bankTimePerPotion: 0,
 		wesley: true

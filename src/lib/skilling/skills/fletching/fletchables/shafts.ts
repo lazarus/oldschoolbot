@@ -9,7 +9,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 1,
 		xp: 5,
-		inputItems: new Bank({ Logs: 1 }),
+		inputItems: new Bank().add('Logs'),
 		tickRate: 2,
 		outputMultiple: 15
 	},
@@ -18,7 +18,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Javelin shaft'),
 		level: 3,
 		xp: 5,
-		inputItems: new Bank({ Logs: 1 }),
+		inputItems: new Bank().add('Logs'),
 		tickRate: 2,
 		outputMultiple: 15
 	},
@@ -27,7 +27,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Ogre arrow shaft'),
 		level: 5,
 		xp: 7.2,
-		inputItems: new Bank({ 'Achey tree logs': 1 }),
+		inputItems: new Bank().add('Achey tree logs'),
 		tickRate: 2,
 		outputMultiple: 15
 	},
@@ -36,7 +36,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 15,
 		xp: 10,
-		inputItems: new Bank({ 'Oak logs': 1 }),
+		inputItems: new Bank().add('Oak logs'),
 		tickRate: 2,
 		outputMultiple: 30
 	},
@@ -45,7 +45,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 30,
 		xp: 15,
-		inputItems: new Bank({ 'Willow logs': 1 }),
+		inputItems: new Bank().add('Willow logs'),
 		tickRate: 2,
 		outputMultiple: 45
 	},
@@ -54,7 +54,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 45,
 		xp: 20,
-		inputItems: new Bank({ 'Maple logs': 1 }),
+		inputItems: new Bank().add('Maple logs'),
 		tickRate: 2,
 		outputMultiple: 60
 	},
@@ -63,7 +63,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 60,
 		xp: 25,
-		inputItems: new Bank({ 'Yew logs': 1 }),
+		inputItems: new Bank().add('Yew logs'),
 		tickRate: 2,
 		outputMultiple: 75
 	},
@@ -72,7 +72,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 75,
 		xp: 30,
-		inputItems: new Bank({ 'Magic logs': 1 }),
+		inputItems: new Bank().add('Magic logs'),
 		tickRate: 2,
 		outputMultiple: 90
 	},
@@ -81,7 +81,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Arrow shaft'),
 		level: 90,
 		xp: 35,
-		inputItems: new Bank({ 'Redwood logs': 1 }),
+		inputItems: new Bank().add('Redwood logs'),
 		tickRate: 2,
 		outputMultiple: 105
 	},
@@ -90,7 +90,7 @@ const Shafts: Fletchable[] = [
 		id: itemID('Battlestaff'),
 		level: 40,
 		xp: 80,
-		inputItems: new Bank({ 'Celastrus bark': 1 }),
+		inputItems: new Bank().add('Celastrus bark'),
 		tickRate: 4
 	}
 ];

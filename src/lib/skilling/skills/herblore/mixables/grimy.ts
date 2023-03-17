@@ -10,7 +10,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Guam leaf'),
 		level: 3,
 		xp: 2.5,
-		inputItems: new Bank({ 'Grimy guam leaf': 1 }),
+		inputItems: new Bank().add('Grimy guam leaf'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -21,7 +21,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Marrentill'),
 		level: 5,
 		xp: 3.8,
-		inputItems: new Bank({ 'Grimy marrentill': 1 }),
+		inputItems: new Bank().add('Grimy marrentill'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -32,7 +32,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Tarromin'),
 		level: 11,
 		xp: 5,
-		inputItems: new Bank({ 'Grimy tarromin': 1 }),
+		inputItems: new Bank().add('Grimy tarromin'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -43,7 +43,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Harralander'),
 		level: 20,
 		xp: 6.3,
-		inputItems: new Bank({ 'Grimy harralander': 1 }),
+		inputItems: new Bank().add('Grimy harralander'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -54,7 +54,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Ranarr weed'),
 		level: 25,
 		xp: 7.5,
-		inputItems: new Bank({ 'Grimy ranarr weed': 1 }),
+		inputItems: new Bank().add('Grimy ranarr weed'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -65,7 +65,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Toadflax'),
 		level: 30,
 		xp: 8,
-		inputItems: new Bank({ 'Grimy toadflax': 1 }),
+		inputItems: new Bank().add('Grimy toadflax'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -76,7 +76,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Irit leaf'),
 		level: 40,
 		xp: 8.8,
-		inputItems: new Bank({ 'Grimy irit leaf': 1 }),
+		inputItems: new Bank().add('Grimy irit leaf'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -87,7 +87,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Avantoe'),
 		level: 48,
 		xp: 10,
-		inputItems: new Bank({ 'Grimy avantoe': 1 }),
+		inputItems: new Bank().add('Grimy avantoe'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -98,7 +98,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Kwuarm'),
 		level: 54,
 		xp: 11.3,
-		inputItems: new Bank({ 'Grimy kwuarm': 1 }),
+		inputItems: new Bank().add('Grimy kwuarm'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -109,7 +109,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Snapdragon'),
 		level: 59,
 		xp: 11.8,
-		inputItems: new Bank({ 'Grimy snapdragon': 1 }),
+		inputItems: new Bank().add('Grimy snapdragon'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -120,7 +120,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Cadantine'),
 		level: 65,
 		xp: 12.5,
-		inputItems: new Bank({ 'Grimy cadantine': 1 }),
+		inputItems: new Bank().add('Grimy cadantine'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -131,7 +131,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Lantadyme'),
 		level: 67,
 		xp: 13.1,
-		inputItems: new Bank({ 'Grimy lantadyme': 1 }),
+		inputItems: new Bank().add('Grimy lantadyme'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -142,7 +142,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Dwarf weed'),
 		level: 70,
 		xp: 13.8,
-		inputItems: new Bank({ 'Grimy dwarf weed': 1 }),
+		inputItems: new Bank().add('Grimy dwarf weed'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true
@@ -153,7 +153,7 @@ const Grimy: Mixable[] = [
 		id: itemID('Torstol'),
 		level: 75,
 		xp: 15,
-		inputItems: new Bank({ 'Grimy torstol': 1 }),
+		inputItems: new Bank().add('Grimy torstol'),
 		tickRate: 0.5,
 		bankTimePerPotion: 0.15,
 		zahur: true

@@ -15,7 +15,7 @@ export async function decantCommand(user: MUser, itemName: string, dose = 4) {
 	await user.addItemsToBank({ items: potionsToAdd });
 
 	if (user.hasEquipped(['Iron dagger', 'Bronze arrow']) && !user.hasEquippedOrInBank('Clue hunter gloves')) {
-		await user.addItemsToBank({ items: new Bank({ 'Clue hunter gloves': 1 }), collectionLog: true });
+		await user.addItemsToBank({ items: new Bank().add('Clue hunter gloves'), collectionLog: true });
 	}
 
 	return `You decanted **${sumOfPots}x ${potionName}${sumOfPots > 0 ? 's' : ''}** into **${potionsToAdd}**.`;

@@ -11,7 +11,7 @@ export const championsChallengeTask: MinionTask = {
 		const user = await mUserFetch(userID);
 		await incrementMinigameScore(userID, 'champions_challenge', 1);
 
-		const loot = new Bank({ "Champion's cape": 1 });
+		const loot = new Bank().add("Champion's cape");
 
 		await transactItems({
 			userID: user.id,

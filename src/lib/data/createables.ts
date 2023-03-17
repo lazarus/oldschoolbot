@@ -471,62 +471,62 @@ const crystalTools: Createable[] = [
 const hunterClothing: Createable[] = [
 	{
 		name: 'Polar camouflage gear',
-		inputItems: new Bank({ 'Polar kebbit fur': 4 }),
-		outputItems: new Bank({ 'Polar camo top': 1, 'Polar camo legs': 1 }),
+		inputItems: new Bank().add('Polar kebbit fur', 4),
+		outputItems: new Bank().add('Polar camo top').add('Polar camo legs'),
 		GPCost: 40
 	},
 	{
 		name: 'Woodland camouflage gear',
-		inputItems: new Bank({ 'Common kebbit fur': 4 }),
-		outputItems: new Bank({ 'Wood camo top': 1, 'Wood camo legs': 1 }),
+		inputItems: new Bank().add('Common kebbit fur', 4),
+		outputItems: new Bank().add('Wood camo top').add('Wood camo legs'),
 		GPCost: 40
 	},
 	{
 		name: 'Jungle camouflage gear',
-		inputItems: new Bank({ 'Feldip weasel fur': 4 }),
-		outputItems: new Bank({ 'Jungle camo top': 1, 'Jungle camo legs': 1 }),
+		inputItems: new Bank().add('Feldip weasel fur', 4),
+		outputItems: new Bank().add('Jungle camo top').add('Jungle camo legs'),
 		GPCost: 40
 	},
 	{
 		name: 'Desert camouflage gear',
-		inputItems: new Bank({ 'Desert devil fur': 4 }),
-		outputItems: new Bank({ 'Desert camo top': 1, 'Desert camo legs': 1 }),
+		inputItems: new Bank().add('Desert devil fur', 4),
+		outputItems: new Bank().add('Desert camo top').add('Desert camo legs'),
 		GPCost: 40
 	},
 	{
 		name: 'Larupia hunter gear',
-		inputItems: new Bank({ 'Larupia fur': 1, 'Tatty larupia fur': 2 }),
-		outputItems: new Bank({ 'Larupia hat': 1, 'Larupia top': 1, 'Larupia legs': 1 }),
+		inputItems: new Bank().add('Larupia fur').add('Tatty larupia fur', 2),
+		outputItems: new Bank().add('Larupia hat').add('Larupia top').add('Larupia legs'),
 		GPCost: 700
 	},
 	{
 		name: 'Graahk hunter gear',
-		inputItems: new Bank({ 'Graahk fur': 1, 'Tatty graahk fur': 2 }),
-		outputItems: new Bank({ 'Graahk headdress': 1, 'Graahk top': 1, 'Graahk legs': 1 }),
+		inputItems: new Bank().add('Graahk fur').add('Tatty graahk fur', 2),
+		outputItems: new Bank().add('Graahk headdress').add('Graahk top').add('Graahk legs'),
 		GPCost: 1000
 	},
 	{
 		name: 'Kyatt hunter gear',
-		inputItems: new Bank({ 'Kyatt fur': 1, 'Tatty kyatt fur': 2 }),
-		outputItems: new Bank({ 'Kyatt hat': 1, 'Kyatt top': 1, 'Kyatt legs': 1 }),
+		inputItems: new Bank().add('Kyatt fur').add('Tatty kyatt fur', 2),
+		outputItems: new Bank().add('Kyatt hat').add('Kyatt top').add('Kyatt legs'),
 		GPCost: 1400
 	},
 	{
 		name: 'Spotted cape',
-		inputItems: new Bank({ 'Spotted kebbit fur': 2 }),
-		outputItems: new Bank({ 'Spotted cape': 1 }),
+		inputItems: new Bank().add('Spotted kebbit fur', 2),
+		outputItems: new Bank().add('Spotted cape'),
 		GPCost: 400
 	},
 	{
 		name: 'Spottier cape',
-		inputItems: new Bank({ 'Dashing kebbit fur': 2 }),
-		outputItems: new Bank({ 'Spottier cape': 1 }),
+		inputItems: new Bank().add('Dashing kebbit fur', 2),
+		outputItems: new Bank().add('Spottier cape'),
 		GPCost: 800
 	},
 	{
 		name: 'Gloves of silence',
-		inputItems: new Bank({ 'Dark kebbit fur': 2 }),
-		outputItems: new Bank({ 'Gloves of silence': 1 }),
+		inputItems: new Bank().add('Dark kebbit fur', 2),
+		outputItems: new Bank().add('Gloves of silence'),
 		GPCost: 600
 	}
 ];

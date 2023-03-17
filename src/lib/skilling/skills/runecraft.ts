@@ -81,8 +81,8 @@ const Runes: Rune[] = [
 		name: 'Mist rune',
 		levels: [[6, 1]],
 		tripLength: Time.Minute * 0.87,
-		inputRune: new Bank({ 'Air rune': 1 }),
-		inputTalisman: new Bank({ 'Air talisman': 1 }),
+		inputRune: new Bank().add('Air rune'),
+		inputTalisman: new Bank().add('Air talisman'),
 		stams: true
 	},
 	{
@@ -103,8 +103,8 @@ const Runes: Rune[] = [
 		name: 'Dust rune',
 		levels: [[10, 1]],
 		tripLength: Time.Minute * 0.87,
-		inputRune: new Bank({ 'Air rune': 1 }),
-		inputTalisman: new Bank({ 'Air talisman': 1 }),
+		inputRune: new Bank().add('Air rune'),
+		inputTalisman: new Bank().add('Air talisman'),
 		stams: true
 	},
 	{
@@ -113,8 +113,8 @@ const Runes: Rune[] = [
 		name: 'Mud rune',
 		levels: [[13, 1]],
 		tripLength: Time.Minute * 0.87,
-		inputRune: new Bank({ 'Water rune': 1 }),
-		inputTalisman: new Bank({ 'Water talisman': 1 }),
+		inputRune: new Bank().add('Water rune'),
+		inputTalisman: new Bank().add('Water talisman'),
 		stams: true
 	},
 	{
@@ -134,8 +134,8 @@ const Runes: Rune[] = [
 		name: 'Smoke rune',
 		levels: [[15, 1]],
 		tripLength: Time.Minute * 0.515,
-		inputRune: new Bank({ 'Air rune': 1 }),
-		inputTalisman: new Bank({ 'Air talisman': 1 }),
+		inputRune: new Bank().add('Air rune'),
+		inputTalisman: new Bank().add('Air talisman'),
 		stams: true
 	},
 	{
@@ -144,8 +144,8 @@ const Runes: Rune[] = [
 		name: 'Steam rune',
 		levels: [[19, 1]],
 		tripLength: Time.Minute * 0.515,
-		inputRune: new Bank({ 'Water rune': 1 }),
-		inputTalisman: new Bank({ 'Water talisman': 1 }),
+		inputRune: new Bank().add('Water rune'),
+		inputTalisman: new Bank().add('Water talisman'),
 		stams: true
 	},
 	{
@@ -165,8 +165,8 @@ const Runes: Rune[] = [
 		name: 'Lava rune',
 		levels: [[23, 1]],
 		tripLength: Time.Minute * 0.515,
-		inputRune: new Bank({ 'Earth rune': 1 }),
-		inputTalisman: new Bank({ 'Earth talisman': 1 }),
+		inputRune: new Bank().add('Earth rune'),
+		inputTalisman: new Bank().add('Earth talisman'),
 		stams: true
 	},
 	{
@@ -284,35 +284,35 @@ const Tiaras: Tiara[] = [
 		id: itemID('Air tiara'),
 		name: 'Air tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Air talisman': 1 })
+		inputTalisman: new Bank().add('Air talisman')
 	},
 	{
 		xp: 52.5,
 		id: itemID('Blood tiara'),
 		name: 'Blood tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Blood talisman': 1 })
+		inputTalisman: new Bank().add('Blood talisman')
 	},
 	{
 		xp: 37.5,
 		id: itemID('Body tiara'),
 		name: 'Body tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Body talisman': 1 })
+		inputTalisman: new Bank().add('Body talisman')
 	},
 	{
 		xp: 42.5,
 		id: itemID('Chaos tiara'),
 		name: 'Chaos tiara',
 		tripLength: Time.Minute * 2,
-		inputTalisman: new Bank({ 'Chaos talisman': 1 })
+		inputTalisman: new Bank().add('Chaos talisman')
 	},
 	{
 		xp: 40,
 		id: itemID('Cosmic tiara'),
 		name: 'Cosmic tiara',
 		tripLength: Time.Minute * 1.3,
-		inputTalisman: new Bank({ 'Cosmic talisman': 1 }),
+		inputTalisman: new Bank().add('Cosmic talisman'),
 		qpRequired: 5
 	},
 	{
@@ -320,7 +320,7 @@ const Tiaras: Tiara[] = [
 		id: itemID('Death tiara'),
 		name: 'Death tiara',
 		tripLength: Time.Minute * 1.3,
-		inputTalisman: new Bank({ 'Death talisman': 1 }),
+		inputTalisman: new Bank().add('Death talisman'),
 		qpRequired: 10
 	},
 	{
@@ -328,21 +328,21 @@ const Tiaras: Tiara[] = [
 		id: itemID('Earth tiara'),
 		name: 'Earth tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Earth talisman': 1 })
+		inputTalisman: new Bank().add('Earth talisman')
 	},
 	{
 		xp: 35,
 		id: itemID('Fire tiara'),
 		name: 'Fire tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Fire talisman': 1 })
+		inputTalisman: new Bank().add('Fire talisman')
 	},
 	{
 		xp: 47.5,
 		id: itemID('Law tiara'),
 		name: 'Law tiara',
 		tripLength: Time.Minute * 1.7,
-		inputTalisman: new Bank({ 'Law talisman': 1 }),
+		inputTalisman: new Bank().add('Law talisman'),
 		qpRequired: 10
 	},
 	{
@@ -350,28 +350,28 @@ const Tiaras: Tiara[] = [
 		id: itemID('Mind tiara'),
 		name: 'Mind tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Mind talisman': 1 })
+		inputTalisman: new Bank().add('Mind talisman')
 	},
 	{
 		xp: 45,
 		id: itemID('Nature tiara'),
 		name: 'Nature tiara',
 		tripLength: Time.Minute * 1.5,
-		inputTalisman: new Bank({ 'Nature talisman': 1 })
+		inputTalisman: new Bank().add('Nature talisman')
 	},
 	{
 		xp: 30,
 		id: itemID('Water tiara'),
 		name: 'Water tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Water talisman': 1 })
+		inputTalisman: new Bank().add('Water talisman')
 	},
 	{
 		xp: 52.5,
 		id: itemID('Wrath tiara'),
 		name: 'Wrath tiara',
 		tripLength: Time.Minute,
-		inputTalisman: new Bank({ 'Wrath talisman': 1 }),
+		inputTalisman: new Bank().add('Wrath talisman'),
 		qpRequired: 200
 	}
 ];

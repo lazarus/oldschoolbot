@@ -1,4 +1,4 @@
-import { Bank } from 'oldschooljs';
+import { Bank, Items } from 'oldschooljs';
 
 import { mahojiUsersSettingsFetch } from '../mahoji/mahojiSettings';
 import { ItemBank } from './types';
@@ -93,6 +93,15 @@ export async function stressTest(userID: string) {
 	const specialRemoveBank = new Bank().add('Egg').add('Twisted bow', 100);
 	await user.addItemsToBank({ items: specialRemoveBank });
 	await user.specialRemoveItems(specialRemoveBank);
+
+	const bank = new Bank();
+	for (let i = 0; i < 1000; i++) {
+		bank.add(Items.random().id);
+	}
+	for (let i = 0; i < 10_000; i++) {
+		await user.addItemsToBank({ items: specialRemoveBank });
+		await user.removeItemsFromBank(specialRemoveBank);
+	}
 
 	return 'Success';
 }

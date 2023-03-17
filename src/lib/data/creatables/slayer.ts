@@ -12,7 +12,7 @@ export const slayerCreatables: Createable[] = [
 			'Dark totem middle': 1,
 			'Dark totem top': 1
 		}),
-		outputItems: new Bank({ 'Dark totem': 1 }),
+		outputItems: new Bank().add('Dark totem'),
 		GPCost: 0
 	},
 	{
@@ -21,7 +21,7 @@ export const slayerCreatables: Createable[] = [
 			"Hydra's claw": 1,
 			'Zamorakian hasta': 1
 		}),
-		outputItems: new Bank({ 'Dragon hunter lance': 1 }),
+		outputItems: new Bank().add('Dragon hunter lance'),
 		GPCost: 0
 	},
 	{
@@ -29,7 +29,7 @@ export const slayerCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Hydra leather': 1
 		}),
-		outputItems: new Bank({ 'Ferocious gloves': 1 }),
+		outputItems: new Bank().add('Ferocious gloves'),
 		GPCost: 0
 	},
 	{
@@ -37,7 +37,7 @@ export const slayerCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Ferocious gloves': 1
 		}),
-		outputItems: new Bank({ 'Hydra leather': 1 }),
+		outputItems: new Bank().add('Hydra leather'),
 		GPCost: 0,
 		noCl: true
 	},
@@ -47,7 +47,7 @@ export const slayerCreatables: Createable[] = [
 			Onyx: 1,
 			'Zenyte shard': 1
 		}),
-		outputItems: new Bank({ 'Uncut zenyte': 1 }),
+		outputItems: new Bank().add('Uncut zenyte'),
 		GPCost: 0
 	},
 	{
@@ -56,12 +56,12 @@ export const slayerCreatables: Createable[] = [
 			'Basilisk jaw': 1,
 			'Helm of neitiznot': 1
 		}),
-		outputItems: new Bank({ 'Neitiznot faceguard': 1 }),
+		outputItems: new Bank().add('Neitiznot faceguard'),
 		GPCost: 0
 	},
 	{
 		name: 'Revert neitiznot faceguard',
-		inputItems: new Bank({ 'Neitiznot faceguard': 1 }),
+		inputItems: new Bank().add('Neitiznot faceguard'),
 		outputItems: new Bank({
 			'Basilisk jaw': 1,
 			'Helm of neitiznot': 1
@@ -74,7 +74,7 @@ export const slayerCreatables: Createable[] = [
 			Darklight: 1,
 			'Ancient shard': 3
 		}),
-		outputItems: new Bank({ Arclight: 1 }),
+		outputItems: new Bank().add('Arclight'),
 		GPCost: 0
 	},
 	{
@@ -83,7 +83,7 @@ export const slayerCreatables: Createable[] = [
 			"Drake's claw": 1,
 			'Boots of stone': 1
 		}),
-		outputItems: new Bank({ 'Boots of brimstone': 1 }),
+		outputItems: new Bank().add('Boots of brimstone'),
 		GPCost: 0
 	},
 	{
@@ -92,7 +92,7 @@ export const slayerCreatables: Createable[] = [
 			"Drake's tooth": 1,
 			'Holy sandals': 1
 		}),
-		outputItems: new Bank({ 'Devout boots': 1 }),
+		outputItems: new Bank().add('Devout boots'),
 		GPCost: 0
 	},
 	{
@@ -101,7 +101,7 @@ export const slayerCreatables: Createable[] = [
 			'Magic fang': 1,
 			'Uncharged trident': 1
 		}),
-		outputItems: new Bank({ 'Uncharged toxic trident': 1 }),
+		outputItems: new Bank().add('Uncharged toxic trident'),
 		GPCost: 0
 	},
 	{
@@ -111,7 +111,7 @@ export const slayerCreatables: Createable[] = [
 			"Bryophyta's essence": 1,
 			Battlestaff: 1
 		}),
-		outputItems: new Bank({ "Bryophyta's staff": 1 }),
+		outputItems: new Bank().add("Bryophyta's staff"),
 		GPCost: 0
 	},
 	{
@@ -120,7 +120,7 @@ export const slayerCreatables: Createable[] = [
 			'Magic fang': 1,
 			'Staff of the dead': 1
 		}),
-		outputItems: new Bank({ 'Toxic staff (uncharged)': 1 }),
+		outputItems: new Bank().add('Toxic staff (uncharged)'),
 		GPCost: 0
 	},
 	{
@@ -129,7 +129,7 @@ export const slayerCreatables: Createable[] = [
 			'Kraken tentacle': 1,
 			'Abyssal whip': 1
 		}),
-		outputItems: new Bank({ 'Abyssal tentacle': 1 }),
+		outputItems: new Bank().add('Abyssal tentacle'),
 		GPCost: 0,
 		maxCanOwn: 1,
 		onCreate: async (qty, user) => {
@@ -149,7 +149,7 @@ export const slayerCreatables: Createable[] = [
 			"Hydra's fang": 1,
 			"Hydra's heart": 1
 		}),
-		outputItems: new Bank({ 'Brimstone ring': 1 }),
+		outputItems: new Bank().add('Brimstone ring'),
 		GPCost: 0
 	},
 	{
@@ -158,7 +158,7 @@ export const slayerCreatables: Createable[] = [
 			'Black tourmaline core': 1,
 			'Bandos boots': 1
 		}),
-		outputItems: new Bank({ 'Guardian boots': 1 }),
+		outputItems: new Bank().add('Guardian boots'),
 		GPCost: 0
 	},
 	{
@@ -168,7 +168,7 @@ export const slayerCreatables: Createable[] = [
 			'Bludgeon spine': 1,
 			'Bludgeon axon': 1
 		}),
-		outputItems: new Bank({ 'Abyssal bludgeon': 1 }),
+		outputItems: new Bank().add('Abyssal bludgeon'),
 		GPCost: 0
 	},
 	{
@@ -176,7 +176,7 @@ export const slayerCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Black mask (10)': 1
 		}),
-		outputItems: new Bank({ 'Black mask': 1 }),
+		outputItems: new Bank().add('Black mask'),
 		GPCost: 0
 	},
 	{
@@ -185,7 +185,7 @@ export const slayerCreatables: Createable[] = [
 			'Gold bar': 1,
 			'Enchanted gem': 1
 		}),
-		outputItems: new Bank({ 'Slayer ring (8)': 1 }),
+		outputItems: new Bank().add('Slayer ring (8)'),
 		GPCost: 0,
 		requiredSkills: {
 			crafting: 75
@@ -198,7 +198,7 @@ export const slayerCreatables: Createable[] = [
 			'Gold bar': 1,
 			'Eternal gem': 1
 		}),
-		outputItems: new Bank({ 'Slayer ring (eternal)': 1 }),
+		outputItems: new Bank().add('Slayer ring (eternal)'),
 		GPCost: 0,
 		requiredSkills: {
 			crafting: 75
@@ -218,7 +218,7 @@ export const slayerCreatables: Createable[] = [
 		requiredSkills: {
 			crafting: 55
 		},
-		outputItems: new Bank({ 'Slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade]
 	},
@@ -232,7 +232,7 @@ export const slayerCreatables: Createable[] = [
 			'Spiny helmet': 1,
 			'Enchanted gem': 1
 		}),
-		outputItems: new Bank({ 'Slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)'),
 		GPCost: 0,
 		requiredSkills: {
 			crafting: 55
@@ -241,7 +241,7 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet'),
 		outputItems: new Bank({
 			'Black mask': 1,
 			Earmuffs: 1,
@@ -259,7 +259,7 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)'),
 		outputItems: new Bank({
 			'Black mask (i)': 1,
 			Earmuffs: 1,
@@ -277,210 +277,210 @@ export const slayerCreatables: Createable[] = [
 	},
 	{
 		name: 'Black slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Kbd heads': 1 }),
-		outputItems: new Bank({ 'Black slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Kbd heads'),
+		outputItems: new Bank().add('Black slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KingBlackBonnet]
 	},
 	{
 		name: 'Black slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Kbd heads': 1 }),
-		outputItems: new Bank({ 'Black slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Kbd heads'),
+		outputItems: new Bank().add('Black slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KingBlackBonnet]
 	},
 	{
 		name: 'Revert black slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Kbd heads': 1 }),
-		inputItems: new Bank({ 'Black slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Kbd heads'),
+		inputItems: new Bank().add('Black slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KingBlackBonnet],
 		noCl: true
 	},
 	{
 		name: 'Revert black slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Kbd heads': 1 }),
-		inputItems: new Bank({ 'Black slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Kbd heads'),
+		inputItems: new Bank().add('Black slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KingBlackBonnet],
 		noCl: true
 	},
 	{
 		name: 'Green slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Kq head': 1 }),
-		outputItems: new Bank({ 'Green slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Kq head'),
+		outputItems: new Bank().add('Green slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KalphiteKhat]
 	},
 	{
 		name: 'Green slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Kq head': 1 }),
-		outputItems: new Bank({ 'Green slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Kq head'),
+		outputItems: new Bank().add('Green slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KalphiteKhat]
 	},
 	{
 		name: 'Revert green slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Kq head': 1 }),
-		inputItems: new Bank({ 'Green slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Kq head'),
+		inputItems: new Bank().add('Green slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KalphiteKhat],
 		noCl: true
 	},
 	{
 		name: 'Revert green slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Kq head': 1 }),
-		inputItems: new Bank({ 'Green slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Kq head'),
+		inputItems: new Bank().add('Green slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.KalphiteKhat],
 		noCl: true
 	},
 	{
 		name: 'Red slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Abyssal head': 1 }),
-		outputItems: new Bank({ 'Red slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Abyssal head'),
+		outputItems: new Bank().add('Red slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UnholyHelmet]
 	},
 	{
 		name: 'Red slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Abyssal head': 1 }),
-		outputItems: new Bank({ 'Red slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Abyssal head'),
+		outputItems: new Bank().add('Red slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UnholyHelmet]
 	},
 	{
 		name: 'Revert red slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Abyssal head': 1 }),
-		inputItems: new Bank({ 'Red slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Abyssal head'),
+		inputItems: new Bank().add('Red slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UnholyHelmet],
 		noCl: true
 	},
 	{
 		name: 'Revert red slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Abyssal head': 1 }),
-		inputItems: new Bank({ 'Red slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Abyssal head'),
+		inputItems: new Bank().add('Red slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UnholyHelmet],
 		noCl: true
 	},
 	{
 		name: 'Purple slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Dark claw': 1 }),
-		outputItems: new Bank({ 'Purple slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Dark claw'),
+		outputItems: new Bank().add('Purple slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.DarkMantle]
 	},
 	{
 		name: 'Purple slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Dark claw': 1 }),
-		outputItems: new Bank({ 'Purple slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Dark claw'),
+		outputItems: new Bank().add('Purple slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.DarkMantle]
 	},
 	{
 		name: 'Revert purple slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Dark claw': 1 }),
-		inputItems: new Bank({ 'Purple slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Dark claw'),
+		inputItems: new Bank().add('Purple slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.DarkMantle],
 		noCl: true
 	},
 	{
 		name: 'Revert purple slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Dark claw': 1 }),
-		inputItems: new Bank({ 'Purple slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Dark claw'),
+		inputItems: new Bank().add('Purple slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.DarkMantle],
 		noCl: true
 	},
 	{
 		name: 'Turquoise slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, "Vorkath's head": 1 }),
-		outputItems: new Bank({ 'Turquoise slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add("Vorkath's head"),
+		outputItems: new Bank().add('Turquoise slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UndeadHead]
 	},
 	{
 		name: 'Turquoise slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, "Vorkath's head": 1 }),
-		outputItems: new Bank({ 'Turquoise slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add("Vorkath's head"),
+		outputItems: new Bank().add('Turquoise slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UndeadHead]
 	},
 	{
 		name: 'Revert turquoise slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, "Vorkath's head": 1 }),
-		inputItems: new Bank({ 'Turquoise slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add("Vorkath's head"),
+		inputItems: new Bank().add('Turquoise slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UndeadHead],
 		noCl: true
 	},
 	{
 		name: 'Revert turquoise slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, "Vorkath's head": 1 }),
-		inputItems: new Bank({ 'Turquoise slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add("Vorkath's head"),
+		inputItems: new Bank().add('Turquoise slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UndeadHead],
 		noCl: true
 	},
 	{
 		name: 'Hydra slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Alchemical hydra heads': 1 }),
-		outputItems: new Bank({ 'Hydra slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Alchemical hydra heads'),
+		outputItems: new Bank().add('Hydra slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UseMoreHead]
 	},
 	{
 		name: 'Hydra slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Alchemical hydra heads': 1 }),
-		outputItems: new Bank({ 'Hydra slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Alchemical hydra heads'),
+		outputItems: new Bank().add('Hydra slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UseMoreHead]
 	},
 	{
 		name: 'Revert hydra slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Alchemical hydra heads': 1 }),
-		inputItems: new Bank({ 'Hydra slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Alchemical hydra heads'),
+		inputItems: new Bank().add('Hydra slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UseMoreHead],
 		noCl: true
 	},
 	{
 		name: 'Revert hydra slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Alchemical hydra heads': 1 }),
-		inputItems: new Bank({ 'Hydra slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Alchemical hydra heads'),
+		inputItems: new Bank().add('Hydra slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.UseMoreHead],
 		noCl: true
 	},
 	{
 		name: 'Twisted slayer helmet',
-		inputItems: new Bank({ 'Slayer helmet': 1, 'Twisted horns': 1 }),
-		outputItems: new Bank({ 'Twisted slayer helmet': 1 }),
+		inputItems: new Bank().add('Slayer helmet').add('Twisted horns'),
+		outputItems: new Bank().add('Twisted slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.TwistedVision]
 	},
 	{
 		name: 'Twisted slayer helmet (i)',
-		inputItems: new Bank({ 'Slayer helmet (i)': 1, 'Twisted horns': 1 }),
-		outputItems: new Bank({ 'Twisted slayer helmet (i)': 1 }),
+		inputItems: new Bank().add('Slayer helmet (i)').add('Twisted horns'),
+		outputItems: new Bank().add('Twisted slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.TwistedVision]
 	},
 	{
 		name: 'Revert twisted slayer helmet',
-		outputItems: new Bank({ 'Slayer helmet': 1, 'Twisted horns': 1 }),
-		inputItems: new Bank({ 'Twisted slayer helmet': 1 }),
+		outputItems: new Bank().add('Slayer helmet').add('Twisted horns'),
+		inputItems: new Bank().add('Twisted slayer helmet'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.TwistedVision],
 		noCl: true
 	},
 	{
 		name: 'Revert twisted slayer helmet (i)',
-		outputItems: new Bank({ 'Slayer helmet (i)': 1, 'Twisted horns': 1 }),
-		inputItems: new Bank({ 'Twisted slayer helmet (i)': 1 }),
+		outputItems: new Bank().add('Slayer helmet (i)').add('Twisted horns'),
+		inputItems: new Bank().add('Twisted slayer helmet (i)'),
 		GPCost: 0,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.MalevolentMasquerade, SlayerTaskUnlocksEnum.TwistedVision],
 		noCl: true

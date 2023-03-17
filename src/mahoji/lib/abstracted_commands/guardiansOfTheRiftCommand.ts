@@ -111,7 +111,7 @@ export async function guardiansOfTheRiftStartCommand(
 	} else if (user.skillLevel(SkillsEnum.Magic) >= 67) {
 		const NPCContactRuneCost = determineRunes(
 			user,
-			new Bank({ 'Astral rune': 1, 'Cosmic rune': 1, 'Air rune': 2 }).clone().multiply(quantity)
+			new Bank().add('Astral rune').add('Cosmic rune').add('Air rune', 2).clone().multiply(quantity)
 		);
 		if (bank.has(NPCContactRuneCost)) {
 			boosts.push('Extra 2 Barriers/Guardians fixed for NPC Contact');
@@ -139,7 +139,10 @@ export async function guardiansOfTheRiftStartCommand(
 		const tomeOfWater = user.hasEquipped(['Tome of water', 'Tome of water (empty)']) ? 0 : 7;
 		const magicImbueRuneCost = determineRunes(
 			user,
-			new Bank({ 'Astral rune': 2, 'Fire rune': tomeOfFire, 'Water rune': tomeOfWater })
+			new Bank()
+				.add('Astral rune', 2)
+				.add('Fire rune', tomeOfFire)
+				.add('Water rune', tomeOfWater)
 				.clone()
 				.multiply(quantity * 5)
 		);

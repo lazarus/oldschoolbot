@@ -33,7 +33,7 @@ export async function scatterCommand(user: MUser, channelID: string, ashName: st
 		quantity = Math.min(Math.floor(maxTripLength / timeToScatterAnAsh), amountOfAshesOwned);
 	}
 
-	const cost = new Bank({ [ash.inputId]: quantity });
+	const cost = new Bank().add(ash.inputId, quantity);
 
 	if (!user.owns(cost)) {
 		return `You dont have ${cost}.`;

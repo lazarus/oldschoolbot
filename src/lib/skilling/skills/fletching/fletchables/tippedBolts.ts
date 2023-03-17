@@ -9,7 +9,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Opal bolts'),
 		level: 11,
 		xp: 1.6,
-		inputItems: new Bank({ 'Opal bolt tips': 1, 'Bronze bolts': 1 }),
+		inputItems: new Bank().add('Opal bolt tips').add('Bronze bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -17,7 +17,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Pearl bolts'),
 		level: 41,
 		xp: 3.2,
-		inputItems: new Bank({ 'Pearl bolt tips': 1, 'Iron bolts': 1 }),
+		inputItems: new Bank().add('Pearl bolt tips').add('Iron bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -25,7 +25,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Topaz bolts'),
 		level: 48,
 		xp: 4,
-		inputItems: new Bank({ 'Topaz bolt tips': 1, 'Steel bolts': 1 }),
+		inputItems: new Bank().add('Topaz bolt tips').add('Steel bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -33,7 +33,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Sapphire bolts'),
 		level: 56,
 		xp: 4.7,
-		inputItems: new Bank({ 'Sapphire bolt tips': 1, 'Mithril bolts': 1 }),
+		inputItems: new Bank().add('Sapphire bolt tips').add('Mithril bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -41,7 +41,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Emerald bolts'),
 		level: 58,
 		xp: 5.5,
-		inputItems: new Bank({ 'Emerald bolt tips': 1, 'Mithril bolts': 1 }),
+		inputItems: new Bank().add('Emerald bolt tips').add('Mithril bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -49,7 +49,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Ruby bolts'),
 		level: 63,
 		xp: 6.3,
-		inputItems: new Bank({ 'Ruby bolt tips': 1, 'Adamant bolts': 1 }),
+		inputItems: new Bank().add('Ruby bolt tips').add('Adamant bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -57,7 +57,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Diamond bolts'),
 		level: 65,
 		xp: 7,
-		inputItems: new Bank({ 'Diamond bolt tips': 1, 'Adamant bolts': 1 }),
+		inputItems: new Bank().add('Diamond bolt tips').add('Adamant bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -65,7 +65,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Dragonstone bolts'),
 		level: 71,
 		xp: 8.2,
-		inputItems: new Bank({ 'Dragonstone bolt tips': 1, 'Runite bolts': 1 }),
+		inputItems: new Bank().add('Dragonstone bolt tips').add('Runite bolts'),
 		tickRate: 0.2
 	},
 	{
@@ -73,7 +73,7 @@ const TippedBolts: Fletchable[] = [
 		id: itemID('Onyx bolts'),
 		level: 73,
 		xp: 9.4,
-		inputItems: new Bank({ 'Onyx bolt tips': 1, 'Runite bolts': 1 }),
+		inputItems: new Bank().add('Onyx bolt tips').add('Runite bolts'),
 		tickRate: 0.2
 	}
 ];

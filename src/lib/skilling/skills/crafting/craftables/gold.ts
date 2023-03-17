@@ -9,7 +9,7 @@ const Gold: Craftable[] = [
 		id: itemID('Gold ring'),
 		level: 5,
 		xp: 15,
-		inputItems: new Bank({ 'Gold bar': 1 }),
+		inputItems: new Bank().add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -17,7 +17,7 @@ const Gold: Craftable[] = [
 		id: itemID('Gold necklace'),
 		level: 6,
 		xp: 20,
-		inputItems: new Bank({ 'Gold bar': 1 }),
+		inputItems: new Bank().add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -25,7 +25,7 @@ const Gold: Craftable[] = [
 		id: itemID('Gold bracelet'),
 		level: 7,
 		xp: 25,
-		inputItems: new Bank({ 'Gold bar': 1 }),
+		inputItems: new Bank().add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -33,7 +33,7 @@ const Gold: Craftable[] = [
 		id: itemID('Gold amulet (u)'),
 		level: 8,
 		xp: 30,
-		inputItems: new Bank({ 'Gold bar': 1 }),
+		inputItems: new Bank().add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -41,7 +41,7 @@ const Gold: Craftable[] = [
 		id: itemID('Gold amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Gold amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Gold amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -49,7 +49,7 @@ const Gold: Craftable[] = [
 		id: itemID('Sapphire ring'),
 		level: 20,
 		xp: 40,
-		inputItems: new Bank({ Sapphire: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Sapphire').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -57,7 +57,7 @@ const Gold: Craftable[] = [
 		id: itemID('Sapphire necklace'),
 		level: 22,
 		xp: 55,
-		inputItems: new Bank({ Sapphire: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Sapphire').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -65,7 +65,7 @@ const Gold: Craftable[] = [
 		id: itemID('Sapphire bracelet'),
 		level: 23,
 		xp: 60,
-		inputItems: new Bank({ Sapphire: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Sapphire').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -95,7 +95,7 @@ const Gold: Craftable[] = [
 		id: itemID('Emerald ring'),
 		level: 27,
 		xp: 55,
-		inputItems: new Bank({ Emerald: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Emerald').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -103,7 +103,7 @@ const Gold: Craftable[] = [
 		id: itemID('Emerald necklace'),
 		level: 29,
 		xp: 60,
-		inputItems: new Bank({ Emerald: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Emerald').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -111,7 +111,7 @@ const Gold: Craftable[] = [
 		id: itemID('Emerald bracelet'),
 		level: 30,
 		xp: 65,
-		inputItems: new Bank({ Emerald: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Emerald').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -141,7 +141,7 @@ const Gold: Craftable[] = [
 		id: itemID('Ruby ring'),
 		level: 34,
 		xp: 70,
-		inputItems: new Bank({ Ruby: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Ruby').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -149,7 +149,7 @@ const Gold: Craftable[] = [
 		id: itemID('Ruby necklace'),
 		level: 40,
 		xp: 75,
-		inputItems: new Bank({ Ruby: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Ruby').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -157,7 +157,7 @@ const Gold: Craftable[] = [
 		id: itemID('Ruby bracelet'),
 		level: 42,
 		xp: 80,
-		inputItems: new Bank({ Ruby: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Ruby').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -165,7 +165,7 @@ const Gold: Craftable[] = [
 		id: itemID('Ruby amulet (u)'),
 		level: 50,
 		xp: 85,
-		inputItems: new Bank({ Ruby: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Ruby').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -173,7 +173,7 @@ const Gold: Craftable[] = [
 		id: itemID('Ruby amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Ruby amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Ruby amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -181,7 +181,7 @@ const Gold: Craftable[] = [
 		id: itemID('Diamond ring'),
 		level: 43,
 		xp: 85,
-		inputItems: new Bank({ Diamond: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Diamond').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -189,7 +189,7 @@ const Gold: Craftable[] = [
 		id: itemID('Diamond necklace'),
 		level: 56,
 		xp: 90,
-		inputItems: new Bank({ Diamond: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Diamond').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -197,7 +197,7 @@ const Gold: Craftable[] = [
 		id: itemID('Diamond bracelet'),
 		level: 58,
 		xp: 95,
-		inputItems: new Bank({ Diamond: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Diamond').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -227,7 +227,7 @@ const Gold: Craftable[] = [
 		id: itemID('Dragonstone ring'),
 		level: 55,
 		xp: 100,
-		inputItems: new Bank({ Dragonstone: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Dragonstone').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -236,7 +236,7 @@ const Gold: Craftable[] = [
 		id: itemID('Dragon necklace'),
 		level: 72,
 		xp: 105,
-		inputItems: new Bank({ Dragonstone: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Dragonstone').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -244,7 +244,7 @@ const Gold: Craftable[] = [
 		id: itemID('Dragonstone bracelet'),
 		level: 74,
 		xp: 110,
-		inputItems: new Bank({ Dragonstone: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Dragonstone').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -274,7 +274,7 @@ const Gold: Craftable[] = [
 		id: itemID('Onyx ring'),
 		level: 67,
 		xp: 115,
-		inputItems: new Bank({ Onyx: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Onyx').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -282,7 +282,7 @@ const Gold: Craftable[] = [
 		id: itemID('Onyx necklace'),
 		level: 82,
 		xp: 120,
-		inputItems: new Bank({ Onyx: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Onyx').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -290,7 +290,7 @@ const Gold: Craftable[] = [
 		id: itemID('Onyx bracelet'),
 		level: 84,
 		xp: 125,
-		inputItems: new Bank({ Onyx: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Onyx').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -298,7 +298,7 @@ const Gold: Craftable[] = [
 		id: itemID('Onyx amulet (u)'),
 		level: 90,
 		xp: 165,
-		inputItems: new Bank({ Onyx: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Onyx').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -306,7 +306,7 @@ const Gold: Craftable[] = [
 		id: itemID('Onyx amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Onyx amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Onyx amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	},
 	{
@@ -314,7 +314,7 @@ const Gold: Craftable[] = [
 		id: itemID('Zenyte ring'),
 		level: 89,
 		xp: 150,
-		inputItems: new Bank({ Zenyte: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Zenyte').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -322,7 +322,7 @@ const Gold: Craftable[] = [
 		id: itemID('Zenyte necklace'),
 		level: 92,
 		xp: 165,
-		inputItems: new Bank({ Zenyte: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Zenyte').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -330,7 +330,7 @@ const Gold: Craftable[] = [
 		id: itemID('Zenyte bracelet'),
 		level: 95,
 		xp: 180,
-		inputItems: new Bank({ Zenyte: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Zenyte').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -338,7 +338,7 @@ const Gold: Craftable[] = [
 		id: itemID('Zenyte amulet (u)'),
 		level: 98,
 		xp: 200,
-		inputItems: new Bank({ Zenyte: 1, 'Gold bar': 1 }),
+		inputItems: new Bank().add('Zenyte').add('Gold bar'),
 		tickRate: 3
 	},
 	{
@@ -346,7 +346,7 @@ const Gold: Craftable[] = [
 		id: itemID('Zenyte amulet'),
 		level: 1,
 		xp: 4,
-		inputItems: new Bank({ 'Zenyte amulet (u)': 1, 'Ball of wool': 1 }),
+		inputItems: new Bank().add('Zenyte amulet (u)').add('Ball of wool'),
 		tickRate: 2
 	}
 ];

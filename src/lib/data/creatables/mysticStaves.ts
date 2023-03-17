@@ -8,7 +8,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Air battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic air staff': 1 }),
+		outputItems: new Bank().add('Mystic air staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -18,7 +18,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Water battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic water staff': 1 }),
+		outputItems: new Bank().add('Mystic water staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -28,7 +28,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Earth battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic earth staff': 1 }),
+		outputItems: new Bank().add('Mystic earth staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -38,7 +38,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Fire battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic fire staff': 1 }),
+		outputItems: new Bank().add('Mystic fire staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -48,7 +48,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Dust battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic dust staff': 1 }),
+		outputItems: new Bank().add('Mystic dust staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -58,7 +58,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Lava battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic lava staff': 1 }),
+		outputItems: new Bank().add('Mystic lava staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -68,7 +68,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Lava battlestaff (or)': 1
 		}),
-		outputItems: new Bank({ 'Mystic lava staff (or)': 1 }),
+		outputItems: new Bank().add('Mystic lava staff (or)'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -78,7 +78,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Mist battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic mist staff': 1 }),
+		outputItems: new Bank().add('Mystic mist staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -88,7 +88,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Mud battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic mud staff': 1 }),
+		outputItems: new Bank().add('Mystic mud staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -98,7 +98,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Smoke battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic smoke staff': 1 }),
+		outputItems: new Bank().add('Mystic smoke staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -108,7 +108,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Steam battlestaff': 1
 		}),
-		outputItems: new Bank({ 'Mystic steam staff': 1 }),
+		outputItems: new Bank().add('Mystic steam staff'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }
@@ -118,7 +118,7 @@ export const mysticStavesCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Steam battlestaff (or)': 1
 		}),
-		outputItems: new Bank({ 'Mystic steam staff (or)': 1 }),
+		outputItems: new Bank().add('Mystic steam staff (or)'),
 		GPCost: 40_000,
 		QPRequired: 1,
 		requiredSkills: { prayer: 31 }

@@ -31,6 +31,7 @@ import {
 	userGrowingProgressStr
 } from '../../lib/util/farmingHelpers';
 import getOSItem from '../../lib/util/getOSItem';
+import { deferInteraction } from '../../lib/util/interactionReply';
 import { logError } from '../../lib/util/logError';
 import { parseStringBank } from '../../lib/util/parseStringBank';
 import { getPOH } from '../lib/abstracted_commands/pohCommand';
@@ -486,7 +487,8 @@ export const testPotatoCommand: OSBMahojiCommand | null = production
 			],
 			run: async ({
 				options,
-				userID
+				userID,
+				interaction
 			}: CommandRunOptions<{
 				max?: {};
 				patron?: { tier: string };
@@ -502,6 +504,7 @@ export const testPotatoCommand: OSBMahojiCommand | null = production
 				forcegrow?: { patch_name: FarmingPatchName };
 				stresstest?: {};
 			}>) => {
+				deferInteraction(interaction);
 				if (production) {
 					logError('Test command ran in production', { userID: userID.toString() });
 					return 'This will never happen...';

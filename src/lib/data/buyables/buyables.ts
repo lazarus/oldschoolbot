@@ -162,7 +162,7 @@ const cmCapes: Buyable[] = [
 ];
 
 const constructionBuyables: Buyable[] = [
-	{ name: 'Bolt of cloth', outputItems: new Bank({ 'Bolt of cloth': 1 }), gpCost: 5000 },
+	{ name: 'Bolt of cloth', outputItems: new Bank().add('Bolt of cloth'), gpCost: 5000 },
 	{
 		name: 'Limestone brick',
 		gpCost: 1000,
@@ -223,48 +223,48 @@ const constructionBuyables: Buyable[] = [
 const sepulchreBuyables: Buyable[] = [
 	{
 		name: 'Hallowed crystal shard',
-		itemCost: new Bank({ 'Hallowed mark': 1 })
+		itemCost: new Bank().add('Hallowed mark')
 	},
 	{
 		name: 'Hallowed token',
-		itemCost: new Bank({ 'Hallowed mark': 10 })
+		itemCost: new Bank().add('Hallowed mark', 10)
 	},
 	{
 		name: 'Hallowed grapple',
-		itemCost: new Bank({ 'Hallowed mark': 100 })
+		itemCost: new Bank().add('Hallowed mark', 100)
 	},
 	{
 		name: 'Hallowed focus',
-		itemCost: new Bank({ 'Hallowed mark': 100 })
+		itemCost: new Bank().add('Hallowed mark', 100)
 	},
 	{
 		name: 'Hallowed symbol',
-		itemCost: new Bank({ 'Hallowed mark': 100 })
+		itemCost: new Bank().add('Hallowed mark', 100)
 	},
 	{
 		name: 'Hallowed hammer',
-		itemCost: new Bank({ 'Hallowed mark': 100 })
+		itemCost: new Bank().add('Hallowed mark', 100)
 	},
 	{
 		name: 'Hallowed sack',
-		itemCost: new Bank({ 'Hallowed mark': 100 })
+		itemCost: new Bank().add('Hallowed mark', 100)
 	},
 	{
 		name: 'Hallowed ring',
-		itemCost: new Bank({ 'Hallowed mark': 250 })
+		itemCost: new Bank().add('Hallowed mark', 250)
 	},
 	{
 		name: 'Dark dye',
-		itemCost: new Bank({ 'Hallowed mark': 300 })
+		itemCost: new Bank().add('Hallowed mark', 300)
 	},
 	{
 		name: 'Dark acorn',
-		outputItems: new Bank({ 'Dark acorn': 1 }),
-		itemCost: new Bank({ 'Hallowed mark': 3000 })
+		outputItems: new Bank().add('Dark acorn'),
+		itemCost: new Bank().add('Hallowed mark', 3000)
 	},
 	{
 		name: 'Dark squirrel',
-		itemCost: new Bank({ 'Dark acorn': 1, 'Giant squirrel': 1 })
+		itemCost: new Bank().add('Dark acorn').add('Giant squirrel')
 	}
 ];
 
@@ -817,7 +817,7 @@ const Buyables: Buyable[] = [
 		outputItems: new Bank({
 			'Amylase crystal': 100
 		}),
-		itemCost: new Bank({ 'Mark of grace': 10 })
+		itemCost: new Bank().add('Mark of grace', 10)
 	},
 	{
 		name: 'Dragon scimitar',
@@ -841,7 +841,7 @@ const Buyables: Buyable[] = [
 	},
 	{
 		name: 'Torstol',
-		itemCost: new Bank({ 'Torstol potion (unf)': 1 })
+		itemCost: new Bank().add('Torstol potion (unf)')
 	},
 	{
 		name: 'Ogre bow',

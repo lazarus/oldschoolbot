@@ -8,7 +8,7 @@ export const nexCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Bandos chestplate': 1
 		}),
-		outputItems: new Bank({ 'Bandosian components': 3 }),
+		outputItems: new Bank().add('Bandosian components', 3),
 		forceAddToCl: true
 	},
 	{
@@ -16,7 +16,7 @@ export const nexCreatables: Createable[] = [
 		inputItems: new Bank({
 			'Bandos tassets': 1
 		}),
-		outputItems: new Bank({ 'Bandosian components': 2 }),
+		outputItems: new Bank().add('Bandosian components', 2),
 		forceAddToCl: true
 	},
 	{
@@ -25,7 +25,7 @@ export const nexCreatables: Createable[] = [
 			'Bandosian components': 1,
 			'Torva full helm (damaged)': 1
 		}),
-		outputItems: new Bank({ 'Torva full helm': 1 }),
+		outputItems: new Bank().add('Torva full helm'),
 		requiredSkills: {
 			smithing: 90
 		}
@@ -36,7 +36,7 @@ export const nexCreatables: Createable[] = [
 			'Bandosian components': 2,
 			'Torva platebody (damaged)': 1
 		}),
-		outputItems: new Bank({ 'Torva platebody': 1 }),
+		outputItems: new Bank().add('Torva platebody'),
 		requiredSkills: {
 			smithing: 90
 		}
@@ -47,7 +47,7 @@ export const nexCreatables: Createable[] = [
 			'Bandosian components': 2,
 			'Torva platelegs (damaged)': 1
 		}),
-		outputItems: new Bank({ 'Torva platelegs': 1 }),
+		outputItems: new Bank().add('Torva platelegs'),
 		requiredSkills: {
 			smithing: 90
 		}
@@ -58,7 +58,7 @@ export const nexCreatables: Createable[] = [
 			'Godsword blade': 1,
 			'Ancient hilt': 1
 		}),
-		outputItems: new Bank({ 'Ancient godsword': 1 })
+		outputItems: new Bank().add('Ancient godsword')
 	},
 	{
 		name: 'Zaryte crossbow',
@@ -67,6 +67,6 @@ export const nexCreatables: Createable[] = [
 			'Nihil horn': 1,
 			'Nihil shard': 250
 		}),
-		outputItems: new Bank({ 'Zaryte crossbow': 1 })
+		outputItems: new Bank().add('Zaryte crossbow')
 	}
 ];

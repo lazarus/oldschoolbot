@@ -55,7 +55,7 @@ export const buryingTask: MinionTask = {
 		) {
 			await transactItems({
 				userID,
-				itemsToAdd: new Bank({ 'Clue hunter garb': 1, 'Clue hunter trousers': 1 }),
+				itemsToAdd: new Bank().add('Clue hunter garb').add('Clue hunter trousers'),
 				collectionLog: true
 			});
 			str += '\n\nWhile digging a hole to bury bones in, you find a garb and pair of trousers.';

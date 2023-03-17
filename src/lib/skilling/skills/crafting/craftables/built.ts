@@ -9,7 +9,7 @@ const Built: Craftable[] = [
 		id: itemID('Serpentine helm (uncharged)'),
 		level: 52,
 		xp: 120,
-		inputItems: new Bank({ 'Serpentine visage': 1 }),
+		inputItems: new Bank().add('Serpentine visage'),
 		tickRate: 3
 	},
 	{
@@ -17,7 +17,7 @@ const Built: Craftable[] = [
 		id: itemID('Toxic staff (uncharged)'),
 		level: 59,
 		xp: 0,
-		inputItems: new Bank({ 'Staff of the dead': 1, 'Magic fang': 1 }),
+		inputItems: new Bank().add('Magic fang').add('Staff of the dead'),
 		tickRate: 3
 	},
 	{
@@ -25,7 +25,7 @@ const Built: Craftable[] = [
 		id: itemID('Uncharged toxic trident'),
 		level: 59,
 		xp: 0,
-		inputItems: new Bank({ 'Uncharged trident': 1, 'Magic fang': 1 }),
+		inputItems: new Bank().add('Uncharged trident').add('Magic fang'),
 		tickRate: 3
 	}
 ];

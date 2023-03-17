@@ -200,7 +200,10 @@ export const runecraftCommand: OSBMahojiCommand = {
 			const tomeOfWater = user.hasEquipped(['Tome of water', 'Tome of water (empty)']) ? 0 : 7;
 			const magicImbueRuneCost = determineRunes(
 				user,
-				new Bank({ 'Astral rune': 2, 'Fire rune': tomeOfFire, 'Water rune': tomeOfWater })
+				new Bank()
+					.add('Astral rune', 2)
+					.add('Fire rune', tomeOfFire)
+					.add('Water rune', tomeOfWater)
 					.clone()
 					.multiply(numberOfInventories)
 			);
@@ -236,7 +239,12 @@ export const runecraftCommand: OSBMahojiCommand = {
 			}
 			const ringOfTheElementsRuneCost = determineRunes(
 				user,
-				new Bank({ 'Law rune': 1, 'Fire rune': 1, 'Water rune': 1, 'Earth rune': 1, 'Air rune': 1 })
+				new Bank()
+					.add('Law rune')
+					.add('Fire rune')
+					.add('Water rune')
+					.add('Earth rune')
+					.add('Air rune')
 					.clone()
 					.multiply(numberOfInventories)
 			);

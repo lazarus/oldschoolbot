@@ -10,7 +10,7 @@ const Tar: Mixable[] = [
 		id: itemID('Guam tar'),
 		level: 19,
 		xp: 30,
-		inputItems: new Bank({ 'Guam leaf': 1, 'Swamp tar': 15 }),
+		inputItems: new Bank().add('Guam leaf').add('Swamp tar', 15),
 		tickRate: 3,
 		bankTimePerPotion: 0.17,
 		outputMultiple: 15
@@ -21,7 +21,7 @@ const Tar: Mixable[] = [
 		id: itemID('Marrentill tar'),
 		level: 31,
 		xp: 42.5,
-		inputItems: new Bank({ Marrentill: 1, 'Swamp tar': 15 }),
+		inputItems: new Bank().add('Marrentill').add('Swamp tar', 15),
 		tickRate: 3,
 		bankTimePerPotion: 0.17,
 		outputMultiple: 15
@@ -32,7 +32,7 @@ const Tar: Mixable[] = [
 		id: itemID('Tarromin tar'),
 		level: 39,
 		xp: 55,
-		inputItems: new Bank({ Tarromin: 1, 'Swamp tar': 15 }),
+		inputItems: new Bank().add('Tarromin').add('Swamp tar', 15),
 		tickRate: 3,
 		bankTimePerPotion: 0.17,
 		outputMultiple: 15
@@ -43,7 +43,7 @@ const Tar: Mixable[] = [
 		id: itemID('Harralander tar'),
 		level: 44,
 		xp: 72.5,
-		inputItems: new Bank({ Harralander: 1, 'Swamp tar': 15 }),
+		inputItems: new Bank().add('Harralander').add('Swamp tar', 15),
 		tickRate: 3,
 		bankTimePerPotion: 0.17,
 		outputMultiple: 15

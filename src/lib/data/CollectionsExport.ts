@@ -2165,13 +2165,12 @@ export const allPetIDs = [
 	...toaMetamorphPets
 ];
 
-export const antiSantaOutfit = new Bank({
-	'Antisanta mask': 1,
-	'Antisanta jacket': 1,
-	'Antisanta pantaloons': 1,
-	'Antisanta gloves': 1,
-	'Antisanta boots': 1
-});
+export const antiSantaOutfit = new Bank()
+	.add('Antisanta mask')
+	.add('Antisanta jacket')
+	.add('Antisanta pantaloons')
+	.add('Antisanta gloves')
+	.add('Antisanta boots');
 
 export const allClueItems = [
 	...cluesBeginnerCL,

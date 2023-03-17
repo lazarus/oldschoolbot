@@ -108,7 +108,7 @@ export const mineCommand: OSBMahojiCommand = {
 			if (quantity > offerableOwned) {
 				return `You don't have ${quantity} ${whichOfferable.name} to offer the ${whichOfferable.offerWhere}. You have ${offerableOwned}.`;
 			}
-			await user.removeItemsFromBank(new Bank({ [whichOfferable.itemID]: quantity }));
+			await user.removeItemsFromBank(new Bank().add(whichOfferable.itemID, quantity));
 			let loot = new Bank().add(whichOfferable.table.roll(quantity));
 
 			const { previousCL, itemsAdded } = await transactItems({

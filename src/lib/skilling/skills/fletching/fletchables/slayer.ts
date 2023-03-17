@@ -10,7 +10,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Incomplete heavy ballista'),
 		level: 47,
 		xp: 1,
-		inputItems: new Bank({ 'Ballista limbs': 1, 'Heavy frame': 1 }),
+		inputItems: new Bank().add('Ballista limbs').add('Heavy frame'),
 		tickRate: 3
 	},
 	{
@@ -18,7 +18,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Incomplete light ballista'),
 		level: 47,
 		xp: 1,
-		inputItems: new Bank({ 'Ballista limbs': 1, 'Light frame': 1 }),
+		inputItems: new Bank().add('Ballista limbs').add('Light frame'),
 		tickRate: 3
 	},
 	{
@@ -26,7 +26,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Unstrung heavy ballista'),
 		level: 72,
 		xp: 1,
-		inputItems: new Bank({ 'Ballista spring': 1, 'Incomplete heavy ballista': 1 }),
+		inputItems: new Bank().add('Ballista spring').add('Incomplete heavy ballista'),
 		tickRate: 3
 	},
 	{
@@ -34,7 +34,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Unstrung light ballista'),
 		level: 72,
 		xp: 1,
-		inputItems: new Bank({ 'Ballista spring': 1, 'Incomplete light ballista': 1 }),
+		inputItems: new Bank().add('Ballista spring').add('Incomplete light ballista'),
 		tickRate: 3
 	},
 	{
@@ -42,7 +42,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Heavy ballista'),
 		level: 72,
 		xp: 1,
-		inputItems: new Bank({ 'Monkey tail': 1, 'Unstrung heavy ballista': 1 }),
+		inputItems: new Bank().add('Monkey tail').add('Unstrung heavy ballista'),
 		tickRate: 3
 	},
 	{
@@ -50,7 +50,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Light ballista'),
 		level: 72,
 		xp: 1,
-		inputItems: new Bank({ 'Monkey tail': 1, 'Unstrung light ballista': 1 }),
+		inputItems: new Bank().add('Monkey tail').add('Unstrung light ballista'),
 		tickRate: 3
 	},
 	{
@@ -58,7 +58,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Broad arrows'),
 		level: 52,
 		xp: 10,
-		inputItems: new Bank({ 'Broad arrowheads': 1, 'Headless arrow': 1 }),
+		inputItems: new Bank().add('Broad arrowheads').add('Headless arrow'),
 		tickRate: 0.13,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.BroaderFletching]
 	},
@@ -67,7 +67,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Broad bolts'),
 		level: 55,
 		xp: 3,
-		inputItems: new Bank({ 'Unfinished broad bolts': 1, Feather: 1 }),
+		inputItems: new Bank().add('Unfinished broad bolts').add('Feather'),
 		tickRate: 0.08,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.BroaderFletching]
 	},
@@ -76,7 +76,7 @@ const Slayer: Fletchable[] = [
 		id: itemID('Amethyst broad bolts'),
 		level: 76,
 		xp: 10.6,
-		inputItems: new Bank({ 'Broad bolts': 1, 'Amethyst bolt tips': 1 }),
+		inputItems: new Bank().add('Broad bolts').add('Amethyst bolt tips'),
 		tickRate: 0.13,
 		requiredSlayerUnlocks: [SlayerTaskUnlocksEnum.BroaderFletching]
 	}

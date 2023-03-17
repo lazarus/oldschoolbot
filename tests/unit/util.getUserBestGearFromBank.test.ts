@@ -80,17 +80,16 @@ describe('getUserBestGearFromBank', () => {
 				'Amulet of glory': 1,
 				'Dragonfire shield': 1
 			}),
-			userFinalBank: new Bank({
-				'Bandos chestplate': 3,
-				'Dragon chainbody': 1,
-				'Helm of neitiznot': 2,
-				'Elder maul': 1,
-				'3rd age amulet': 1,
-				'Occult necklace': 1,
-				'Ancestral robe top': 1,
-				'Ancestral robe bottom': 1,
-				'Amulet of strength': 1
-			})
+			userFinalBank: new Bank()
+				.add('Bandos chestplate', 3)
+				.add('Dragon chainbody', 1)
+				.add('Helm of neitiznot', 2)
+				.add('Elder maul', 1)
+				.add('3rd age amulet', 1)
+				.add('Occult necklace', 1)
+				.add('Ancestral robe top', 1)
+				.add('Ancestral robe bottom', 1)
+				.add('Amulet of strength', 1)
 		});
 	});
 	test('autoequip melee attack crush', async () => {

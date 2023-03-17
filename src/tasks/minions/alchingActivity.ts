@@ -15,7 +15,7 @@ export const alchingTask: MinionTask = {
 	async run(data: AlchingActivityTaskOptions) {
 		let { itemID, quantity, channelID, alchValue, userID, duration } = data;
 		const user = await mUserFetch(userID);
-		const loot = new Bank({ Coins: alchValue });
+		const loot = new Bank().add('Coins', alchValue);
 
 		const item = getOSItem(itemID);
 

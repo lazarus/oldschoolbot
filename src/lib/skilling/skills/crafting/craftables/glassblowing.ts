@@ -9,7 +9,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Molten glass'),
 		level: 1,
 		xp: 20,
-		inputItems: new Bank({ 'Bucket of sand': 1, 'Soda ash': 1 }),
+		inputItems: new Bank().add('Bucket of sand').add('Soda ash'),
 		tickRate: 2
 	},
 	{
@@ -17,7 +17,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Beer glass'),
 		level: 1,
 		xp: 17.5,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -25,7 +25,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Empty candle lantern'),
 		level: 4,
 		xp: 19,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -33,7 +33,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Empty oil lamp'),
 		level: 12,
 		xp: 25,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -41,7 +41,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Vial'),
 		level: 33,
 		xp: 35,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -49,7 +49,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Fishbowl'),
 		level: 42,
 		xp: 42.5,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -57,7 +57,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Unpowered orb'),
 		level: 46,
 		xp: 52.5,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -65,7 +65,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Lantern lens'),
 		level: 49,
 		xp: 55,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	},
 	{
@@ -73,7 +73,7 @@ const Glassblowing: Craftable[] = [
 		id: itemID('Empty light orb'),
 		level: 87,
 		xp: 70,
-		inputItems: new Bank({ 'Molten glass': 1 }),
+		inputItems: new Bank().add('Molten glass'),
 		tickRate: 3
 	}
 ];

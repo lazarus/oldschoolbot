@@ -9,7 +9,7 @@ export const shadesOfMortonCreatables: Createable[] = [
 			'Bronze locks': 1,
 			'Broken coffin': 1
 		}),
-		outputItems: new Bank({ 'Bronze coffin': 1 })
+		outputItems: new Bank().add('Bronze coffin')
 	},
 	{
 		name: 'Steel coffin',
@@ -17,7 +17,7 @@ export const shadesOfMortonCreatables: Createable[] = [
 			'Steel locks': 1,
 			'Bronze coffin': 1
 		}),
-		outputItems: new Bank({ 'Steel coffin': 1 })
+		outputItems: new Bank().add('Steel coffin')
 	},
 	{
 		name: 'Black coffin',
@@ -25,7 +25,7 @@ export const shadesOfMortonCreatables: Createable[] = [
 			'Black locks': 1,
 			'Steel coffin': 1
 		}),
-		outputItems: new Bank({ 'Black coffin': 1 })
+		outputItems: new Bank().add('Black coffin')
 	},
 	{
 		name: 'Silver coffin',
@@ -33,7 +33,7 @@ export const shadesOfMortonCreatables: Createable[] = [
 			'Silver locks': 1,
 			'Black coffin': 1
 		}),
-		outputItems: new Bank({ 'Silver coffin': 1 })
+		outputItems: new Bank().add('Silver coffin')
 	},
 	{
 		name: 'Gold coffin',
@@ -41,6 +41,6 @@ export const shadesOfMortonCreatables: Createable[] = [
 			'Gold locks': 1,
 			'Silver coffin': 1
 		}),
-		outputItems: new Bank({ 'Gold coffin': 1 })
+		outputItems: new Bank().add('Gold coffin')
 	}
 ];

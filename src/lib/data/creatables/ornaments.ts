@@ -5,111 +5,111 @@ import { Createable } from '../createables';
 export const ornamentKits: Createable[] = [
 	{
 		name: 'Dragon defender (t)',
-		inputItems: new Bank({ 'Dragon defender': 1, 'Dragon defender ornament kit': 1 }),
-		outputItems: new Bank({ 'Dragon defender (t)': 1 })
+		inputItems: new Bank().add('Dragon defender').add('Dragon defender ornament kit'),
+		outputItems: new Bank().add('Dragon defender (t)')
 	},
 	{
 		name: 'Revert dragon defender (t)',
-		inputItems: new Bank({ 'Dragon defender (t)': 1 }),
-		outputItems: new Bank({ 'Dragon defender': 1, 'Dragon defender ornament kit': 1 }),
+		inputItems: new Bank().add('Dragon defender (t)'),
+		outputItems: new Bank().add('Dragon defender').add('Dragon defender ornament kit'),
 		noCl: true
 	},
 	{
 		name: 'Rune defender (t)',
-		inputItems: new Bank({ 'Rune defender': 1, 'Rune defender ornament kit': 1 }),
-		outputItems: new Bank({ 'Rune defender (t)': 1 })
+		inputItems: new Bank().add('Rune defender').add('Rune defender ornament kit'),
+		outputItems: new Bank().add('Rune defender (t)')
 	},
 	{
 		name: 'Revert rune defender (t)',
-		inputItems: new Bank({ 'Rune defender (t)': 1 }),
-		outputItems: new Bank({ 'Rune defender': 1, 'Rune defender ornament kit': 1 }),
+		inputItems: new Bank().add('Rune defender (t)'),
+		outputItems: new Bank().add('Rune defender').add('Rune defender ornament kit'),
 		noCl: true
 	},
 	{
 		name: 'Dragon pickaxe (or)',
-		inputItems: new Bank({ 'Dragon pickaxe': 1, 'Zalcano shard': 1 }),
-		outputItems: new Bank({ 'Dragon pickaxe (or)': 1 })
+		inputItems: new Bank().add('Dragon pickaxe').add('Zalcano shard'),
+		outputItems: new Bank().add('Dragon pickaxe (or)')
 	},
 	{
 		name: 'Revert dragon pickaxe (or)',
-		inputItems: new Bank({ 'Dragon pickaxe (or)': 1 }),
-		outputItems: new Bank({ 'Dragon pickaxe': 1, 'Zalcano shard': 1 }),
+		inputItems: new Bank().add('Dragon pickaxe (or)'),
+		outputItems: new Bank().add('Dragon pickaxe').add('Zalcano shard'),
 		noCl: true
 	},
 	{
 		name: 'Dragon sq shield (g)',
-		inputItems: new Bank({ 'Dragon sq shield ornament kit': 1, 'Dragon sq shield': 1 }),
-		outputItems: new Bank({ 'Dragon sq shield (g)': 1 })
+		inputItems: new Bank().add('Dragon sq shield ornament kit').add('Dragon sq shield'),
+		outputItems: new Bank().add('Dragon sq shield (g)')
 	},
 	{
 		name: 'Revert dragon sq shield (g)',
-		inputItems: new Bank({ 'Dragon sq shield (g)': 1 }),
-		outputItems: new Bank({ 'Dragon sq shield ornament kit': 1, 'Dragon sq shield': 1 }),
+		inputItems: new Bank().add('Dragon sq shield (g)'),
+		outputItems: new Bank().add('Dragon sq shield ornament kit').add('Dragon sq shield'),
 		noCl: true
 	},
 	{
 		name: 'Dragon full helm (g)',
-		inputItems: new Bank({ 'Dragon full helm ornament kit': 1, 'Dragon full helm': 1 }),
-		outputItems: new Bank({ 'Dragon full helm (g)': 1 })
+		inputItems: new Bank().add('Dragon full helm ornament kit').add('Dragon full helm'),
+		outputItems: new Bank().add('Dragon full helm (g)')
 	},
 	{
 		name: 'Revert dragon full helm (g)',
-		inputItems: new Bank({ 'Dragon full helm (g)': 1 }),
-		outputItems: new Bank({ 'Dragon full helm ornament kit': 1, 'Dragon full helm': 1 }),
+		inputItems: new Bank().add('Dragon full helm (g)'),
+		outputItems: new Bank().add('Dragon full helm ornament kit').add('Dragon full helm'),
 		noCl: true
 	},
 	{
 		name: 'Dragon platebody (g)',
-		inputItems: new Bank({ 'Dragon platebody ornament kit': 1, 'Dragon platebody': 1 }),
-		outputItems: new Bank({ 'Dragon platebody (g)': 1 })
+		inputItems: new Bank().add('Dragon platebody ornament kit').add('Dragon platebody'),
+		outputItems: new Bank().add('Dragon platebody (g)')
 	},
 	{
 		name: 'Revert dragon platebody (g)',
-		inputItems: new Bank({ 'Dragon platebody (g)': 1 }),
-		outputItems: new Bank({ 'Dragon platebody ornament kit': 1, 'Dragon platebody': 1 }),
+		inputItems: new Bank().add('Dragon platebody (g)'),
+		outputItems: new Bank().add('Dragon platebody ornament kit').add('Dragon platebody'),
 		noCl: true
 	},
 	{
 		name: 'Dragon kiteshield (g)',
-		inputItems: new Bank({ 'Dragon kiteshield ornament kit': 1, 'Dragon kiteshield': 1 }),
-		outputItems: new Bank({ 'Dragon kiteshield (g)': 1 })
+		inputItems: new Bank().add('Dragon kiteshield ornament kit').add('Dragon kiteshield'),
+		outputItems: new Bank().add('Dragon kiteshield (g)')
 	},
 	{
 		name: 'Revert dragon kiteshield (g)',
-		inputItems: new Bank({ 'Dragon kiteshield (g)': 1 }),
-		outputItems: new Bank({ 'Dragon kiteshield ornament kit': 1, 'Dragon kiteshield': 1 }),
+		inputItems: new Bank().add('Dragon kiteshield (g)'),
+		outputItems: new Bank().add('Dragon kiteshield ornament kit').add('Dragon kiteshield'),
 		noCl: true
 	},
 	{
 		name: 'Dragon boots (g)',
-		inputItems: new Bank({ 'Dragon boots ornament kit': 1, 'Dragon boots': 1 }),
-		outputItems: new Bank({ 'Dragon boots (g)': 1 })
+		inputItems: new Bank().add('Dragon boots ornament kit').add('Dragon boots'),
+		outputItems: new Bank().add('Dragon boots (g)')
 	},
 	{
 		name: 'Revert dragon boots (g)',
-		inputItems: new Bank({ 'Dragon boots (g)': 1 }),
-		outputItems: new Bank({ 'Dragon boots ornament kit': 1, 'Dragon boots': 1 }),
+		inputItems: new Bank().add('Dragon boots (g)'),
+		outputItems: new Bank().add('Dragon boots ornament kit').add('Dragon boots'),
 		noCl: true
 	},
 	{
 		name: 'Dragon scimitar (or)',
-		inputItems: new Bank({ 'Dragon scimitar ornament kit': 1, 'Dragon scimitar': 1 }),
-		outputItems: new Bank({ 'Dragon scimitar (or)': 1 })
+		inputItems: new Bank().add('Dragon scimitar ornament kit').add('Dragon scimitar'),
+		outputItems: new Bank().add('Dragon scimitar (or)')
 	},
 	{
 		name: 'Revert dragon scimitar (or)',
-		inputItems: new Bank({ 'Dragon scimitar (or)': 1 }),
-		outputItems: new Bank({ 'Dragon scimitar ornament kit': 1, 'Dragon scimitar': 1 }),
+		inputItems: new Bank().add('Dragon scimitar (or)'),
+		outputItems: new Bank().add('Dragon scimitar ornament kit').add('Dragon scimitar'),
 		noCl: true
 	},
 	{
 		name: 'Dragon platelegs (g)',
-		inputItems: new Bank({ 'Dragon platelegs': 1, 'Dragon legs/skirt ornament kit': 1 }),
-		outputItems: new Bank({ 'Dragon platelegs (g)': 1 })
+		inputItems: new Bank().add('Dragon platelegs').add('Dragon legs/skirt ornament kit'),
+		outputItems: new Bank().add('Dragon platelegs (g)')
 	},
 	{
 		name: 'Revert dragon platelegs (g)',
-		inputItems: new Bank({ 'Dragon platelegs (g)': 1 }),
+		inputItems: new Bank().add('Dragon platelegs (g)'),
 		outputItems: new Bank({
 			'Dragon platelegs': 1,
 			'Dragon legs/skirt ornament kit': 1
@@ -122,11 +122,11 @@ export const ornamentKits: Createable[] = [
 			'Dragon plateskirt': 1,
 			'Dragon legs/skirt ornament kit': 1
 		}),
-		outputItems: new Bank({ 'Dragon plateskirt (g)': 1 })
+		outputItems: new Bank().add('Dragon plateskirt (g)')
 	},
 	{
 		name: 'Revert dragon plateskirt (g)',
-		inputItems: new Bank({ 'Dragon plateskirt (g)': 1 }),
+		inputItems: new Bank().add('Dragon plateskirt (g)'),
 		outputItems: new Bank({
 			'Dragon plateskirt': 1,
 			'Dragon legs/skirt ornament kit': 1
@@ -139,11 +139,11 @@ export const ornamentKits: Createable[] = [
 			'Dragon chainbody': 1,
 			'Dragon chainbody ornament kit': 1
 		}),
-		outputItems: new Bank({ 'Dragon chainbody (g)': 1 })
+		outputItems: new Bank().add('Dragon chainbody (g)')
 	},
 	{
 		name: 'Revert dragon chainbody (g)',
-		inputItems: new Bank({ 'Dragon chainbody (g)': 1 }),
+		inputItems: new Bank().add('Dragon chainbody (g)'),
 		outputItems: new Bank({
 			'Dragon chainbody': 1,
 			'Dragon chainbody ornament kit': 1
@@ -152,7 +152,7 @@ export const ornamentKits: Createable[] = [
 	},
 	{
 		name: 'Amulet of fury (or)',
-		inputItems: new Bank({ 'Amulet of fury': 1, 'Fury ornament kit': 1 }),
+		inputItems: new Bank().add('Amulet of fury').add('Fury ornament kit'),
 		outputItems: new Bank({
 			'Amulet of fury (or)': 1
 		})
@@ -162,13 +162,13 @@ export const ornamentKits: Createable[] = [
 		inputItems: new Bank({
 			'Amulet of fury (or)': 1
 		}),
-		outputItems: new Bank({ 'Amulet of fury': 1, 'Fury ornament kit': 1 }),
+		outputItems: new Bank().add('Amulet of fury').add('Fury ornament kit'),
 		noCl: true
 	},
 	// Godswords
 	{
 		name: 'Zamorak godsword (or)',
-		inputItems: new Bank({ 'Zamorak godsword': 1, 'Zamorak godsword ornament kit': 1 }),
+		inputItems: new Bank().add('Zamorak godsword').add('Zamorak godsword ornament kit'),
 		outputItems: new Bank({
 			'Zamorak godsword (or)': 1
 		})
@@ -178,12 +178,12 @@ export const ornamentKits: Createable[] = [
 		inputItems: new Bank({
 			'Zamorak godsword (or)': 1
 		}),
-		outputItems: new Bank({ 'Zamorak godsword': 1, 'Zamorak godsword ornament kit': 1 }),
+		outputItems: new Bank().add('Zamorak godsword').add('Zamorak godsword ornament kit'),
 		noCl: true
 	},
 	{
 		name: 'Bandos godsword (or)',
-		inputItems: new Bank({ 'Bandos godsword': 1, 'Bandos godsword ornament kit': 1 }),
+		inputItems: new Bank().add('Bandos godsword').add('Bandos godsword ornament kit'),
 		outputItems: new Bank({
 			'Bandos godsword (or)': 1
 		})
@@ -193,7 +193,7 @@ export const ornamentKits: Createable[] = [
 		inputItems: new Bank({
 			'Bandos godsword (or)': 1
 		}),
-		outputItems: new Bank({ 'Bandos godsword': 1, 'Bandos godsword ornament kit': 1 }),
+		outputItems: new Bank().add('Bandos godsword').add('Bandos godsword ornament kit'),
 		noCl: true
 	},
 	{
