@@ -1404,7 +1404,12 @@ export const armorAndItemPacks: Createable[] = [
 	{
 		name: 'Unpack saradomin dragonhide set',
 		inputItems: new Bank().add('Saradomin dragonhide set', 1),
-		outputItems: new Bank().add('Saradomin coif', 1).add('Saradomin chaps', 1).add('Saradomin bracers', 1),
+		outputItems: new Bank()
+			.add('Saradomin coif', 1)
+			.add("Saradomin d'hide body")
+			.add('Saradomin chaps', 1)
+			.add('Saradomin bracers', 1),
+
 		noCl: true
 	},
 	{
@@ -1414,8 +1419,21 @@ export const armorAndItemPacks: Createable[] = [
 	},
 	{
 		name: 'Unpack zamorak dragonhide set',
+		inputItems: new Bank()
+			.add('Saradomin coif', 1)
+			.add("Saradomin d'hide body")
+			.add('Saradomin chaps', 1)
+			.add('Saradomin bracers', 1),
+		outputItems: new Bank().add('Saradomin dragonhide set', 1)
+	},
+	{
+		name: 'Unpack zamorak dragonhide set',
 		inputItems: new Bank().add('Zamorak dragonhide set', 1),
-		outputItems: new Bank().add('Zamorak coif', 1).add('Zamorak chaps', 1).add('Zamorak bracers', 1),
+		outputItems: new Bank()
+			.add('Zamorak coif', 1)
+			.add("Zamorak d'hide body")
+			.add('Zamorak chaps', 1)
+			.add('Zamorak bracers', 1),
 		noCl: true
 	},
 	{
@@ -1425,8 +1443,21 @@ export const armorAndItemPacks: Createable[] = [
 	},
 	{
 		name: 'Unpack ancient dragonhide set',
+		inputItems: new Bank()
+			.add('Zamorak coif', 1)
+			.add("Zamorak d'hide body")
+			.add('Zamorak chaps', 1)
+			.add('Zamorak bracers', 1),
+		outputItems: new Bank().add('Zamorak dragonhide set', 1)
+	},
+	{
+		name: 'Unpack ancient dragonhide set',
 		inputItems: new Bank().add('Ancient dragonhide set', 1),
-		outputItems: new Bank().add('Ancient coif', 1).add('Ancient chaps', 1).add('Ancient bracers', 1),
+		outputItems: new Bank()
+			.add('Ancient coif', 1)
+			.add("Ancient d'hide body")
+			.add('Ancient chaps', 1)
+			.add('Ancient bracers', 1),
 		noCl: true
 	},
 	{
@@ -1436,8 +1467,21 @@ export const armorAndItemPacks: Createable[] = [
 	},
 	{
 		name: 'Unpack armadyl dragonhide set',
+		inputItems: new Bank()
+			.add('Ancient coif', 1)
+			.add("Ancient d'hide body")
+			.add('Ancient chaps', 1)
+			.add('Ancient bracers', 1),
+		outputItems: new Bank().add('Ancient dragonhide set', 1)
+	},
+	{
+		name: 'Unpack armadyl dragonhide set',
 		inputItems: new Bank().add('Armadyl dragonhide set', 1),
-		outputItems: new Bank().add('Armadyl coif', 1).add('Armadyl chaps', 1).add('Armadyl bracers', 1),
+		outputItems: new Bank()
+			.add('Armadyl coif', 1)
+			.add("Armadyl d'hide body")
+			.add('Armadyl chaps', 1)
+			.add('Armadyl bracers', 1),
 		noCl: true
 	},
 	{
@@ -1447,13 +1491,30 @@ export const armorAndItemPacks: Createable[] = [
 	},
 	{
 		name: 'Unpack bandos dragonhide set',
+		inputItems: new Bank()
+			.add('Armadyl coif', 1)
+			.add("Armadyl d'hide body")
+			.add('Armadyl chaps', 1)
+			.add('Armadyl bracers', 1),
+		outputItems: new Bank().add('Armadyl dragonhide set', 1)
+	},
+	{
+		name: 'Unpack bandos dragonhide set',
 		inputItems: new Bank().add('Bandos dragonhide set', 1),
-		outputItems: new Bank().add('Bandos coif', 1).add('Bandos chaps', 1).add('Bandos bracers', 1),
+		outputItems: new Bank()
+			.add('Bandos coif', 1)
+			.add("Bandos d'hide body")
+			.add('Bandos chaps', 1)
+			.add('Bandos bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Bandos dragonhide set',
-		inputItems: new Bank().add('Bandos coif', 1).add('Bandos chaps', 1).add('Bandos bracers', 1),
+		inputItems: new Bank()
+			.add('Bandos coif', 1)
+			.add("Bandos d'hide body")
+			.add('Bandos chaps', 1)
+			.add('Bandos bracers', 1),
 		outputItems: new Bank().add('Bandos dragonhide set', 1)
 	},
 	// mage sets

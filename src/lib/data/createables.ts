@@ -124,7 +124,7 @@ for (const [uWep, cWep] of [
 	revWeapons.push({
 		name: `Revert ${cWep.toLowerCase()}`,
 		inputItems: new Bank().add(cWep),
-		outputItems: new Bank().add('Revenant ether', 7000)
+		outputItems: new Bank().add(uWep).add('Revenant ether', 7000)
 	});
 	revWeapons.push({
 		name: `Revert ${uWep.toLowerCase()}`,
@@ -405,7 +405,7 @@ const metamorphPets: Createable[] = [
 	},
 	{
 		name: 'Greatish guardian',
-		inputItems: new Bank().add('Rift guardian', 1),
+		inputItems: new Bank().add('Rift guardian').add("Guardian's eye"),
 		outputItems: new Bank().add('Greatish guardian', 1)
 	}
 ];
@@ -779,7 +779,7 @@ const Reverteables: Createable[] = [
 	{
 		name: 'Revert greatish guardian',
 		inputItems: new Bank().add('Greatish guardian', 1),
-		outputItems: new Bank().add('Rift guardian', 1),
+		outputItems: new Bank().add('Rift guardian', 1).add("Guardian's eye"),
 		noCl: true
 	}
 ];
@@ -1261,12 +1261,12 @@ const Createables: Createable[] = [
 	{
 		name: 'Salve amulet (e)',
 		inputItems: new Bank().add('Salve amulet', 1).add("Tarn's diary", 1),
-		outputItems: new Bank().add('Salve amulet (e)', 1)
+		outputItems: new Bank().add('Salve amulet (e)', 1).add("Tarn's diary", 1)
 	},
 	{
 		name: 'Salve amulet(ei)',
 		inputItems: new Bank().add('Salve amulet(i)', 1).add("Tarn's diary", 1),
-		outputItems: new Bank().add('Salve amulet(ei)', 1)
+		outputItems: new Bank().add('Salve amulet(ei)', 1).add("Tarn's diary", 1)
 	},
 	{
 		name: 'Strange hallowed tome',
