@@ -1,7 +1,6 @@
 import { Bank } from 'oldschooljs';
 
 import { Favours } from '../../minions/data/kourendFavour';
-import itemID from '../../util/itemID';
 import { Createable } from '../createables';
 
 export const gracefulOutfitCreatables: Createable[] = [
@@ -9,7 +8,13 @@ export const gracefulOutfitCreatables: Createable[] = [
 	{
 		name: 'Graceful',
 		inputItems: new Bank().add('Mark of grace', 260),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1)
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
 	},
 	{
 		name: 'Graceful hood',
@@ -43,7 +48,13 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		outputItems: new Bank().add('Mark of grace', 208)
 	},
 	{
@@ -79,8 +90,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Hallowed Sepulchre
 	{
 		name: 'Dark Graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Dark dye', 6),
-		outputItems: new Bank().add('Dark graceful hood', 1).add('Dark graceful top', 1).add('Dark graceful legs', 1).add('Dark graceful gloves', 1).add('Dark graceful boots', 1).add('Dark graceful cape', 1)
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Dark dye', 6),
+		outputItems: new Bank()
+			.add('Dark graceful hood', 1)
+			.add('Dark graceful top', 1)
+			.add('Dark graceful legs', 1)
+			.add('Dark graceful gloves', 1)
+			.add('Dark graceful boots', 1)
+			.add('Dark graceful cape', 1)
 	},
 	{
 		name: 'Dark Graceful hood',
@@ -115,8 +139,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Arceuus
 	{
 		name: 'Arceuus graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Arceuus graceful hood', 1).add('Arceuus graceful top', 1).add('Arceuus graceful legs', 1).add('Arceuus graceful gloves', 1).add('Arceuus graceful boots', 1).add('Arceuus graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Arceuus graceful hood', 1)
+			.add('Arceuus graceful top', 1)
+			.add('Arceuus graceful legs', 1)
+			.add('Arceuus graceful gloves', 1)
+			.add('Arceuus graceful boots', 1)
+			.add('Arceuus graceful cape', 1),
 		requiredFavour: Favours.Arceuus
 	},
 	{
@@ -157,8 +194,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert arceuus graceful',
-		inputItems: new Bank().add('Arceuus graceful hood', 1).add('Arceuus graceful top', 1).add('Arceuus graceful legs', 1).add('Arceuus graceful gloves', 1).add('Arceuus graceful boots', 1).add('Arceuus graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Arceuus graceful hood', 1)
+			.add('Arceuus graceful top', 1)
+			.add('Arceuus graceful legs', 1)
+			.add('Arceuus graceful gloves', 1)
+			.add('Arceuus graceful boots', 1)
+			.add('Arceuus graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		requiredFavour: Favours.Arceuus,
 		noCl: true
 	},
@@ -207,8 +256,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Piscarilius
 	{
 		name: 'Piscarilius graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Piscarilius graceful hood', 1).add('Piscarilius graceful top', 1).add('Piscarilius graceful legs', 1).add('Piscarilius graceful gloves', 1).add('Piscarilius graceful boots', 1).add('Piscarilius graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Piscarilius graceful hood', 1)
+			.add('Piscarilius graceful top', 1)
+			.add('Piscarilius graceful legs', 1)
+			.add('Piscarilius graceful gloves', 1)
+			.add('Piscarilius graceful boots', 1)
+			.add('Piscarilius graceful cape', 1),
 		requiredFavour: Favours.Piscarilius
 	},
 	{
@@ -249,8 +311,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert Piscarilius graceful',
-		inputItems: new Bank().add('Piscarilius graceful hood', 1).add('Piscarilius graceful top', 1).add('Piscarilius graceful legs', 1).add('Piscarilius graceful gloves', 1).add('Piscarilius graceful boots', 1).add('Piscarilius graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Piscarilius graceful hood', 1)
+			.add('Piscarilius graceful top', 1)
+			.add('Piscarilius graceful legs', 1)
+			.add('Piscarilius graceful gloves', 1)
+			.add('Piscarilius graceful boots', 1)
+			.add('Piscarilius graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		requiredFavour: Favours.Piscarilius,
 		noCl: true
 	},
@@ -299,8 +373,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Lovakengj
 	{
 		name: 'Lovakengj graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Lovakengj graceful hood', 1).add('Lovakengj graceful top', 1).add('Lovakengj graceful legs', 1).add('Lovakengj graceful gloves', 1).add('Lovakengj graceful boots', 1).add('Lovakengj graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Lovakengj graceful hood', 1)
+			.add('Lovakengj graceful top', 1)
+			.add('Lovakengj graceful legs', 1)
+			.add('Lovakengj graceful gloves', 1)
+			.add('Lovakengj graceful boots', 1)
+			.add('Lovakengj graceful cape', 1),
 		requiredFavour: Favours.Lovakengj
 	},
 	{
@@ -341,8 +428,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert Lovakengj graceful',
-		inputItems: new Bank().add('Lovakengj graceful hood', 1).add('Lovakengj graceful top', 1).add('Lovakengj graceful legs', 1).add('Lovakengj graceful gloves', 1).add('Lovakengj graceful boots', 1).add('Lovakengj graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Lovakengj graceful hood', 1)
+			.add('Lovakengj graceful top', 1)
+			.add('Lovakengj graceful legs', 1)
+			.add('Lovakengj graceful gloves', 1)
+			.add('Lovakengj graceful boots', 1)
+			.add('Lovakengj graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		requiredFavour: Favours.Lovakengj,
 		noCl: true
 	},
@@ -391,8 +490,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Shayzien
 	{
 		name: 'Shayzien graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Shayzien graceful hood', 1).add('Shayzien graceful top', 1).add('Shayzien graceful legs', 1).add('Shayzien graceful gloves', 1).add('Shayzien graceful boots', 1).add('Shayzien graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Shayzien graceful hood', 1)
+			.add('Shayzien graceful top', 1)
+			.add('Shayzien graceful legs', 1)
+			.add('Shayzien graceful gloves', 1)
+			.add('Shayzien graceful boots', 1)
+			.add('Shayzien graceful cape', 1),
 		requiredFavour: Favours.Shayzien
 	},
 	{
@@ -433,8 +545,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert Shayzien graceful',
-		inputItems: new Bank().add('Shayzien graceful hood', 1).add('Shayzien graceful top', 1).add('Shayzien graceful legs', 1).add('Shayzien graceful gloves', 1).add('Shayzien graceful boots', 1).add('Shayzien graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Shayzien graceful hood', 1)
+			.add('Shayzien graceful top', 1)
+			.add('Shayzien graceful legs', 1)
+			.add('Shayzien graceful gloves', 1)
+			.add('Shayzien graceful boots', 1)
+			.add('Shayzien graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		requiredFavour: Favours.Shayzien,
 		noCl: true
 	},
@@ -483,8 +607,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Hosidius
 	{
 		name: 'Hosidius graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Hosidius graceful hood', 1).add('Hosidius graceful top', 1).add('Hosidius graceful legs', 1).add('Hosidius graceful gloves', 1).add('Hosidius graceful boots', 1).add('Hosidius graceful cape', 1),
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Hosidius graceful hood', 1)
+			.add('Hosidius graceful top', 1)
+			.add('Hosidius graceful legs', 1)
+			.add('Hosidius graceful gloves', 1)
+			.add('Hosidius graceful boots', 1)
+			.add('Hosidius graceful cape', 1),
 		requiredFavour: Favours.Hosidius
 	},
 	{
@@ -525,8 +662,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert Hosidius graceful',
-		inputItems: new Bank().add('Hosidius graceful hood', 1).add('Hosidius graceful top', 1).add('Hosidius graceful legs', 1).add('Hosidius graceful gloves', 1).add('Hosidius graceful boots', 1).add('Hosidius graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Hosidius graceful hood', 1)
+			.add('Hosidius graceful top', 1)
+			.add('Hosidius graceful legs', 1)
+			.add('Hosidius graceful gloves', 1)
+			.add('Hosidius graceful boots', 1)
+			.add('Hosidius graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		requiredFavour: Favours.Hosidius,
 		noCl: true
 	},
@@ -575,8 +724,21 @@ export const gracefulOutfitCreatables: Createable[] = [
 	// Great Kourend
 	{
 		name: 'Kourend graceful',
-		inputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1).add('Mark of grace', 90),
-		outputItems: new Bank().add('Kourend graceful hood', 1).add('Kourend graceful top', 1).add('Kourend graceful legs', 1).add('Kourend graceful gloves', 1).add('Kourend graceful boots', 1).add('Kourend graceful cape', 1)
+		inputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1)
+			.add('Mark of grace', 90),
+		outputItems: new Bank()
+			.add('Kourend graceful hood', 1)
+			.add('Kourend graceful top', 1)
+			.add('Kourend graceful legs', 1)
+			.add('Kourend graceful gloves', 1)
+			.add('Kourend graceful boots', 1)
+			.add('Kourend graceful cape', 1)
 	},
 	{
 		name: 'Kourend graceful hood',
@@ -610,8 +772,20 @@ export const gracefulOutfitCreatables: Createable[] = [
 	},
 	{
 		name: 'Revert Kourend graceful',
-		inputItems: new Bank().add('Kourend graceful hood', 1).add('Kourend graceful top', 1).add('Kourend graceful legs', 1).add('Kourend graceful gloves', 1).add('Kourend graceful boots', 1).add('Kourend graceful cape', 1),
-		outputItems: new Bank().add('Graceful hood', 1).add('Graceful top', 1).add('Graceful legs', 1).add('Graceful gloves', 1).add('Graceful boots', 1).add('Graceful cape', 1),
+		inputItems: new Bank()
+			.add('Kourend graceful hood', 1)
+			.add('Kourend graceful top', 1)
+			.add('Kourend graceful legs', 1)
+			.add('Kourend graceful gloves', 1)
+			.add('Kourend graceful boots', 1)
+			.add('Kourend graceful cape', 1),
+		outputItems: new Bank()
+			.add('Graceful hood', 1)
+			.add('Graceful top', 1)
+			.add('Graceful legs', 1)
+			.add('Graceful gloves', 1)
+			.add('Graceful boots', 1)
+			.add('Graceful cape', 1),
 		noCl: true
 	},
 	{

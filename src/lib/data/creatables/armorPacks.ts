@@ -2,7 +2,6 @@ import { Bank } from 'oldschooljs';
 import { Item } from 'oldschooljs/dist/meta/types';
 
 import getOSItem from '../../util/getOSItem';
-import itemID from '../../util/itemID';
 import { Createable } from '../createables';
 
 export const armorAndItemPacks: Createable[] = [
@@ -10,2557 +9,1803 @@ export const armorAndItemPacks: Createable[] = [
 	// bronze
 	{
 		name: 'Unpack bronze set (lg)',
-		inputItems: {
-			[itemID('Bronze set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm')]: 1,
-			[itemID('Bronze platebody')]: 1,
-			[itemID('Bronze platelegs')]: 1,
-			[itemID('Bronze kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Bronze set (lg)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm', 1)
+			.add('Bronze platebody', 1)
+			.add('Bronze platelegs', 1)
+			.add('Bronze kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze set (lg)',
-		inputItems: {
-			[itemID('Bronze full helm')]: 1,
-			[itemID('Bronze platebody')]: 1,
-			[itemID('Bronze platelegs')]: 1,
-			[itemID('Bronze kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm', 1)
+			.add('Bronze platebody', 1)
+			.add('Bronze platelegs', 1)
+			.add('Bronze kiteshield', 1),
+		outputItems: new Bank().add('Bronze set (lg)', 1)
 	},
 	{
 		name: 'Unpack bronze set (sk)',
-		inputItems: {
-			[itemID('Bronze set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm')]: 1,
-			[itemID('Bronze platebody')]: 1,
-			[itemID('Bronze plateskirt')]: 1,
-			[itemID('Bronze kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Bronze set (sk)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm', 1)
+			.add('Bronze platebody', 1)
+			.add('Bronze plateskirt', 1)
+			.add('Bronze kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze set (sk)',
-		inputItems: {
-			[itemID('Bronze full helm')]: 1,
-			[itemID('Bronze platebody')]: 1,
-			[itemID('Bronze plateskirt')]: 1,
-			[itemID('Bronze kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm', 1)
+			.add('Bronze platebody', 1)
+			.add('Bronze plateskirt', 1)
+			.add('Bronze kiteshield', 1),
+		outputItems: new Bank().add('Bronze set (sk)', 1)
 	},
 	{
 		name: 'Unpack bronze trimmed set (lg)',
-		inputItems: {
-			[itemID('Bronze trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm (t)')]: 1,
-			[itemID('Bronze platebody (t)')]: 1,
-			[itemID('Bronze platelegs (t)')]: 1,
-			[itemID('Bronze kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Bronze trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm (t)', 1)
+			.add('Bronze platebody (t)', 1)
+			.add('Bronze platelegs (t)', 1)
+			.add('Bronze kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze trimmed set (lg)',
-		inputItems: {
-			[itemID('Bronze full helm (t)')]: 1,
-			[itemID('Bronze platebody (t)')]: 1,
-			[itemID('Bronze platelegs (t)')]: 1,
-			[itemID('Bronze kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm (t)', 1)
+			.add('Bronze platebody (t)', 1)
+			.add('Bronze platelegs (t)', 1)
+			.add('Bronze kiteshield (t)', 1),
+		outputItems: new Bank().add('Bronze trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack bronze trimmed set (sk)',
-		inputItems: {
-			[itemID('Bronze trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm (t)')]: 1,
-			[itemID('Bronze platebody (t)')]: 1,
-			[itemID('Bronze plateskirt (t)')]: 1,
-			[itemID('Bronze kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Bronze trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm (t)', 1)
+			.add('Bronze platebody (t)', 1)
+			.add('Bronze plateskirt (t)', 1)
+			.add('Bronze kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze trimmed set (sk)',
-		inputItems: {
-			[itemID('Bronze full helm (t)')]: 1,
-			[itemID('Bronze platebody (t)')]: 1,
-			[itemID('Bronze plateskirt (t)')]: 1,
-			[itemID('Bronze kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm (t)', 1)
+			.add('Bronze platebody (t)', 1)
+			.add('Bronze plateskirt (t)', 1)
+			.add('Bronze kiteshield (t)', 1),
+		outputItems: new Bank().add('Bronze trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack bronze gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Bronze gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm (g)')]: 1,
-			[itemID('Bronze platebody (g)')]: 1,
-			[itemID('Bronze platelegs (g)')]: 1,
-			[itemID('Bronze kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Bronze gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm (g)', 1)
+			.add('Bronze platebody (g)', 1)
+			.add('Bronze platelegs (g)', 1)
+			.add('Bronze kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Bronze full helm (g)')]: 1,
-			[itemID('Bronze platebody (g)')]: 1,
-			[itemID('Bronze platelegs (g)')]: 1,
-			[itemID('Bronze kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm (g)', 1)
+			.add('Bronze platebody (g)', 1)
+			.add('Bronze platelegs (g)', 1)
+			.add('Bronze kiteshield (g)', 1),
+		outputItems: new Bank().add('Bronze gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack bronze gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Bronze gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze full helm (g)')]: 1,
-			[itemID('Bronze platebody (g)')]: 1,
-			[itemID('Bronze plateskirt (g)')]: 1,
-			[itemID('Bronze kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Bronze gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Bronze full helm (g)', 1)
+			.add('Bronze platebody (g)', 1)
+			.add('Bronze plateskirt (g)', 1)
+			.add('Bronze kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Bronze gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Bronze full helm (g)')]: 1,
-			[itemID('Bronze platebody (g)')]: 1,
-			[itemID('Bronze plateskirt (g)')]: 1,
-			[itemID('Bronze kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Bronze gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bronze full helm (g)', 1)
+			.add('Bronze platebody (g)', 1)
+			.add('Bronze plateskirt (g)', 1)
+			.add('Bronze kiteshield (g)', 1),
+		outputItems: new Bank().add('Bronze gold-trimmed set (sk)', 1)
 	},
 	// iron
 	{
 		name: 'Unpack iron set (lg)',
-		inputItems: {
-			[itemID('Iron set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm')]: 1,
-			[itemID('Iron platebody')]: 1,
-			[itemID('Iron platelegs')]: 1,
-			[itemID('Iron kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Iron set (lg)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm', 1)
+			.add('Iron platebody', 1)
+			.add('Iron platelegs', 1)
+			.add('Iron kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron set (lg)',
-		inputItems: {
-			[itemID('Iron full helm')]: 1,
-			[itemID('Iron platebody')]: 1,
-			[itemID('Iron platelegs')]: 1,
-			[itemID('Iron kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Iron set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm', 1)
+			.add('Iron platebody', 1)
+			.add('Iron platelegs', 1)
+			.add('Iron kiteshield', 1),
+		outputItems: new Bank().add('Iron set (lg)', 1)
 	},
 	{
 		name: 'Unpack iron set (sk)',
-		inputItems: {
-			[itemID('Iron set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm')]: 1,
-			[itemID('Iron platebody')]: 1,
-			[itemID('Iron plateskirt')]: 1,
-			[itemID('Iron kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Iron set (sk)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm', 1)
+			.add('Iron platebody', 1)
+			.add('Iron plateskirt', 1)
+			.add('Iron kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron set (sk)',
-		inputItems: {
-			[itemID('Iron full helm')]: 1,
-			[itemID('Iron platebody')]: 1,
-			[itemID('Iron plateskirt')]: 1,
-			[itemID('Iron kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Iron set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm', 1)
+			.add('Iron platebody', 1)
+			.add('Iron plateskirt', 1)
+			.add('Iron kiteshield', 1),
+		outputItems: new Bank().add('Iron set (sk)', 1)
 	},
 	{
 		name: 'Unpack iron trimmed set (lg)',
-		inputItems: {
-			[itemID('Iron trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm (t)')]: 1,
-			[itemID('Iron platebody (t)')]: 1,
-			[itemID('Iron platelegs (t)')]: 1,
-			[itemID('Iron kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Iron trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm (t)', 1)
+			.add('Iron platebody (t)', 1)
+			.add('Iron platelegs (t)', 1)
+			.add('Iron kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron trimmed set (lg)',
-		inputItems: {
-			[itemID('Iron full helm (t)')]: 1,
-			[itemID('Iron platebody (t)')]: 1,
-			[itemID('Iron platelegs (t)')]: 1,
-			[itemID('Iron kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm (t)', 1)
+			.add('Iron platebody (t)', 1)
+			.add('Iron platelegs (t)', 1)
+			.add('Iron kiteshield (t)', 1),
+		outputItems: new Bank().add('Iron trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack iron trimmed set (sk)',
-		inputItems: {
-			[itemID('Iron trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm (t)')]: 1,
-			[itemID('Iron platebody (t)')]: 1,
-			[itemID('Iron plateskirt (t)')]: 1,
-			[itemID('Iron kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Iron trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm (t)', 1)
+			.add('Iron platebody (t)', 1)
+			.add('Iron plateskirt (t)', 1)
+			.add('Iron kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron trimmed set (sk)',
-		inputItems: {
-			[itemID('Iron full helm (t)')]: 1,
-			[itemID('Iron platebody (t)')]: 1,
-			[itemID('Iron plateskirt (t)')]: 1,
-			[itemID('Iron kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm (t)', 1)
+			.add('Iron platebody (t)', 1)
+			.add('Iron plateskirt (t)', 1)
+			.add('Iron kiteshield (t)', 1),
+		outputItems: new Bank().add('Iron trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack iron gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Iron gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm (g)')]: 1,
-			[itemID('Iron platebody (g)')]: 1,
-			[itemID('Iron platelegs (g)')]: 1,
-			[itemID('Iron kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Iron gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm (g)', 1)
+			.add('Iron platebody (g)', 1)
+			.add('Iron platelegs (g)', 1)
+			.add('Iron kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Iron full helm (g)')]: 1,
-			[itemID('Iron platebody (g)')]: 1,
-			[itemID('Iron platelegs (g)')]: 1,
-			[itemID('Iron kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm (g)', 1)
+			.add('Iron platebody (g)', 1)
+			.add('Iron platelegs (g)', 1)
+			.add('Iron kiteshield (g)', 1),
+		outputItems: new Bank().add('Iron gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack iron gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Iron gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron full helm (g)')]: 1,
-			[itemID('Iron platebody (g)')]: 1,
-			[itemID('Iron plateskirt (g)')]: 1,
-			[itemID('Iron kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Iron gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Iron full helm (g)', 1)
+			.add('Iron platebody (g)', 1)
+			.add('Iron plateskirt (g)', 1)
+			.add('Iron kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Iron gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Iron full helm (g)')]: 1,
-			[itemID('Iron platebody (g)')]: 1,
-			[itemID('Iron plateskirt (g)')]: 1,
-			[itemID('Iron kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Iron gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Iron full helm (g)', 1)
+			.add('Iron platebody (g)', 1)
+			.add('Iron plateskirt (g)', 1)
+			.add('Iron kiteshield (g)', 1),
+		outputItems: new Bank().add('Iron gold-trimmed set (sk)', 1)
 	},
 	// steel
 	{
 		name: 'Unpack steel set (lg)',
-		inputItems: {
-			[itemID('Steel set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm')]: 1,
-			[itemID('Steel platebody')]: 1,
-			[itemID('Steel platelegs')]: 1,
-			[itemID('Steel kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Steel set (lg)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm', 1)
+			.add('Steel platebody', 1)
+			.add('Steel platelegs', 1)
+			.add('Steel kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel set (lg)',
-		inputItems: {
-			[itemID('Steel full helm')]: 1,
-			[itemID('Steel platebody')]: 1,
-			[itemID('Steel platelegs')]: 1,
-			[itemID('Steel kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Steel set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm', 1)
+			.add('Steel platebody', 1)
+			.add('Steel platelegs', 1)
+			.add('Steel kiteshield', 1),
+		outputItems: new Bank().add('Steel set (lg)', 1)
 	},
 	{
 		name: 'Unpack steel set (sk)',
-		inputItems: {
-			[itemID('Steel set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm')]: 1,
-			[itemID('Steel platebody')]: 1,
-			[itemID('Steel plateskirt')]: 1,
-			[itemID('Steel kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Steel set (sk)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm', 1)
+			.add('Steel platebody', 1)
+			.add('Steel plateskirt', 1)
+			.add('Steel kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel set (sk)',
-		inputItems: {
-			[itemID('Steel full helm')]: 1,
-			[itemID('Steel platebody')]: 1,
-			[itemID('Steel plateskirt')]: 1,
-			[itemID('Steel kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Steel set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm', 1)
+			.add('Steel platebody', 1)
+			.add('Steel plateskirt', 1)
+			.add('Steel kiteshield', 1),
+		outputItems: new Bank().add('Steel set (sk)', 1)
 	},
 	{
 		name: 'Unpack steel trimmed set (lg)',
-		inputItems: {
-			[itemID('Steel trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm (t)')]: 1,
-			[itemID('Steel platebody (t)')]: 1,
-			[itemID('Steel platelegs (t)')]: 1,
-			[itemID('Steel kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Steel trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm (t)', 1)
+			.add('Steel platebody (t)', 1)
+			.add('Steel platelegs (t)', 1)
+			.add('Steel kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel trimmed set (lg)',
-		inputItems: {
-			[itemID('Steel full helm (t)')]: 1,
-			[itemID('Steel platebody (t)')]: 1,
-			[itemID('Steel platelegs (t)')]: 1,
-			[itemID('Steel kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm (t)', 1)
+			.add('Steel platebody (t)', 1)
+			.add('Steel platelegs (t)', 1)
+			.add('Steel kiteshield (t)', 1),
+		outputItems: new Bank().add('Steel trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack steel trimmed set (sk)',
-		inputItems: {
-			[itemID('Steel trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm (t)')]: 1,
-			[itemID('Steel platebody (t)')]: 1,
-			[itemID('Steel plateskirt (t)')]: 1,
-			[itemID('Steel kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Steel trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm (t)', 1)
+			.add('Steel platebody (t)', 1)
+			.add('Steel plateskirt (t)', 1)
+			.add('Steel kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel trimmed set (sk)',
-		inputItems: {
-			[itemID('Steel full helm (t)')]: 1,
-			[itemID('Steel platebody (t)')]: 1,
-			[itemID('Steel plateskirt (t)')]: 1,
-			[itemID('Steel kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm (t)', 1)
+			.add('Steel platebody (t)', 1)
+			.add('Steel plateskirt (t)', 1)
+			.add('Steel kiteshield (t)', 1),
+		outputItems: new Bank().add('Steel trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack steel gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Steel gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm (g)')]: 1,
-			[itemID('Steel platebody (g)')]: 1,
-			[itemID('Steel platelegs (g)')]: 1,
-			[itemID('Steel kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Steel gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm (g)', 1)
+			.add('Steel platebody (g)', 1)
+			.add('Steel platelegs (g)', 1)
+			.add('Steel kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Steel full helm (g)')]: 1,
-			[itemID('Steel platebody (g)')]: 1,
-			[itemID('Steel platelegs (g)')]: 1,
-			[itemID('Steel kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm (g)', 1)
+			.add('Steel platebody (g)', 1)
+			.add('Steel platelegs (g)', 1)
+			.add('Steel kiteshield (g)', 1),
+		outputItems: new Bank().add('Steel gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack steel gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Steel gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel full helm (g)')]: 1,
-			[itemID('Steel platebody (g)')]: 1,
-			[itemID('Steel plateskirt (g)')]: 1,
-			[itemID('Steel kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Steel gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Steel full helm (g)', 1)
+			.add('Steel platebody (g)', 1)
+			.add('Steel plateskirt (g)', 1)
+			.add('Steel kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Steel gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Steel full helm (g)')]: 1,
-			[itemID('Steel platebody (g)')]: 1,
-			[itemID('Steel plateskirt (g)')]: 1,
-			[itemID('Steel kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Steel gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Steel full helm (g)', 1)
+			.add('Steel platebody (g)', 1)
+			.add('Steel plateskirt (g)', 1)
+			.add('Steel kiteshield (g)', 1),
+		outputItems: new Bank().add('Steel gold-trimmed set (sk)', 1)
 	},
 	// black
 	{
 		name: 'Unpack black set (lg)',
-		inputItems: {
-			[itemID('Black set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm')]: 1,
-			[itemID('Black platebody')]: 1,
-			[itemID('Black platelegs')]: 1,
-			[itemID('Black kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Black set (lg)', 1),
+		outputItems: new Bank()
+			.add('Black full helm', 1)
+			.add('Black platebody', 1)
+			.add('Black platelegs', 1)
+			.add('Black kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Black set (lg)',
-		inputItems: {
-			[itemID('Black full helm')]: 1,
-			[itemID('Black platebody')]: 1,
-			[itemID('Black platelegs')]: 1,
-			[itemID('Black kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Black set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm', 1)
+			.add('Black platebody', 1)
+			.add('Black platelegs', 1)
+			.add('Black kiteshield', 1),
+		outputItems: new Bank().add('Black set (lg)', 1)
 	},
 	{
 		name: 'Unpack black set (sk)',
-		inputItems: {
-			[itemID('Black set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm')]: 1,
-			[itemID('Black platebody')]: 1,
-			[itemID('Black plateskirt')]: 1,
-			[itemID('Black kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Black set (sk)', 1),
+		outputItems: new Bank()
+			.add('Black full helm', 1)
+			.add('Black platebody', 1)
+			.add('Black plateskirt', 1)
+			.add('Black kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Black set (sk)',
-		inputItems: {
-			[itemID('Black full helm')]: 1,
-			[itemID('Black platebody')]: 1,
-			[itemID('Black plateskirt')]: 1,
-			[itemID('Black kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Black set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm', 1)
+			.add('Black platebody', 1)
+			.add('Black plateskirt', 1)
+			.add('Black kiteshield', 1),
+		outputItems: new Bank().add('Black set (sk)', 1)
 	},
 	{
 		name: 'Unpack black trimmed set (lg)',
-		inputItems: {
-			[itemID('Black trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm (t)')]: 1,
-			[itemID('Black platebody (t)')]: 1,
-			[itemID('Black platelegs (t)')]: 1,
-			[itemID('Black kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Black trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Black full helm (t)', 1)
+			.add('Black platebody (t)', 1)
+			.add('Black platelegs (t)', 1)
+			.add('Black kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Black trimmed set (lg)',
-		inputItems: {
-			[itemID('Black full helm (t)')]: 1,
-			[itemID('Black platebody (t)')]: 1,
-			[itemID('Black platelegs (t)')]: 1,
-			[itemID('Black kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Black trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm (t)', 1)
+			.add('Black platebody (t)', 1)
+			.add('Black platelegs (t)', 1)
+			.add('Black kiteshield (t)', 1),
+		outputItems: new Bank().add('Black trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack black trimmed set (sk)',
-		inputItems: {
-			[itemID('Black trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm (t)')]: 1,
-			[itemID('Black platebody (t)')]: 1,
-			[itemID('Black plateskirt (t)')]: 1,
-			[itemID('Black kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Black trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Black full helm (t)', 1)
+			.add('Black platebody (t)', 1)
+			.add('Black plateskirt (t)', 1)
+			.add('Black kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Black trimmed set (sk)',
-		inputItems: {
-			[itemID('Black full helm (t)')]: 1,
-			[itemID('Black platebody (t)')]: 1,
-			[itemID('Black plateskirt (t)')]: 1,
-			[itemID('Black kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Black trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm (t)', 1)
+			.add('Black platebody (t)', 1)
+			.add('Black plateskirt (t)', 1)
+			.add('Black kiteshield (t)', 1),
+		outputItems: new Bank().add('Black trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack black gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Black gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm (g)')]: 1,
-			[itemID('Black platebody (g)')]: 1,
-			[itemID('Black platelegs (g)')]: 1,
-			[itemID('Black kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Black gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Black full helm (g)', 1)
+			.add('Black platebody (g)', 1)
+			.add('Black platelegs (g)', 1)
+			.add('Black kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Black gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Black full helm (g)')]: 1,
-			[itemID('Black platebody (g)')]: 1,
-			[itemID('Black platelegs (g)')]: 1,
-			[itemID('Black kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Black gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm (g)', 1)
+			.add('Black platebody (g)', 1)
+			.add('Black platelegs (g)', 1)
+			.add('Black kiteshield (g)', 1),
+		outputItems: new Bank().add('Black gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack black gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Black gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Black full helm (g)')]: 1,
-			[itemID('Black platebody (g)')]: 1,
-			[itemID('Black plateskirt (g)')]: 1,
-			[itemID('Black kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Black gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Black full helm (g)', 1)
+			.add('Black platebody (g)', 1)
+			.add('Black plateskirt (g)', 1)
+			.add('Black kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Black gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Black full helm (g)')]: 1,
-			[itemID('Black platebody (g)')]: 1,
-			[itemID('Black plateskirt (g)')]: 1,
-			[itemID('Black kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Black gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Black full helm (g)', 1)
+			.add('Black platebody (g)', 1)
+			.add('Black plateskirt (g)', 1)
+			.add('Black kiteshield (g)', 1),
+		outputItems: new Bank().add('Black gold-trimmed set (sk)', 1)
 	},
 	// mithril
 	{
 		name: 'Unpack mithril set (lg)',
-		inputItems: {
-			[itemID('Mithril set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm')]: 1,
-			[itemID('Mithril platebody')]: 1,
-			[itemID('Mithril platelegs')]: 1,
-			[itemID('Mithril kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Mithril set (lg)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm', 1)
+			.add('Mithril platebody', 1)
+			.add('Mithril platelegs', 1)
+			.add('Mithril kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril set (lg)',
-		inputItems: {
-			[itemID('Mithril full helm')]: 1,
-			[itemID('Mithril platebody')]: 1,
-			[itemID('Mithril platelegs')]: 1,
-			[itemID('Mithril kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm', 1)
+			.add('Mithril platebody', 1)
+			.add('Mithril platelegs', 1)
+			.add('Mithril kiteshield', 1),
+		outputItems: new Bank().add('Mithril set (lg)', 1)
 	},
 	{
 		name: 'Unpack mithril set (sk)',
-		inputItems: {
-			[itemID('Mithril set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm')]: 1,
-			[itemID('Mithril platebody')]: 1,
-			[itemID('Mithril plateskirt')]: 1,
-			[itemID('Mithril kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Mithril set (sk)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm', 1)
+			.add('Mithril platebody', 1)
+			.add('Mithril plateskirt', 1)
+			.add('Mithril kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril set (sk)',
-		inputItems: {
-			[itemID('Mithril full helm')]: 1,
-			[itemID('Mithril platebody')]: 1,
-			[itemID('Mithril plateskirt')]: 1,
-			[itemID('Mithril kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm', 1)
+			.add('Mithril platebody', 1)
+			.add('Mithril plateskirt', 1)
+			.add('Mithril kiteshield', 1),
+		outputItems: new Bank().add('Mithril set (sk)', 1)
 	},
 	{
 		name: 'Unpack mithril trimmed set (lg)',
-		inputItems: {
-			[itemID('Mithril trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm (t)')]: 1,
-			[itemID('Mithril platebody (t)')]: 1,
-			[itemID('Mithril platelegs (t)')]: 1,
-			[itemID('Mithril kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Mithril trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm (t)', 1)
+			.add('Mithril platebody (t)', 1)
+			.add('Mithril platelegs (t)', 1)
+			.add('Mithril kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril trimmed set (lg)',
-		inputItems: {
-			[itemID('Mithril full helm (t)')]: 1,
-			[itemID('Mithril platebody (t)')]: 1,
-			[itemID('Mithril platelegs (t)')]: 1,
-			[itemID('Mithril kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm (t)', 1)
+			.add('Mithril platebody (t)', 1)
+			.add('Mithril platelegs (t)', 1)
+			.add('Mithril kiteshield (t)', 1),
+		outputItems: new Bank().add('Mithril trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack mithril trimmed set (sk)',
-		inputItems: {
-			[itemID('Mithril trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm (t)')]: 1,
-			[itemID('Mithril platebody (t)')]: 1,
-			[itemID('Mithril plateskirt (t)')]: 1,
-			[itemID('Mithril kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Mithril trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm (t)', 1)
+			.add('Mithril platebody (t)', 1)
+			.add('Mithril plateskirt (t)', 1)
+			.add('Mithril kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril trimmed set (sk)',
-		inputItems: {
-			[itemID('Mithril full helm (t)')]: 1,
-			[itemID('Mithril platebody (t)')]: 1,
-			[itemID('Mithril plateskirt (t)')]: 1,
-			[itemID('Mithril kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm (t)', 1)
+			.add('Mithril platebody (t)', 1)
+			.add('Mithril plateskirt (t)', 1)
+			.add('Mithril kiteshield (t)', 1),
+		outputItems: new Bank().add('Mithril trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack mithril gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Mithril gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm (g)')]: 1,
-			[itemID('Mithril platebody (g)')]: 1,
-			[itemID('Mithril platelegs (g)')]: 1,
-			[itemID('Mithril kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Mithril gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm (g)', 1)
+			.add('Mithril platebody (g)', 1)
+			.add('Mithril platelegs (g)', 1)
+			.add('Mithril kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Mithril full helm (g)')]: 1,
-			[itemID('Mithril platebody (g)')]: 1,
-			[itemID('Mithril platelegs (g)')]: 1,
-			[itemID('Mithril kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm (g)', 1)
+			.add('Mithril platebody (g)', 1)
+			.add('Mithril platelegs (g)', 1)
+			.add('Mithril kiteshield (g)', 1),
+		outputItems: new Bank().add('Mithril gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack mithril gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Mithril gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril full helm (g)')]: 1,
-			[itemID('Mithril platebody (g)')]: 1,
-			[itemID('Mithril plateskirt (g)')]: 1,
-			[itemID('Mithril kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Mithril gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Mithril full helm (g)', 1)
+			.add('Mithril platebody (g)', 1)
+			.add('Mithril plateskirt (g)', 1)
+			.add('Mithril kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mithril gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Mithril full helm (g)')]: 1,
-			[itemID('Mithril platebody (g)')]: 1,
-			[itemID('Mithril plateskirt (g)')]: 1,
-			[itemID('Mithril kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Mithril gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mithril full helm (g)', 1)
+			.add('Mithril platebody (g)', 1)
+			.add('Mithril plateskirt (g)', 1)
+			.add('Mithril kiteshield (g)', 1),
+		outputItems: new Bank().add('Mithril gold-trimmed set (sk)', 1)
 	},
 	// adamant
 	{
 		name: 'Unpack adamant set (lg)',
-		inputItems: {
-			[itemID('Adamant set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm')]: 1,
-			[itemID('Adamant platebody')]: 1,
-			[itemID('Adamant platelegs')]: 1,
-			[itemID('Adamant kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Adamant set (lg)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm', 1)
+			.add('Adamant platebody', 1)
+			.add('Adamant platelegs', 1)
+			.add('Adamant kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant set (lg)',
-		inputItems: {
-			[itemID('Adamant full helm')]: 1,
-			[itemID('Adamant platebody')]: 1,
-			[itemID('Adamant platelegs')]: 1,
-			[itemID('Adamant kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm', 1)
+			.add('Adamant platebody', 1)
+			.add('Adamant platelegs', 1)
+			.add('Adamant kiteshield', 1),
+		outputItems: new Bank().add('Adamant set (lg)', 1)
 	},
 	{
 		name: 'Unpack adamant set (sk)',
-		inputItems: {
-			[itemID('Adamant set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm')]: 1,
-			[itemID('Adamant platebody')]: 1,
-			[itemID('Adamant plateskirt')]: 1,
-			[itemID('Adamant kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Adamant set (sk)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm', 1)
+			.add('Adamant platebody', 1)
+			.add('Adamant plateskirt', 1)
+			.add('Adamant kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant set (sk)',
-		inputItems: {
-			[itemID('Adamant full helm')]: 1,
-			[itemID('Adamant platebody')]: 1,
-			[itemID('Adamant plateskirt')]: 1,
-			[itemID('Adamant kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm', 1)
+			.add('Adamant platebody', 1)
+			.add('Adamant plateskirt', 1)
+			.add('Adamant kiteshield', 1),
+		outputItems: new Bank().add('Adamant set (sk)', 1)
 	},
 	{
 		name: 'Unpack adamant trimmed set (lg)',
-		inputItems: {
-			[itemID('Adamant trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm (t)')]: 1,
-			[itemID('Adamant platebody (t)')]: 1,
-			[itemID('Adamant platelegs (t)')]: 1,
-			[itemID('Adamant kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Adamant trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm (t)', 1)
+			.add('Adamant platebody (t)', 1)
+			.add('Adamant platelegs (t)', 1)
+			.add('Adamant kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant trimmed set (lg)',
-		inputItems: {
-			[itemID('Adamant full helm (t)')]: 1,
-			[itemID('Adamant platebody (t)')]: 1,
-			[itemID('Adamant platelegs (t)')]: 1,
-			[itemID('Adamant kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm (t)', 1)
+			.add('Adamant platebody (t)', 1)
+			.add('Adamant platelegs (t)', 1)
+			.add('Adamant kiteshield (t)', 1),
+		outputItems: new Bank().add('Adamant trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack adamant trimmed set (sk)',
-		inputItems: {
-			[itemID('Adamant trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm (t)')]: 1,
-			[itemID('Adamant platebody (t)')]: 1,
-			[itemID('Adamant plateskirt (t)')]: 1,
-			[itemID('Adamant kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Adamant trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm (t)', 1)
+			.add('Adamant platebody (t)', 1)
+			.add('Adamant plateskirt (t)', 1)
+			.add('Adamant kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant trimmed set (sk)',
-		inputItems: {
-			[itemID('Adamant full helm (t)')]: 1,
-			[itemID('Adamant platebody (t)')]: 1,
-			[itemID('Adamant plateskirt (t)')]: 1,
-			[itemID('Adamant kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm (t)', 1)
+			.add('Adamant platebody (t)', 1)
+			.add('Adamant plateskirt (t)', 1)
+			.add('Adamant kiteshield (t)', 1),
+		outputItems: new Bank().add('Adamant trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack adamant gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Adamant gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm (g)')]: 1,
-			[itemID('Adamant platebody (g)')]: 1,
-			[itemID('Adamant platelegs (g)')]: 1,
-			[itemID('Adamant kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Adamant gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm (g)', 1)
+			.add('Adamant platebody (g)', 1)
+			.add('Adamant platelegs (g)', 1)
+			.add('Adamant kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Adamant full helm (g)')]: 1,
-			[itemID('Adamant platebody (g)')]: 1,
-			[itemID('Adamant platelegs (g)')]: 1,
-			[itemID('Adamant kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm (g)', 1)
+			.add('Adamant platebody (g)', 1)
+			.add('Adamant platelegs (g)', 1)
+			.add('Adamant kiteshield (g)', 1),
+		outputItems: new Bank().add('Adamant gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack adamant gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Adamant gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant full helm (g)')]: 1,
-			[itemID('Adamant platebody (g)')]: 1,
-			[itemID('Adamant plateskirt (g)')]: 1,
-			[itemID('Adamant kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Adamant gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Adamant full helm (g)', 1)
+			.add('Adamant platebody (g)', 1)
+			.add('Adamant plateskirt (g)', 1)
+			.add('Adamant kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Adamant gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Adamant full helm (g)')]: 1,
-			[itemID('Adamant platebody (g)')]: 1,
-			[itemID('Adamant plateskirt (g)')]: 1,
-			[itemID('Adamant kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Adamant gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Adamant full helm (g)', 1)
+			.add('Adamant platebody (g)', 1)
+			.add('Adamant plateskirt (g)', 1)
+			.add('Adamant kiteshield (g)', 1),
+		outputItems: new Bank().add('Adamant gold-trimmed set (sk)', 1)
 	},
 	// rune
 	{
 		name: 'Unpack rune armour set (lg)',
-		inputItems: {
-			[itemID('Rune armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm')]: 1,
-			[itemID('Rune platebody')]: 1,
-			[itemID('Rune platelegs')]: 1,
-			[itemID('Rune kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Rune armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm', 1)
+			.add('Rune platebody', 1)
+			.add('Rune platelegs', 1)
+			.add('Rune kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune armour set (lg)',
-		inputItems: {
-			[itemID('Rune full helm')]: 1,
-			[itemID('Rune platebody')]: 1,
-			[itemID('Rune platelegs')]: 1,
-			[itemID('Rune kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Rune armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm', 1)
+			.add('Rune platebody', 1)
+			.add('Rune platelegs', 1)
+			.add('Rune kiteshield', 1),
+		outputItems: new Bank().add('Rune armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack rune armour set (sk)',
-		inputItems: {
-			[itemID('Rune armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm')]: 1,
-			[itemID('Rune platebody')]: 1,
-			[itemID('Rune plateskirt')]: 1,
-			[itemID('Rune kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Rune armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm', 1)
+			.add('Rune platebody', 1)
+			.add('Rune plateskirt', 1)
+			.add('Rune kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune armour set (sk)',
-		inputItems: {
-			[itemID('Rune full helm')]: 1,
-			[itemID('Rune platebody')]: 1,
-			[itemID('Rune plateskirt')]: 1,
-			[itemID('Rune kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Rune armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm', 1)
+			.add('Rune platebody', 1)
+			.add('Rune plateskirt', 1)
+			.add('Rune kiteshield', 1),
+		outputItems: new Bank().add('Rune armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack rune trimmed set (lg)',
-		inputItems: {
-			[itemID('Rune trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm (t)')]: 1,
-			[itemID('Rune platebody (t)')]: 1,
-			[itemID('Rune platelegs (t)')]: 1,
-			[itemID('Rune kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Rune trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm (t)', 1)
+			.add('Rune platebody (t)', 1)
+			.add('Rune platelegs (t)', 1)
+			.add('Rune kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune trimmed set (lg)',
-		inputItems: {
-			[itemID('Rune full helm (t)')]: 1,
-			[itemID('Rune platebody (t)')]: 1,
-			[itemID('Rune platelegs (t)')]: 1,
-			[itemID('Rune kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm (t)', 1)
+			.add('Rune platebody (t)', 1)
+			.add('Rune platelegs (t)', 1)
+			.add('Rune kiteshield (t)', 1),
+		outputItems: new Bank().add('Rune trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack rune trimmed set (sk)',
-		inputItems: {
-			[itemID('Rune trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm (t)')]: 1,
-			[itemID('Rune platebody (t)')]: 1,
-			[itemID('Rune plateskirt (t)')]: 1,
-			[itemID('Rune kiteshield (t)')]: 1
-		},
+		inputItems: new Bank().add('Rune trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm (t)', 1)
+			.add('Rune platebody (t)', 1)
+			.add('Rune plateskirt (t)', 1)
+			.add('Rune kiteshield (t)', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune trimmed set (sk)',
-		inputItems: {
-			[itemID('Rune full helm (t)')]: 1,
-			[itemID('Rune platebody (t)')]: 1,
-			[itemID('Rune plateskirt (t)')]: 1,
-			[itemID('Rune kiteshield (t)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm (t)', 1)
+			.add('Rune platebody (t)', 1)
+			.add('Rune plateskirt (t)', 1)
+			.add('Rune kiteshield (t)', 1),
+		outputItems: new Bank().add('Rune trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack rune gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Rune gold-trimmed set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm (g)')]: 1,
-			[itemID('Rune platebody (g)')]: 1,
-			[itemID('Rune platelegs (g)')]: 1,
-			[itemID('Rune kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Rune gold-trimmed set (lg)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm (g)', 1)
+			.add('Rune platebody (g)', 1)
+			.add('Rune platelegs (g)', 1)
+			.add('Rune kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune gold-trimmed set (lg)',
-		inputItems: {
-			[itemID('Rune full helm (g)')]: 1,
-			[itemID('Rune platebody (g)')]: 1,
-			[itemID('Rune platelegs (g)')]: 1,
-			[itemID('Rune kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune gold-trimmed set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm (g)', 1)
+			.add('Rune platebody (g)', 1)
+			.add('Rune platelegs (g)', 1)
+			.add('Rune kiteshield (g)', 1),
+		outputItems: new Bank().add('Rune gold-trimmed set (lg)', 1)
 	},
 	{
 		name: 'Unpack rune gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Rune gold-trimmed set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune full helm (g)')]: 1,
-			[itemID('Rune platebody (g)')]: 1,
-			[itemID('Rune plateskirt (g)')]: 1,
-			[itemID('Rune kiteshield (g)')]: 1
-		},
+		inputItems: new Bank().add('Rune gold-trimmed set (sk)', 1),
+		outputItems: new Bank()
+			.add('Rune full helm (g)', 1)
+			.add('Rune platebody (g)', 1)
+			.add('Rune plateskirt (g)', 1)
+			.add('Rune kiteshield (g)', 1),
 		noCl: true
 	},
 	{
 		name: 'Rune gold-trimmed set (sk)',
-		inputItems: {
-			[itemID('Rune full helm (g)')]: 1,
-			[itemID('Rune platebody (g)')]: 1,
-			[itemID('Rune plateskirt (g)')]: 1,
-			[itemID('Rune kiteshield (g)')]: 1
-		},
-		outputItems: {
-			[itemID('Rune gold-trimmed set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Rune full helm (g)', 1)
+			.add('Rune platebody (g)', 1)
+			.add('Rune plateskirt (g)', 1)
+			.add('Rune kiteshield (g)', 1),
+		outputItems: new Bank().add('Rune gold-trimmed set (sk)', 1)
 	},
 	{
 		name: 'Unpack gilded armour set (lg)',
-		inputItems: {
-			[itemID('Gilded armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Gilded full helm')]: 1,
-			[itemID('Gilded platebody')]: 1,
-			[itemID('Gilded platelegs')]: 1,
-			[itemID('Gilded kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Gilded armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Gilded full helm', 1)
+			.add('Gilded platebody', 1)
+			.add('Gilded platelegs', 1)
+			.add('Gilded kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Gilded armour set (lg)',
-		inputItems: {
-			[itemID('Gilded full helm')]: 1,
-			[itemID('Gilded platebody')]: 1,
-			[itemID('Gilded platelegs')]: 1,
-			[itemID('Gilded kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Gilded armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Gilded full helm', 1)
+			.add('Gilded platebody', 1)
+			.add('Gilded platelegs', 1)
+			.add('Gilded kiteshield', 1),
+		outputItems: new Bank().add('Gilded armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack gilded armour set (sk)',
-		inputItems: {
-			[itemID('Gilded armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Gilded full helm')]: 1,
-			[itemID('Gilded platebody')]: 1,
-			[itemID('Gilded plateskirt')]: 1,
-			[itemID('Gilded kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Gilded armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Gilded full helm', 1)
+			.add('Gilded platebody', 1)
+			.add('Gilded plateskirt', 1)
+			.add('Gilded kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Gilded armour set (sk)',
-		inputItems: {
-			[itemID('Gilded full helm')]: 1,
-			[itemID('Gilded platebody')]: 1,
-			[itemID('Gilded plateskirt')]: 1,
-			[itemID('Gilded kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Gilded armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Gilded full helm', 1)
+			.add('Gilded platebody', 1)
+			.add('Gilded plateskirt', 1)
+			.add('Gilded kiteshield', 1),
+		outputItems: new Bank().add('Gilded armour set (sk)', 1)
 	},
 	// rune god armours
 	{
 		name: 'Unpack guthix armour set (lg)',
-		inputItems: {
-			[itemID('Guthix armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix full helm')]: 1,
-			[itemID('Guthix platebody')]: 1,
-			[itemID('Guthix platelegs')]: 1,
-			[itemID('Guthix kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Guthix armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Guthix full helm', 1)
+			.add('Guthix platebody', 1)
+			.add('Guthix platelegs', 1)
+			.add('Guthix kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Guthix armour set (lg)',
-		inputItems: {
-			[itemID('Guthix full helm')]: 1,
-			[itemID('Guthix platebody')]: 1,
-			[itemID('Guthix platelegs')]: 1,
-			[itemID('Guthix kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Guthix full helm', 1)
+			.add('Guthix platebody', 1)
+			.add('Guthix platelegs', 1)
+			.add('Guthix kiteshield', 1),
+		outputItems: new Bank().add('Guthix armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack guthix armour set (sk)',
-		inputItems: {
-			[itemID('Guthix armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix full helm')]: 1,
-			[itemID('Guthix platebody')]: 1,
-			[itemID('Guthix plateskirt')]: 1,
-			[itemID('Guthix kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Guthix armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Guthix full helm', 1)
+			.add('Guthix platebody', 1)
+			.add('Guthix plateskirt', 1)
+			.add('Guthix kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Guthix armour set (sk)',
-		inputItems: {
-			[itemID('Guthix full helm')]: 1,
-			[itemID('Guthix platebody')]: 1,
-			[itemID('Guthix plateskirt')]: 1,
-			[itemID('Guthix kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Guthix full helm', 1)
+			.add('Guthix platebody', 1)
+			.add('Guthix plateskirt', 1)
+			.add('Guthix kiteshield', 1),
+		outputItems: new Bank().add('Guthix armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack saradomin armour set (lg)',
-		inputItems: {
-			[itemID('Saradomin armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin full helm')]: 1,
-			[itemID('Saradomin platebody')]: 1,
-			[itemID('Saradomin platelegs')]: 1,
-			[itemID('Saradomin kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Saradomin armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Saradomin full helm', 1)
+			.add('Saradomin platebody', 1)
+			.add('Saradomin platelegs', 1)
+			.add('Saradomin kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Saradomin armour set (lg)',
-		inputItems: {
-			[itemID('Saradomin full helm')]: 1,
-			[itemID('Saradomin platebody')]: 1,
-			[itemID('Saradomin platelegs')]: 1,
-			[itemID('Saradomin kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Saradomin full helm', 1)
+			.add('Saradomin platebody', 1)
+			.add('Saradomin platelegs', 1)
+			.add('Saradomin kiteshield', 1),
+		outputItems: new Bank().add('Saradomin armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack saradomin armour set (sk)',
-		inputItems: {
-			[itemID('Saradomin armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin full helm')]: 1,
-			[itemID('Saradomin platebody')]: 1,
-			[itemID('Saradomin plateskirt')]: 1,
-			[itemID('Saradomin kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Saradomin armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Saradomin full helm', 1)
+			.add('Saradomin platebody', 1)
+			.add('Saradomin plateskirt', 1)
+			.add('Saradomin kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Saradomin armour set (sk)',
-		inputItems: {
-			[itemID('Saradomin full helm')]: 1,
-			[itemID('Saradomin platebody')]: 1,
-			[itemID('Saradomin plateskirt')]: 1,
-			[itemID('Saradomin kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Saradomin full helm', 1)
+			.add('Saradomin platebody', 1)
+			.add('Saradomin plateskirt', 1)
+			.add('Saradomin kiteshield', 1),
+		outputItems: new Bank().add('Saradomin armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack zamorak armour set (lg)',
-		inputItems: {
-			[itemID('Zamorak armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak full helm')]: 1,
-			[itemID('Zamorak platebody')]: 1,
-			[itemID('Zamorak platelegs')]: 1,
-			[itemID('Zamorak kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Zamorak armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Zamorak full helm', 1)
+			.add('Zamorak platebody', 1)
+			.add('Zamorak platelegs', 1)
+			.add('Zamorak kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Zamorak armour set (lg)',
-		inputItems: {
-			[itemID('Zamorak full helm')]: 1,
-			[itemID('Zamorak platebody')]: 1,
-			[itemID('Zamorak platelegs')]: 1,
-			[itemID('Zamorak kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Zamorak full helm', 1)
+			.add('Zamorak platebody', 1)
+			.add('Zamorak platelegs', 1)
+			.add('Zamorak kiteshield', 1),
+		outputItems: new Bank().add('Zamorak armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack zamorak armour set (sk)',
-		inputItems: {
-			[itemID('Zamorak armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak full helm')]: 1,
-			[itemID('Zamorak platebody')]: 1,
-			[itemID('Zamorak plateskirt')]: 1,
-			[itemID('Zamorak kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Zamorak armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Zamorak full helm', 1)
+			.add('Zamorak platebody', 1)
+			.add('Zamorak plateskirt', 1)
+			.add('Zamorak kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Zamorak armour set (sk)',
-		inputItems: {
-			[itemID('Zamorak full helm')]: 1,
-			[itemID('Zamorak platebody')]: 1,
-			[itemID('Zamorak plateskirt')]: 1,
-			[itemID('Zamorak kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Zamorak full helm', 1)
+			.add('Zamorak platebody', 1)
+			.add('Zamorak plateskirt', 1)
+			.add('Zamorak kiteshield', 1),
+		outputItems: new Bank().add('Zamorak armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack ancient rune armour set (lg)',
-		inputItems: {
-			[itemID('Ancient rune armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient full helm')]: 1,
-			[itemID('Ancient platebody')]: 1,
-			[itemID('Ancient platelegs')]: 1,
-			[itemID('Ancient kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Ancient rune armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Ancient full helm', 1)
+			.add('Ancient platebody', 1)
+			.add('Ancient platelegs', 1)
+			.add('Ancient kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Ancient rune armour set (lg)',
-		inputItems: {
-			[itemID('Ancient full helm')]: 1,
-			[itemID('Ancient platebody')]: 1,
-			[itemID('Ancient platelegs')]: 1,
-			[itemID('Ancient kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient rune armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Ancient full helm', 1)
+			.add('Ancient platebody', 1)
+			.add('Ancient platelegs', 1)
+			.add('Ancient kiteshield', 1),
+		outputItems: new Bank().add('Ancient rune armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack ancient rune armour set (sk)',
-		inputItems: {
-			[itemID('Ancient rune armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient full helm')]: 1,
-			[itemID('Ancient platebody')]: 1,
-			[itemID('Ancient plateskirt')]: 1,
-			[itemID('Ancient kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Ancient rune armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Ancient full helm', 1)
+			.add('Ancient platebody', 1)
+			.add('Ancient plateskirt', 1)
+			.add('Ancient kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Ancient rune armour set (sk)',
-		inputItems: {
-			[itemID('Ancient full helm')]: 1,
-			[itemID('Ancient platebody')]: 1,
-			[itemID('Ancient plateskirt')]: 1,
-			[itemID('Ancient kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient rune armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Ancient full helm', 1)
+			.add('Ancient platebody', 1)
+			.add('Ancient plateskirt', 1)
+			.add('Ancient kiteshield', 1),
+		outputItems: new Bank().add('Ancient rune armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack armadyl rune armour set (lg)',
-		inputItems: {
-			[itemID('Armadyl rune armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl full helm')]: 1,
-			[itemID('Armadyl platebody')]: 1,
-			[itemID('Armadyl platelegs')]: 1,
-			[itemID('Armadyl kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Armadyl rune armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Armadyl full helm', 1)
+			.add('Armadyl platebody', 1)
+			.add('Armadyl platelegs', 1)
+			.add('Armadyl kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Armadyl rune armour set (lg)',
-		inputItems: {
-			[itemID('Armadyl full helm')]: 1,
-			[itemID('Armadyl platebody')]: 1,
-			[itemID('Armadyl platelegs')]: 1,
-			[itemID('Armadyl kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl rune armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Armadyl full helm', 1)
+			.add('Armadyl platebody', 1)
+			.add('Armadyl platelegs', 1)
+			.add('Armadyl kiteshield', 1),
+		outputItems: new Bank().add('Armadyl rune armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack armadyl rune armour set (sk)',
-		inputItems: {
-			[itemID('Armadyl rune armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl full helm')]: 1,
-			[itemID('Armadyl platebody')]: 1,
-			[itemID('Armadyl plateskirt')]: 1,
-			[itemID('Armadyl kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Armadyl rune armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Armadyl full helm', 1)
+			.add('Armadyl platebody', 1)
+			.add('Armadyl plateskirt', 1)
+			.add('Armadyl kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Armadyl rune armour set (sk)',
-		inputItems: {
-			[itemID('Armadyl full helm')]: 1,
-			[itemID('Armadyl platebody')]: 1,
-			[itemID('Armadyl plateskirt')]: 1,
-			[itemID('Armadyl kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl rune armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Armadyl full helm', 1)
+			.add('Armadyl platebody', 1)
+			.add('Armadyl plateskirt', 1)
+			.add('Armadyl kiteshield', 1),
+		outputItems: new Bank().add('Armadyl rune armour set (sk)', 1)
 	},
 	{
 		name: 'Unpack bandos rune armour set (lg)',
-		inputItems: {
-			[itemID('Bandos rune armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos full helm')]: 1,
-			[itemID('Bandos platebody')]: 1,
-			[itemID('Bandos platelegs')]: 1,
-			[itemID('Bandos kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Bandos rune armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Bandos full helm', 1)
+			.add('Bandos platebody', 1)
+			.add('Bandos platelegs', 1)
+			.add('Bandos kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Bandos rune armour set (lg)',
-		inputItems: {
-			[itemID('Bandos full helm')]: 1,
-			[itemID('Bandos platebody')]: 1,
-			[itemID('Bandos platelegs')]: 1,
-			[itemID('Bandos kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos rune armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bandos full helm', 1)
+			.add('Bandos platebody', 1)
+			.add('Bandos platelegs', 1)
+			.add('Bandos kiteshield', 1),
+		outputItems: new Bank().add('Bandos rune armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack bandos rune armour set (sk)',
-		inputItems: {
-			[itemID('Bandos rune armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos full helm')]: 1,
-			[itemID('Bandos platebody')]: 1,
-			[itemID('Bandos plateskirt')]: 1,
-			[itemID('Bandos kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Bandos rune armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Bandos full helm', 1)
+			.add('Bandos platebody', 1)
+			.add('Bandos plateskirt', 1)
+			.add('Bandos kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Bandos rune armour set (sk)',
-		inputItems: {
-			[itemID('Bandos full helm')]: 1,
-			[itemID('Bandos platebody')]: 1,
-			[itemID('Bandos plateskirt')]: 1,
-			[itemID('Bandos kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos rune armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bandos full helm', 1)
+			.add('Bandos platebody', 1)
+			.add('Bandos plateskirt', 1)
+			.add('Bandos kiteshield', 1),
+		outputItems: new Bank().add('Bandos rune armour set (sk)', 1)
 	},
 	// dragon
 	{
 		name: 'Unpack dragon armour set (lg)',
-		inputItems: {
-			[itemID('Dragon armour set (lg)')]: 1
-		},
-		outputItems: {
-			[itemID('Dragon full helm')]: 1,
-			[itemID('Dragon platebody')]: 1,
-			[itemID('Dragon platelegs')]: 1,
-			[itemID('Dragon kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Dragon armour set (lg)', 1),
+		outputItems: new Bank()
+			.add('Dragon full helm', 1)
+			.add('Dragon platebody', 1)
+			.add('Dragon platelegs', 1)
+			.add('Dragon kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Dragon armour set (lg)',
-		inputItems: {
-			[itemID('Dragon full helm')]: 1,
-			[itemID('Dragon platebody')]: 1,
-			[itemID('Dragon platelegs')]: 1,
-			[itemID('Dragon kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Dragon armour set (lg)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Dragon full helm', 1)
+			.add('Dragon platebody', 1)
+			.add('Dragon platelegs', 1)
+			.add('Dragon kiteshield', 1),
+		outputItems: new Bank().add('Dragon armour set (lg)', 1)
 	},
 	{
 		name: 'Unpack dragon armour set (sk)',
-		inputItems: {
-			[itemID('Dragon armour set (sk)')]: 1
-		},
-		outputItems: {
-			[itemID('Dragon full helm')]: 1,
-			[itemID('Dragon platebody')]: 1,
-			[itemID('Dragon plateskirt')]: 1,
-			[itemID('Dragon kiteshield')]: 1
-		},
+		inputItems: new Bank().add('Dragon armour set (sk)', 1),
+		outputItems: new Bank()
+			.add('Dragon full helm', 1)
+			.add('Dragon platebody', 1)
+			.add('Dragon plateskirt', 1)
+			.add('Dragon kiteshield', 1),
 		noCl: true
 	},
 	{
 		name: 'Dragon armour set (sk)',
-		inputItems: {
-			[itemID('Dragon full helm')]: 1,
-			[itemID('Dragon platebody')]: 1,
-			[itemID('Dragon plateskirt')]: 1,
-			[itemID('Dragon kiteshield')]: 1
-		},
-		outputItems: {
-			[itemID('Dragon armour set (sk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Dragon full helm', 1)
+			.add('Dragon platebody', 1)
+			.add('Dragon plateskirt', 1)
+			.add('Dragon kiteshield', 1),
+		outputItems: new Bank().add('Dragon armour set (sk)', 1)
 	},
 	// barrows
 	{
 		name: "Unpack verac's armour set",
-		inputItems: {
-			[itemID("Verac's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Verac's helm")]: 1,
-			[itemID("Verac's brassard")]: 1,
-			[itemID("Verac's plateskirt")]: 1,
-			[itemID("Verac's flail")]: 1
-		},
+		inputItems: new Bank().add("Verac's armour set"),
+		outputItems: new Bank()
+			.add("Verac's helm")
+			.add("Verac's brassard")
+			.add("Verac's plateskirt")
+			.add("Verac's flail"),
 		noCl: true
 	},
 	{
 		name: "Verac's armour set",
-		inputItems: {
-			[itemID("Verac's helm")]: 1,
-			[itemID("Verac's brassard")]: 1,
-			[itemID("Verac's plateskirt")]: 1,
-			[itemID("Verac's flail")]: 1
-		},
-		outputItems: {
-			[itemID("Verac's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Verac's helm")
+			.add("Verac's brassard")
+			.add("Verac's plateskirt")
+			.add("Verac's flail"),
+		outputItems: new Bank().add("Verac's armour set")
 	},
 	{
 		name: "Unpack dharok's armour set",
-		inputItems: {
-			[itemID("Dharok's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Dharok's helm")]: 1,
-			[itemID("Dharok's platebody")]: 1,
-			[itemID("Dharok's platelegs")]: 1,
-			[itemID("Dharok's greataxe")]: 1
-		},
+		inputItems: new Bank().add("Dharok's armour set"),
+		outputItems: new Bank()
+			.add("Dharok's helm")
+			.add("Dharok's platebody")
+			.add("Dharok's platelegs")
+			.add("Dharok's greataxe"),
 		noCl: true
 	},
 	{
 		name: "Dharok's armour set",
-		inputItems: {
-			[itemID("Dharok's helm")]: 1,
-			[itemID("Dharok's platebody")]: 1,
-			[itemID("Dharok's platelegs")]: 1,
-			[itemID("Dharok's greataxe")]: 1
-		},
-		outputItems: {
-			[itemID("Dharok's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Dharok's helm")
+			.add("Dharok's platebody")
+			.add("Dharok's platelegs")
+			.add("Dharok's greataxe"),
+		outputItems: new Bank().add("Dharok's armour set")
 	},
 	{
 		name: "Unpack guthan's armour set",
-		inputItems: {
-			[itemID("Guthan's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Guthan's helm")]: 1,
-			[itemID("Guthan's platebody")]: 1,
-			[itemID("Guthan's chainskirt")]: 1,
-			[itemID("Guthan's warspear")]: 1
-		},
+		inputItems: new Bank().add("Guthan's armour set"),
+		outputItems: new Bank()
+			.add("Guthan's helm")
+			.add("Guthan's platebody")
+			.add("Guthan's chainskirt")
+			.add("Guthan's warspear"),
 		noCl: true
 	},
 	{
 		name: "Guthan's armour set",
-		inputItems: {
-			[itemID("Guthan's helm")]: 1,
-			[itemID("Guthan's platebody")]: 1,
-			[itemID("Guthan's chainskirt")]: 1,
-			[itemID("Guthan's warspear")]: 1
-		},
-		outputItems: {
-			[itemID("Guthan's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Guthan's helm")
+			.add("Guthan's platebody")
+			.add("Guthan's chainskirt")
+			.add("Guthan's warspear"),
+		outputItems: new Bank().add("Guthan's armour set")
 	},
 	{
 		name: "Unpack ahrim's armour set",
-		inputItems: {
-			[itemID("Ahrim's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Ahrim's hood")]: 1,
-			[itemID("Ahrim's robetop")]: 1,
-			[itemID("Ahrim's robeskirt")]: 1,
-			[itemID("Ahrim's staff")]: 1
-		},
+		inputItems: new Bank().add("Ahrim's armour set"),
+		outputItems: new Bank()
+			.add("Ahrim's hood")
+			.add("Ahrim's robetop")
+			.add("Ahrim's robeskirt")
+			.add("Ahrim's staff"),
 		noCl: true
 	},
 	{
 		name: "Ahrim's armour set",
-		inputItems: {
-			[itemID("Ahrim's hood")]: 1,
-			[itemID("Ahrim's robetop")]: 1,
-			[itemID("Ahrim's robeskirt")]: 1,
-			[itemID("Ahrim's staff")]: 1
-		},
-		outputItems: {
-			[itemID("Ahrim's armour set")]: 1
-		}
+		inputItems: new Bank().add("Ahrim's hood").add("Ahrim's robetop").add("Ahrim's robeskirt").add("Ahrim's staff"),
+		outputItems: new Bank().add("Ahrim's armour set")
 	},
 	{
 		name: "Unpack torag's armour set",
-		inputItems: {
-			[itemID("Torag's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Torag's helm")]: 1,
-			[itemID("Torag's platebody")]: 1,
-			[itemID("Torag's platelegs")]: 1,
-			[itemID("Torag's hammers")]: 1
-		},
+		inputItems: new Bank().add("Torag's armour set"),
+		outputItems: new Bank()
+			.add("Torag's helm")
+			.add("Torag's platebody")
+			.add("Torag's platelegs")
+			.add("Torag's hammers"),
 		noCl: true
 	},
 	{
 		name: "Torag's armour set",
-		inputItems: {
-			[itemID("Torag's helm")]: 1,
-			[itemID("Torag's platebody")]: 1,
-			[itemID("Torag's platelegs")]: 1,
-			[itemID("Torag's hammers")]: 1
-		},
-		outputItems: {
-			[itemID("Torag's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Torag's helm")
+			.add("Torag's platebody")
+			.add("Torag's platelegs")
+			.add("Torag's hammers"),
+		outputItems: new Bank().add("Torag's armour set")
 	},
 	{
 		name: "Unpack karil's armour set",
-		inputItems: {
-			[itemID("Karil's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Karil's coif")]: 1,
-			[itemID("Karil's leathertop")]: 1,
-			[itemID("Karil's leatherskirt")]: 1,
-			[itemID("Karil's crossbow")]: 1
-		},
+		inputItems: new Bank().add("Karil's armour set"),
+		outputItems: new Bank()
+			.add("Karil's coif")
+			.add("Karil's leathertop")
+			.add("Karil's leatherskirt")
+			.add("Karil's crossbow"),
 		noCl: true
 	},
 	{
 		name: "Karil's armour set",
-		inputItems: {
-			[itemID("Karil's coif")]: 1,
-			[itemID("Karil's leathertop")]: 1,
-			[itemID("Karil's leatherskirt")]: 1,
-			[itemID("Karil's crossbow")]: 1
-		},
-		outputItems: {
-			[itemID("Karil's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Karil's coif")
+			.add("Karil's leathertop")
+			.add("Karil's leatherskirt")
+			.add("Karil's crossbow"),
+		outputItems: new Bank().add("Karil's armour set")
 	},
 	// inquisitor
 	{
 		name: "Unpack inquisitor's armour set",
-		inputItems: {
-			[itemID("Inquisitor's armour set")]: 1
-		},
-		outputItems: {
-			[itemID("Inquisitor's great helm")]: 1,
-			[itemID("Inquisitor's hauberk")]: 1,
-			[itemID("Inquisitor's plateskirt")]: 1
-		},
+		inputItems: new Bank().add("Inquisitor's armour set"),
+		outputItems: new Bank()
+			.add("Inquisitor's great helm")
+			.add("Inquisitor's hauberk")
+			.add("Inquisitor's plateskirt"),
 		noCl: true
 	},
 	{
 		name: "Inquisitor's armour set",
-		inputItems: {
-			[itemID("Inquisitor's great helm")]: 1,
-			[itemID("Inquisitor's hauberk")]: 1,
-			[itemID("Inquisitor's plateskirt")]: 1
-		},
-		outputItems: {
-			[itemID("Inquisitor's armour set")]: 1
-		}
+		inputItems: new Bank()
+			.add("Inquisitor's great helm")
+			.add("Inquisitor's hauberk")
+			.add("Inquisitor's plateskirt"),
+		outputItems: new Bank().add("Inquisitor's armour set")
 	},
 	// justiciar
 	{
 		name: 'Unpack justiciar armour set',
-		inputItems: {
-			[itemID('Justiciar armour set')]: 1
-		},
-		outputItems: {
-			[itemID('Justiciar faceguard')]: 1,
-			[itemID('Justiciar chestguard')]: 1,
-			[itemID('Justiciar legguards')]: 1
-		},
+		inputItems: new Bank().add('Justiciar armour set', 1),
+		outputItems: new Bank()
+			.add('Justiciar faceguard', 1)
+			.add('Justiciar chestguard', 1)
+			.add('Justiciar legguards', 1),
 		noCl: true
 	},
 	{
 		name: 'Justiciar armour set',
-		inputItems: {
-			[itemID('Justiciar faceguard')]: 1,
-			[itemID('Justiciar chestguard')]: 1,
-			[itemID('Justiciar legguards')]: 1
-		},
-		outputItems: {
-			[itemID('Justiciar armour set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Justiciar faceguard', 1)
+			.add('Justiciar chestguard', 1)
+			.add('Justiciar legguards', 1),
+		outputItems: new Bank().add('Justiciar armour set', 1)
 	},
 	// obsidian
 	{
 		name: 'Unpack obsidian armour set',
-		inputItems: {
-			[itemID('Obsidian armour set')]: 1
-		},
-		outputItems: {
-			[itemID('Obsidian helmet')]: 1,
-			[itemID('Obsidian platebody')]: 1,
-			[itemID('Obsidian platelegs')]: 1
-		},
+		inputItems: new Bank().add('Obsidian armour set', 1),
+		outputItems: new Bank().add('Obsidian helmet', 1).add('Obsidian platebody', 1).add('Obsidian platelegs', 1),
 		noCl: true
 	},
 	{
 		name: 'Obsidian armour set',
-		inputItems: {
-			[itemID('Obsidian helmet')]: 1,
-			[itemID('Obsidian platebody')]: 1,
-			[itemID('Obsidian platelegs')]: 1
-		},
-		outputItems: {
-			[itemID('Obsidian armour set')]: 1
-		}
+		inputItems: new Bank().add('Obsidian helmet', 1).add('Obsidian platebody', 1).add('Obsidian platelegs', 1),
+		outputItems: new Bank().add('Obsidian armour set', 1)
 	},
 	// dragonstone
 	{
 		name: 'Unpack dragonstone armour set',
-		inputItems: {
-			[itemID('Dragonstone armour set')]: 1
-		},
-		outputItems: {
-			[itemID('Dragonstone full helm')]: 1,
-			[itemID('Dragonstone platebody')]: 1,
-			[itemID('Dragonstone platelegs')]: 1,
-			[itemID('Dragonstone gauntlets')]: 1,
-			[itemID('Dragonstone boots')]: 1
-		},
+		inputItems: new Bank().add('Dragonstone armour set', 1),
+		outputItems: new Bank()
+			.add('Dragonstone full helm', 1)
+			.add('Dragonstone platebody', 1)
+			.add('Dragonstone platelegs', 1)
+			.add('Dragonstone gauntlets', 1)
+			.add('Dragonstone boots', 1),
 		noCl: true
 	},
 	{
 		name: 'Dragonstone armour set',
-		inputItems: {
-			[itemID('Dragonstone full helm')]: 1,
-			[itemID('Dragonstone platebody')]: 1,
-			[itemID('Dragonstone platelegs')]: 1,
-			[itemID('Dragonstone gauntlets')]: 1,
-			[itemID('Dragonstone boots')]: 1
-		},
-		outputItems: {
-			[itemID('Dragonstone armour set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Dragonstone full helm', 1)
+			.add('Dragonstone platebody', 1)
+			.add('Dragonstone platelegs', 1)
+			.add('Dragonstone gauntlets', 1)
+			.add('Dragonstone boots', 1),
+		outputItems: new Bank().add('Dragonstone armour set', 1)
 	},
 	// temple knight
 	{
 		name: 'Unpack initiate harness m',
-		inputItems: {
-			[itemID('Initiate harness m')]: 1
-		},
-		outputItems: {
-			[itemID('Initiate sallet')]: 1,
-			[itemID('Initiate hauberk')]: 1,
-			[itemID('Initiate cuisse')]: 1
-		},
+		inputItems: new Bank().add('Initiate harness m', 1),
+		outputItems: new Bank().add('Initiate sallet', 1).add('Initiate hauberk', 1).add('Initiate cuisse', 1),
 		noCl: true
 	},
 	{
 		name: 'Initiate harness m',
-		inputItems: {
-			[itemID('Initiate sallet')]: 1,
-			[itemID('Initiate hauberk')]: 1,
-			[itemID('Initiate cuisse')]: 1
-		},
-		outputItems: {
-			[itemID('Initiate harness m')]: 1
-		}
+		inputItems: new Bank().add('Initiate sallet', 1).add('Initiate hauberk', 1).add('Initiate cuisse', 1),
+		outputItems: new Bank().add('Initiate harness m', 1)
 	},
 	{
 		name: 'Unpack proselyte harness m',
-		inputItems: {
-			[itemID('Proselyte harness m')]: 1
-		},
-		outputItems: {
-			[itemID('Proselyte sallet')]: 1,
-			[itemID('Proselyte hauberk')]: 1,
-			[itemID('Proselyte cuisse')]: 1
-		},
+		inputItems: new Bank().add('Proselyte harness m', 1),
+		outputItems: new Bank().add('Proselyte sallet', 1).add('Proselyte hauberk', 1).add('Proselyte cuisse', 1),
 		noCl: true
 	},
 	{
 		name: 'Proselyte harness m',
-		inputItems: {
-			[itemID('Proselyte sallet')]: 1,
-			[itemID('Proselyte hauberk')]: 1,
-			[itemID('Proselyte cuisse')]: 1
-		},
-		outputItems: {
-			[itemID('Proselyte harness m')]: 1
-		}
+		inputItems: new Bank().add('Proselyte sallet', 1).add('Proselyte hauberk', 1).add('Proselyte cuisse', 1),
+		outputItems: new Bank().add('Proselyte harness m', 1)
 	},
 	{
 		name: 'Unpack proselyte harness f',
-		inputItems: {
-			[itemID('Proselyte harness f')]: 1
-		},
-		outputItems: {
-			[itemID('Proselyte sallet')]: 1,
-			[itemID('Proselyte hauberk')]: 1,
-			[itemID('Proselyte tasset')]: 1
-		},
+		inputItems: new Bank().add('Proselyte harness f', 1),
+		outputItems: new Bank().add('Proselyte sallet', 1).add('Proselyte hauberk', 1).add('Proselyte tasset', 1),
 		noCl: true
 	},
 	{
 		name: 'Proselyte harness f',
-		inputItems: {
-			[itemID('Proselyte sallet')]: 1,
-			[itemID('Proselyte hauberk')]: 1,
-			[itemID('Proselyte tasset')]: 1
-		},
-		outputItems: {
-			[itemID('Proselyte harness f')]: 1
-		}
+		inputItems: new Bank().add('Proselyte sallet', 1).add('Proselyte hauberk', 1).add('Proselyte tasset', 1),
+		outputItems: new Bank().add('Proselyte harness f', 1)
 	},
 	// range sets
 	// dragonhide
 	{
 		name: 'Unpack green dragonhide set',
-		inputItems: {
-			[itemID('Green dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID("Green d'hide body")]: 1,
-			[itemID("Green d'hide chaps")]: 1,
-			[itemID("Green d'hide vambraces")]: 1
-		},
+		inputItems: new Bank().add('Green dragonhide set', 1),
+		outputItems: new Bank().add("Green d'hide body").add("Green d'hide chaps").add("Green d'hide vambraces"),
 		noCl: true
 	},
 	{
 		name: 'Green dragonhide set',
-		inputItems: {
-			[itemID("Green d'hide body")]: 1,
-			[itemID("Green d'hide chaps")]: 1,
-			[itemID("Green d'hide vambraces")]: 1
-		},
-		outputItems: {
-			[itemID('Green dragonhide set')]: 1
-		}
+		inputItems: new Bank().add("Green d'hide body").add("Green d'hide chaps").add("Green d'hide vambraces"),
+		outputItems: new Bank().add('Green dragonhide set', 1)
 	},
 	{
 		name: 'Unpack blue dragonhide set',
-		inputItems: {
-			[itemID('Blue dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID("Blue d'hide body")]: 1,
-			[itemID("Blue d'hide chaps")]: 1,
-			[itemID("Blue d'hide vambraces")]: 1
-		},
+		inputItems: new Bank().add('Blue dragonhide set', 1),
+		outputItems: new Bank().add("Blue d'hide body").add("Blue d'hide chaps").add("Blue d'hide vambraces"),
 		noCl: true
 	},
 	{
 		name: 'Blue dragonhide set',
-		inputItems: {
-			[itemID("Blue d'hide body")]: 1,
-			[itemID("Blue d'hide chaps")]: 1,
-			[itemID("Blue d'hide vambraces")]: 1
-		},
-		outputItems: {
-			[itemID('Blue dragonhide set')]: 1
-		}
+		inputItems: new Bank().add("Blue d'hide body").add("Blue d'hide chaps").add("Blue d'hide vambraces"),
+		outputItems: new Bank().add('Blue dragonhide set', 1)
 	},
 	{
 		name: 'Unpack red dragonhide set',
-		inputItems: {
-			[itemID('Red dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID("Red d'hide body")]: 1,
-			[itemID("Red d'hide chaps")]: 1,
-			[itemID("Red d'hide vambraces")]: 1
-		},
+		inputItems: new Bank().add('Red dragonhide set', 1),
+		outputItems: new Bank().add("Red d'hide body").add("Red d'hide chaps").add("Red d'hide vambraces"),
 		noCl: true
 	},
 	{
 		name: 'Red dragonhide set',
-		inputItems: {
-			[itemID("Red d'hide body")]: 1,
-			[itemID("Red d'hide chaps")]: 1,
-			[itemID("Red d'hide vambraces")]: 1
-		},
-		outputItems: {
-			[itemID('Red dragonhide set')]: 1
-		}
+		inputItems: new Bank().add("Red d'hide body").add("Red d'hide chaps").add("Red d'hide vambraces"),
+		outputItems: new Bank().add('Red dragonhide set', 1)
 	},
 	{
 		name: 'Unpack black dragonhide set',
-		inputItems: {
-			[itemID('Black dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID("Black d'hide body")]: 1,
-			[itemID("Black d'hide chaps")]: 1,
-			[itemID("Black d'hide vambraces")]: 1
-		},
+		inputItems: new Bank().add('Black dragonhide set', 1),
+		outputItems: new Bank().add("Black d'hide body").add("Black d'hide chaps").add("Black d'hide vambraces"),
 		noCl: true
 	},
 	{
 		name: 'Black dragonhide set',
-		inputItems: {
-			[itemID("Black d'hide body")]: 1,
-			[itemID("Black d'hide chaps")]: 1,
-			[itemID("Black d'hide vambraces")]: 1
-		},
-		outputItems: {
-			[itemID('Black dragonhide set')]: 1
-		}
+		inputItems: new Bank().add("Black d'hide body").add("Black d'hide chaps").add("Black d'hide vambraces"),
+		outputItems: new Bank().add('Black dragonhide set', 1)
 	},
 	{
 		name: 'Unpack gilded dragonhide set',
-		inputItems: {
-			[itemID('Gilded dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID("Gilded d'hide body")]: 1,
-			[itemID("Gilded d'hide chaps")]: 1,
-			[itemID("Gilded d'hide vambraces")]: 1
-		},
+		inputItems: new Bank().add('Gilded dragonhide set', 1),
+		outputItems: new Bank().add("Gilded d'hide body").add("Gilded d'hide chaps").add("Gilded d'hide vambraces"),
 		noCl: true
 	},
 	{
 		name: 'Gilded dragonhide set',
-		inputItems: {
-			[itemID("Gilded d'hide body")]: 1,
-			[itemID("Gilded d'hide chaps")]: 1,
-			[itemID("Gilded d'hide vambraces")]: 1
-		},
-		outputItems: {
-			[itemID('Gilded dragonhide set')]: 1
-		}
+		inputItems: new Bank().add("Gilded d'hide body").add("Gilded d'hide chaps").add("Gilded d'hide vambraces"),
+		outputItems: new Bank().add('Gilded dragonhide set', 1)
 	},
 	// blessed dragonhide
 	{
 		name: 'Unpack guthix dragonhide set',
-		inputItems: {
-			[itemID('Guthix dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix coif')]: 1,
-			[itemID("Guthix d'hide body")]: 1,
-			[itemID('Guthix chaps')]: 1,
-			[itemID('Guthix bracers')]: 1
-		},
+		inputItems: new Bank().add('Guthix dragonhide set', 1),
+		outputItems: new Bank().add('Guthix coif', 1).add('Guthix chaps', 1).add('Guthix bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Guthix dragonhide set',
-		inputItems: {
-			[itemID('Guthix coif')]: 1,
-			[itemID("Guthix d'hide body")]: 1,
-			[itemID('Guthix chaps')]: 1,
-			[itemID('Guthix bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Guthix coif', 1).add('Guthix chaps', 1).add('Guthix bracers', 1),
+		outputItems: new Bank().add('Guthix dragonhide set', 1)
 	},
 	{
 		name: 'Unpack saradomin dragonhide set',
-		inputItems: {
-			[itemID('Saradomin dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin coif')]: 1,
-			[itemID("Saradomin d'hide body")]: 1,
-			[itemID('Saradomin chaps')]: 1,
-			[itemID('Saradomin bracers')]: 1
-		},
+		inputItems: new Bank().add('Saradomin dragonhide set', 1),
+		outputItems: new Bank().add('Saradomin coif', 1).add('Saradomin chaps', 1).add('Saradomin bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Saradomin dragonhide set',
-		inputItems: {
-			[itemID('Saradomin coif')]: 1,
-			[itemID("Saradomin d'hide body")]: 1,
-			[itemID('Saradomin chaps')]: 1,
-			[itemID('Saradomin bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Saradomin coif', 1).add('Saradomin chaps', 1).add('Saradomin bracers', 1),
+		outputItems: new Bank().add('Saradomin dragonhide set', 1)
 	},
 	{
 		name: 'Unpack zamorak dragonhide set',
-		inputItems: {
-			[itemID('Zamorak dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak coif')]: 1,
-			[itemID("Zamorak d'hide body")]: 1,
-			[itemID('Zamorak chaps')]: 1,
-			[itemID('Zamorak bracers')]: 1
-		},
+		inputItems: new Bank().add('Zamorak dragonhide set', 1),
+		outputItems: new Bank().add('Zamorak coif', 1).add('Zamorak chaps', 1).add('Zamorak bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Zamorak dragonhide set',
-		inputItems: {
-			[itemID('Zamorak coif')]: 1,
-			[itemID("Zamorak d'hide body")]: 1,
-			[itemID('Zamorak chaps')]: 1,
-			[itemID('Zamorak bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Zamorak coif', 1).add('Zamorak chaps', 1).add('Zamorak bracers', 1),
+		outputItems: new Bank().add('Zamorak dragonhide set', 1)
 	},
 	{
 		name: 'Unpack ancient dragonhide set',
-		inputItems: {
-			[itemID('Ancient dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient coif')]: 1,
-			[itemID("Ancient d'hide body")]: 1,
-			[itemID('Ancient chaps')]: 1,
-			[itemID('Ancient bracers')]: 1
-		},
+		inputItems: new Bank().add('Ancient dragonhide set', 1),
+		outputItems: new Bank().add('Ancient coif', 1).add('Ancient chaps', 1).add('Ancient bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Ancient dragonhide set',
-		inputItems: {
-			[itemID('Ancient coif')]: 1,
-			[itemID("Ancient d'hide body")]: 1,
-			[itemID('Ancient chaps')]: 1,
-			[itemID('Ancient bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Ancient coif', 1).add('Ancient chaps', 1).add('Ancient bracers', 1),
+		outputItems: new Bank().add('Ancient dragonhide set', 1)
 	},
 	{
 		name: 'Unpack armadyl dragonhide set',
-		inputItems: {
-			[itemID('Armadyl dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl coif')]: 1,
-			[itemID("Armadyl d'hide body")]: 1,
-			[itemID('Armadyl chaps')]: 1,
-			[itemID('Armadyl bracers')]: 1
-		},
+		inputItems: new Bank().add('Armadyl dragonhide set', 1),
+		outputItems: new Bank().add('Armadyl coif', 1).add('Armadyl chaps', 1).add('Armadyl bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Armadyl dragonhide set',
-		inputItems: {
-			[itemID('Armadyl coif')]: 1,
-			[itemID("Armadyl d'hide body")]: 1,
-			[itemID('Armadyl chaps')]: 1,
-			[itemID('Armadyl bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Armadyl coif', 1).add('Armadyl chaps', 1).add('Armadyl bracers', 1),
+		outputItems: new Bank().add('Armadyl dragonhide set', 1)
 	},
 	{
 		name: 'Unpack bandos dragonhide set',
-		inputItems: {
-			[itemID('Bandos dragonhide set')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos coif')]: 1,
-			[itemID("Bandos d'hide body")]: 1,
-			[itemID('Bandos chaps')]: 1,
-			[itemID('Bandos bracers')]: 1
-		},
+		inputItems: new Bank().add('Bandos dragonhide set', 1),
+		outputItems: new Bank().add('Bandos coif', 1).add('Bandos chaps', 1).add('Bandos bracers', 1),
 		noCl: true
 	},
 	{
 		name: 'Bandos dragonhide set',
-		inputItems: {
-			[itemID('Bandos coif')]: 1,
-			[itemID("Bandos d'hide body")]: 1,
-			[itemID('Bandos chaps')]: 1,
-			[itemID('Bandos bracers')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos dragonhide set')]: 1
-		}
+		inputItems: new Bank().add('Bandos coif', 1).add('Bandos chaps', 1).add('Bandos bracers', 1),
+		outputItems: new Bank().add('Bandos dragonhide set', 1)
 	},
 	// mage sets
 	{
 		name: 'Unpack mystic set (blue)',
-		inputItems: {
-			[itemID('Mystic set (blue)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic hat')]: 1,
-			[itemID('Mystic robe top')]: 1,
-			[itemID('Mystic robe bottom')]: 1,
-			[itemID('Mystic gloves')]: 1,
-			[itemID('Mystic boots')]: 1
-		},
+		inputItems: new Bank().add('Mystic set (blue)', 1),
+		outputItems: new Bank()
+			.add('Mystic hat', 1)
+			.add('Mystic robe top', 1)
+			.add('Mystic robe bottom', 1)
+			.add('Mystic gloves', 1)
+			.add('Mystic boots', 1),
 		noCl: true
 	},
 	{
 		name: 'Mystic set (blue)',
-		inputItems: {
-			[itemID('Mystic hat')]: 1,
-			[itemID('Mystic robe top')]: 1,
-			[itemID('Mystic robe bottom')]: 1,
-			[itemID('Mystic gloves')]: 1,
-			[itemID('Mystic boots')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic set (blue)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mystic hat', 1)
+			.add('Mystic robe top', 1)
+			.add('Mystic robe bottom', 1)
+			.add('Mystic gloves', 1)
+			.add('Mystic boots', 1),
+		outputItems: new Bank().add('Mystic set (blue)', 1)
 	},
 	{
 		name: 'Unpack mystic set (dark)',
-		inputItems: {
-			[itemID('Mystic set (dark)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic hat (dark)')]: 1,
-			[itemID('Mystic robe top (dark)')]: 1,
-			[itemID('Mystic robe bottom (dark)')]: 1,
-			[itemID('Mystic gloves (dark)')]: 1,
-			[itemID('Mystic boots (dark)')]: 1
-		},
+		inputItems: new Bank().add('Mystic set (dark)', 1),
+		outputItems: new Bank()
+			.add('Mystic hat (dark)', 1)
+			.add('Mystic robe top (dark)', 1)
+			.add('Mystic robe bottom (dark)', 1)
+			.add('Mystic gloves (dark)', 1)
+			.add('Mystic boots (dark)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mystic set (dark)',
-		inputItems: {
-			[itemID('Mystic hat (dark)')]: 1,
-			[itemID('Mystic robe top (dark)')]: 1,
-			[itemID('Mystic robe bottom (dark)')]: 1,
-			[itemID('Mystic gloves (dark)')]: 1,
-			[itemID('Mystic boots (dark)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic set (dark)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mystic hat (dark)', 1)
+			.add('Mystic robe top (dark)', 1)
+			.add('Mystic robe bottom (dark)', 1)
+			.add('Mystic gloves (dark)', 1)
+			.add('Mystic boots (dark)', 1),
+		outputItems: new Bank().add('Mystic set (dark)', 1)
 	},
 	{
 		name: 'Unpack mystic set (light)',
-		inputItems: {
-			[itemID('Mystic set (light)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic hat (light)')]: 1,
-			[itemID('Mystic robe top (light)')]: 1,
-			[itemID('Mystic robe bottom (light)')]: 1,
-			[itemID('Mystic gloves (light)')]: 1,
-			[itemID('Mystic boots (light)')]: 1
-		},
+		inputItems: new Bank().add('Mystic set (light)', 1),
+		outputItems: new Bank()
+			.add('Mystic hat (light)', 1)
+			.add('Mystic robe top (light)', 1)
+			.add('Mystic robe bottom (light)', 1)
+			.add('Mystic gloves (light)', 1)
+			.add('Mystic boots (light)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mystic set (light)',
-		inputItems: {
-			[itemID('Mystic hat (light)')]: 1,
-			[itemID('Mystic robe top (light)')]: 1,
-			[itemID('Mystic robe bottom (light)')]: 1,
-			[itemID('Mystic gloves (light)')]: 1,
-			[itemID('Mystic boots (light)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic set (light)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mystic hat (light)', 1)
+			.add('Mystic robe top (light)', 1)
+			.add('Mystic robe bottom (light)', 1)
+			.add('Mystic gloves (light)', 1)
+			.add('Mystic boots (light)', 1),
+		outputItems: new Bank().add('Mystic set (light)', 1)
 	},
 	{
 		name: 'Unpack mystic set (dusk)',
-		inputItems: {
-			[itemID('Mystic set (dusk)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic hat (dusk)')]: 1,
-			[itemID('Mystic robe top (dusk)')]: 1,
-			[itemID('Mystic robe bottom (dusk)')]: 1,
-			[itemID('Mystic gloves (dusk)')]: 1,
-			[itemID('Mystic boots (dusk)')]: 1
-		},
+		inputItems: new Bank().add('Mystic set (dusk)', 1),
+		outputItems: new Bank()
+			.add('Mystic hat (dusk)', 1)
+			.add('Mystic robe top (dusk)', 1)
+			.add('Mystic robe bottom (dusk)', 1)
+			.add('Mystic gloves (dusk)', 1)
+			.add('Mystic boots (dusk)', 1),
 		noCl: true
 	},
 	{
 		name: 'Mystic set (dusk)',
-		inputItems: {
-			[itemID('Mystic hat (dusk)')]: 1,
-			[itemID('Mystic robe top (dusk)')]: 1,
-			[itemID('Mystic robe bottom (dusk)')]: 1,
-			[itemID('Mystic gloves (dusk)')]: 1,
-			[itemID('Mystic boots (dusk)')]: 1
-		},
-		outputItems: {
-			[itemID('Mystic set (dusk)')]: 1
-		}
+		inputItems: new Bank()
+			.add('Mystic hat (dusk)', 1)
+			.add('Mystic robe top (dusk)', 1)
+			.add('Mystic robe bottom (dusk)', 1)
+			.add('Mystic gloves (dusk)', 1)
+			.add('Mystic boots (dusk)', 1),
+		outputItems: new Bank().add('Mystic set (dusk)', 1)
 	},
 	// {
 	// 	name: "Unpack dagon'hai robes set",
-	// 	inputItems: {
-	// 		[itemID("Dagon'hai robes set")]: 1
+	// 	inputItems: new Bank()
+	// 		.add("Dagon'hai robes set")
 	// 	},
-	// 	outputItems: {
-	// 		[itemID("Dagon'hai hat")]: 1,
-	// 		[itemID("Dagon'hai robe top")]: 1,
-	// 		[itemID("Dagon'hai robe bottom")]: 1
+	// 	outputItems: new Bank()
+	// 		.add("Dagon'hai hat")
+	// 		.add("Dagon'hai robe top")
+	// 		.add("Dagon'hai robe bottom")
 	// 	},
 	// 	noCl: true
 	// },
 	// {
 	// 	name: "Dagon'hai robes set",
-	// 	inputItems: {
-	// 		[itemID("Dagon'hai hat")]: 1,
-	// 		[itemID("Dagon'hai robe top")]: 1,
-	// 		[itemID("Dagon'hai robe bottom")]: 1
+	// 	inputItems: new Bank()
+	// 		.add("Dagon'hai hat")
+	// 		.add("Dagon'hai robe top")
+	// 		.add("Dagon'hai robe bottom")
 	// 	},
-	// 	outputItems: {
-	// 		[itemID("Dagon'hai robes set")]: 1
+	// 	outputItems: new Bank()
+	// 		.add("Dagon'hai robes set")
 	// 	}
 	// },
 	{
 		name: 'Unpack ancestral robes set',
-		inputItems: {
-			[itemID('Ancestral robes set')]: 1
-		},
-		outputItems: {
-			[itemID('Ancestral hat')]: 1,
-			[itemID('Ancestral robe top')]: 1,
-			[itemID('Ancestral robe bottom')]: 1
-		},
+		inputItems: new Bank().add('Ancestral robes set', 1),
+		outputItems: new Bank().add('Ancestral hat', 1).add('Ancestral robe top', 1).add('Ancestral robe bottom', 1),
 		noCl: true
 	},
 	{
 		name: 'Ancestral robes set',
-		inputItems: {
-			[itemID('Ancestral hat')]: 1,
-			[itemID('Ancestral robe top')]: 1,
-			[itemID('Ancestral robe bottom')]: 1
-		},
-		outputItems: {
-			[itemID('Ancestral robes set')]: 1
-		}
+		inputItems: new Bank().add('Ancestral hat', 1).add('Ancestral robe top', 1).add('Ancestral robe bottom', 1),
+		outputItems: new Bank().add('Ancestral robes set', 1)
 	},
 	// god books
 	{
 		name: 'Unpack book of balance page set',
-		inputItems: {
-			[itemID('Book of balance page set')]: 1
-		},
-		outputItems: {
-			[itemID('Guthix page 1')]: 1,
-			[itemID('Guthix page 2')]: 1,
-			[itemID('Guthix page 3')]: 1,
-			[itemID('Guthix page 4')]: 1
-		},
+		inputItems: new Bank().add('Book of balance page set', 1),
+		outputItems: new Bank()
+			.add('Guthix page 1', 1)
+			.add('Guthix page 2', 1)
+			.add('Guthix page 3', 1)
+			.add('Guthix page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Book of balance page set',
-		inputItems: {
-			[itemID('Guthix page 1')]: 1,
-			[itemID('Guthix page 2')]: 1,
-			[itemID('Guthix page 3')]: 1,
-			[itemID('Guthix page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Book of balance page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Guthix page 1', 1)
+			.add('Guthix page 2', 1)
+			.add('Guthix page 3', 1)
+			.add('Guthix page 4', 1),
+		outputItems: new Bank().add('Book of balance page set', 1)
 	},
 	{
 		name: 'Unpack holy book page set',
-		inputItems: {
-			[itemID('Holy book page set')]: 1
-		},
-		outputItems: {
-			[itemID('Saradomin page 1')]: 1,
-			[itemID('Saradomin page 2')]: 1,
-			[itemID('Saradomin page 3')]: 1,
-			[itemID('Saradomin page 4')]: 1
-		},
+		inputItems: new Bank().add('Holy book page set', 1),
+		outputItems: new Bank()
+			.add('Saradomin page 1', 1)
+			.add('Saradomin page 2', 1)
+			.add('Saradomin page 3', 1)
+			.add('Saradomin page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Holy book page set',
-		inputItems: {
-			[itemID('Saradomin page 1')]: 1,
-			[itemID('Saradomin page 2')]: 1,
-			[itemID('Saradomin page 3')]: 1,
-			[itemID('Saradomin page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Holy book page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Saradomin page 1', 1)
+			.add('Saradomin page 2', 1)
+			.add('Saradomin page 3', 1)
+			.add('Saradomin page 4', 1),
+		outputItems: new Bank().add('Holy book page set', 1)
 	},
 	{
 		name: 'Unpack unholy book page set',
-		inputItems: {
-			[itemID('Unholy book page set')]: 1
-		},
-		outputItems: {
-			[itemID('Zamorak page 1')]: 1,
-			[itemID('Zamorak page 2')]: 1,
-			[itemID('Zamorak page 3')]: 1,
-			[itemID('Zamorak page 4')]: 1
-		},
+		inputItems: new Bank().add('Unholy book page set', 1),
+		outputItems: new Bank()
+			.add('Zamorak page 1', 1)
+			.add('Zamorak page 2', 1)
+			.add('Zamorak page 3', 1)
+			.add('Zamorak page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Unholy book page set',
-		inputItems: {
-			[itemID('Zamorak page 1')]: 1,
-			[itemID('Zamorak page 2')]: 1,
-			[itemID('Zamorak page 3')]: 1,
-			[itemID('Zamorak page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Unholy book page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Zamorak page 1', 1)
+			.add('Zamorak page 2', 1)
+			.add('Zamorak page 3', 1)
+			.add('Zamorak page 4', 1),
+		outputItems: new Bank().add('Unholy book page set', 1)
 	},
 	{
 		name: 'Unpack book of darkness page set',
-		inputItems: {
-			[itemID('Book of darkness page set')]: 1
-		},
-		outputItems: {
-			[itemID('Ancient page 1')]: 1,
-			[itemID('Ancient page 2')]: 1,
-			[itemID('Ancient page 3')]: 1,
-			[itemID('Ancient page 4')]: 1
-		},
+		inputItems: new Bank().add('Book of darkness page set', 1),
+		outputItems: new Bank()
+			.add('Ancient page 1', 1)
+			.add('Ancient page 2', 1)
+			.add('Ancient page 3', 1)
+			.add('Ancient page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Book of darkness page set',
-		inputItems: {
-			[itemID('Ancient page 1')]: 1,
-			[itemID('Ancient page 2')]: 1,
-			[itemID('Ancient page 3')]: 1,
-			[itemID('Ancient page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Book of darkness page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Ancient page 1', 1)
+			.add('Ancient page 2', 1)
+			.add('Ancient page 3', 1)
+			.add('Ancient page 4', 1),
+		outputItems: new Bank().add('Book of darkness page set', 1)
 	},
 	{
 		name: 'Unpack book of law page set',
-		inputItems: {
-			[itemID('Book of law page set')]: 1
-		},
-		outputItems: {
-			[itemID('Armadyl page 1')]: 1,
-			[itemID('Armadyl page 2')]: 1,
-			[itemID('Armadyl page 3')]: 1,
-			[itemID('Armadyl page 4')]: 1
-		},
+		inputItems: new Bank().add('Book of law page set', 1),
+		outputItems: new Bank()
+			.add('Armadyl page 1', 1)
+			.add('Armadyl page 2', 1)
+			.add('Armadyl page 3', 1)
+			.add('Armadyl page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Book of law page set',
-		inputItems: {
-			[itemID('Armadyl page 1')]: 1,
-			[itemID('Armadyl page 2')]: 1,
-			[itemID('Armadyl page 3')]: 1,
-			[itemID('Armadyl page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Book of law page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Armadyl page 1', 1)
+			.add('Armadyl page 2', 1)
+			.add('Armadyl page 3', 1)
+			.add('Armadyl page 4', 1),
+		outputItems: new Bank().add('Book of law page set', 1)
 	},
 	{
 		name: 'Unpack book of war page set',
-		inputItems: {
-			[itemID('Book of war page set')]: 1
-		},
-		outputItems: {
-			[itemID('Bandos page 1')]: 1,
-			[itemID('Bandos page 2')]: 1,
-			[itemID('Bandos page 3')]: 1,
-			[itemID('Bandos page 4')]: 1
-		},
+		inputItems: new Bank().add('Book of war page set', 1),
+		outputItems: new Bank()
+			.add('Bandos page 1', 1)
+			.add('Bandos page 2', 1)
+			.add('Bandos page 3', 1)
+			.add('Bandos page 4', 1),
 		noCl: true
 	},
 	{
 		name: 'Book of war page set',
-		inputItems: {
-			[itemID('Bandos page 1')]: 1,
-			[itemID('Bandos page 2')]: 1,
-			[itemID('Bandos page 3')]: 1,
-			[itemID('Bandos page 4')]: 1
-		},
-		outputItems: {
-			[itemID('Book of war page set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Bandos page 1', 1)
+			.add('Bandos page 2', 1)
+			.add('Bandos page 3', 1)
+			.add('Bandos page 4', 1),
+		outputItems: new Bank().add('Book of war page set', 1)
 	},
 	// twisted relichunter
 	// {
 	// 	name: 'Unpack twisted relichunter (t1) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted relichunter (t1) armour set')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted hat (t1)')]: 1,
-	// 		[itemID('Twisted coat (t1)')]: 1,
-	// 		[itemID('Twisted trousers (t1)')]: 1,
-	// 		[itemID('Twisted boots (t1)')]: 1
-	// 	},
+	// 	inputItems: new Bank().add('Twisted relichunter (t1) armour set', 1),
+	// 	outputItems: new Bank().add('Twisted hat (t1)', 1).add('Twisted coat (t1)', 1).add('Twisted trousers (t1)', 1).add('Twisted boots (t1)', 1),
 	// 	noCl: true
 	// },
 	// {
 	// 	name: 'Twisted relichunter (t1) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted hat (t1)')]: 1,
-	// 		[itemID('Twisted coat (t1)')]: 1,
-	// 		[itemID('Twisted trousers (t1)')]: 1,
-	// 		[itemID('Twisted boots (t1)')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted relichunter (t1) armour set')]: 1
-	// 	}
+	// 	inputItems: new Bank().add('Twisted hat (t1)', 1).add('Twisted coat (t1)', 1).add('Twisted trousers (t1)', 1).add('Twisted boots (t1)', 1),
+	// 	outputItems: new Bank().add('Twisted relichunter (t1) armour set', 1)
 	// },
 	// {
 	// 	name: 'Unpack twisted relichunter (t2) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted relichunter (t2) armour set')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted hat (t2)')]: 1,
-	// 		[itemID('Twisted coat (t2)')]: 1,
-	// 		[itemID('Twisted trousers (t2)')]: 1,
-	// 		[itemID('Twisted boots (t2)')]: 1
-	// 	},
+	// 	inputItems: new Bank().add('Twisted relichunter (t2) armour set', 1),
+	// 	outputItems: new Bank().add('Twisted hat (t2)', 1).add('Twisted coat (t2)', 1).add('Twisted trousers (t2)', 1).add('Twisted boots (t2)', 1),
 	// 	noCl: true
 	// },
 	// {
 	// 	name: 'Twisted relichunter (t2) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted hat (t2)')]: 1,
-	// 		[itemID('Twisted coat (t2)')]: 1,
-	// 		[itemID('Twisted trousers (t2)')]: 1,
-	// 		[itemID('Twisted boots (t2)')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted relichunter (t2) armour set')]: 1
-	// 	}
+	// 	inputItems: new Bank().add('Twisted hat (t2)', 1).add('Twisted coat (t2)', 1).add('Twisted trousers (t2)', 1).add('Twisted boots (t2)', 1),
+	// 	outputItems: new Bank().add('Twisted relichunter (t2) armour set', 1)
 	// },
 	// {
 	// 	name: 'Unpack twisted relichunter (t3) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted relichunter (t3) armour set')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted hat (t3)')]: 1,
-	// 		[itemID('Twisted coat (t3)')]: 1,
-	// 		[itemID('Twisted trousers (t3)')]: 1,
-	// 		[itemID('Twisted boots (t3)')]: 1
-	// 	},
+	// 	inputItems: new Bank().add('Twisted relichunter (t3) armour set', 1),
+	// 	outputItems: new Bank().add('Twisted hat (t3)', 1).add('Twisted coat (t3)', 1).add('Twisted trousers (t3)', 1).add('Twisted boots (t3)', 1),
 	// 	noCl: true
 	// },
 	// {
 	// 	name: 'Twisted relichunter (t3) armour set',
-	// 	inputItems: {
-	// 		[itemID('Twisted hat (t3)')]: 1,
-	// 		[itemID('Twisted coat (t3)')]: 1,
-	// 		[itemID('Twisted trousers (t3)')]: 1,
-	// 		[itemID('Twisted boots (t3)')]: 1
-	// 	},
-	// 	outputItems: {
-	// 		[itemID('Twisted relichunter (t3) armour set')]: 1
-	// 	}
+	// 	inputItems: new Bank().add('Twisted hat (t3)', 1).add('Twisted coat (t3)', 1).add('Twisted trousers (t3)', 1).add('Twisted boots (t3)', 1),
+	// 	outputItems: new Bank().add('Twisted relichunter (t3) armour set', 1)
 	// },
 	// holiday
 	{
 		name: 'Unpack partyhat set',
-		inputItems: {
-			[itemID('Partyhat set')]: 1
-		},
-		outputItems: {
-			[itemID('Red partyhat')]: 1,
-			[itemID('Yellow partyhat')]: 1,
-			[itemID('Green partyhat')]: 1,
-			[itemID('Blue partyhat')]: 1,
-			[itemID('Purple partyhat')]: 1,
-			[itemID('White partyhat')]: 1
-		},
+		inputItems: new Bank().add('Partyhat set', 1),
+		outputItems: new Bank()
+			.add('Red partyhat', 1)
+			.add('Yellow partyhat', 1)
+			.add('Green partyhat', 1)
+			.add('Blue partyhat', 1)
+			.add('Purple partyhat', 1)
+			.add('White partyhat', 1),
 		noCl: true
 	},
 	{
 		name: 'Partyhat set',
-		inputItems: {
-			[itemID('Red partyhat')]: 1,
-			[itemID('Yellow partyhat')]: 1,
-			[itemID('Green partyhat')]: 1,
-			[itemID('Blue partyhat')]: 1,
-			[itemID('Purple partyhat')]: 1,
-			[itemID('White partyhat')]: 1
-		},
-		outputItems: {
-			[itemID('Partyhat set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Red partyhat', 1)
+			.add('Yellow partyhat', 1)
+			.add('Green partyhat', 1)
+			.add('Blue partyhat', 1)
+			.add('Purple partyhat', 1)
+			.add('White partyhat', 1),
+		outputItems: new Bank().add('Partyhat set', 1)
 	},
 	{
 		name: 'Unpack halloween mask set',
-		inputItems: {
-			[itemID('Halloween mask set')]: 1
-		},
-		outputItems: {
-			[itemID('Red halloween mask')]: 1,
-			[itemID('Green halloween mask')]: 1,
-			[itemID('Blue halloween mask')]: 1
-		},
+		inputItems: new Bank().add('Halloween mask set', 1),
+		outputItems: new Bank()
+			.add('Red halloween mask', 1)
+			.add('Green halloween mask', 1)
+			.add('Blue halloween mask', 1),
 		noCl: true
 	},
 	{
 		name: 'Halloween mask set',
-		inputItems: {
-			[itemID('Red halloween mask')]: 1,
-			[itemID('Green halloween mask')]: 1,
-			[itemID('Blue halloween mask')]: 1
-		},
-		outputItems: {
-			[itemID('Halloween mask set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Red halloween mask', 1)
+			.add('Green halloween mask', 1)
+			.add('Blue halloween mask', 1),
+		outputItems: new Bank().add('Halloween mask set', 1)
 	},
 	// misc
 	{
 		name: 'Unpack combat potion set',
-		inputItems: {
-			[itemID('Combat potion set')]: 1
-		},
-		outputItems: {
-			[itemID('Attack potion(4)')]: 1,
-			[itemID('Strength potion(4)')]: 1,
-			[itemID('Defence potion(4)')]: 1
-		},
+		inputItems: new Bank().add('Combat potion set', 1),
+		outputItems: new Bank().add('Attack potion(4)', 1).add('Strength potion(4)', 1).add('Defence potion(4)', 1),
 		noCl: true
 	},
 	{
 		name: 'Combat potion set',
-		inputItems: {
-			[itemID('Attack potion(4)')]: 1,
-			[itemID('Strength potion(4)')]: 1,
-			[itemID('Defence potion(4)')]: 1
-		},
-		outputItems: {
-			[itemID('Combat potion set')]: 1
-		}
+		inputItems: new Bank().add('Attack potion(4)', 1).add('Strength potion(4)', 1).add('Defence potion(4)', 1),
+		outputItems: new Bank().add('Combat potion set', 1)
 	},
 	{
 		name: 'Unpack super potion set',
-		inputItems: {
-			[itemID('Super potion set')]: 1
-		},
-		outputItems: {
-			[itemID('Super attack(4)')]: 1,
-			[itemID('Super strength(4)')]: 1,
-			[itemID('Super defence(4)')]: 1
-		},
+		inputItems: new Bank().add('Super potion set', 1),
+		outputItems: new Bank().add('Super attack(4)', 1).add('Super strength(4)', 1).add('Super defence(4)', 1),
 		noCl: true
 	},
 	{
 		name: 'Super potion set',
-		inputItems: {
-			[itemID('Super attack(4)')]: 1,
-			[itemID('Super strength(4)')]: 1,
-			[itemID('Super defence(4)')]: 1
-		},
-		outputItems: {
-			[itemID('Super potion set')]: 1
-		}
+		inputItems: new Bank().add('Super attack(4)', 1).add('Super strength(4)', 1).add('Super defence(4)', 1),
+		outputItems: new Bank().add('Super potion set', 1)
 	},
 	{
 		name: 'Unpack dwarf cannon set',
-		inputItems: {
-			[itemID('Dwarf cannon set')]: 1
-		},
-		outputItems: {
-			[itemID('Cannon barrels')]: 1,
-			[itemID('Cannon base')]: 1,
-			[itemID('Cannon furnace')]: 1,
-			[itemID('Cannon stand')]: 1
-		},
+		inputItems: new Bank().add('Dwarf cannon set', 1),
+		outputItems: new Bank()
+			.add('Cannon barrels', 1)
+			.add('Cannon base', 1)
+			.add('Cannon furnace', 1)
+			.add('Cannon stand', 1),
 		noCl: true
 	},
 	{
 		name: 'Dwarf cannon set',
-		inputItems: {
-			[itemID('Cannon barrels')]: 1,
-			[itemID('Cannon base')]: 1,
-			[itemID('Cannon furnace')]: 1,
-			[itemID('Cannon stand')]: 1
-		},
-		outputItems: {
-			[itemID('Dwarf cannon set')]: 1
-		}
+		inputItems: new Bank()
+			.add('Cannon barrels', 1)
+			.add('Cannon base', 1)
+			.add('Cannon furnace', 1)
+			.add('Cannon stand', 1),
+		outputItems: new Bank().add('Dwarf cannon set', 1)
 	}
 ];
 

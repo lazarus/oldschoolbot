@@ -1,7 +1,5 @@
 import { Bank } from 'oldschooljs';
 
-import itemID from '../../util/itemID';
-
 interface TitheFarmBuyable {
 	name: string;
 	outputItems: Bank;
