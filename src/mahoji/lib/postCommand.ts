@@ -6,6 +6,7 @@ import { prisma } from '../../lib/settings/prisma';
 import { makeCommandUsage } from '../../lib/util/commandUsage';
 import { logError } from '../../lib/util/logError';
 import { AbstractCommand } from './inhibitors';
+import { globalTransactions } from './preCommand';
 
 export async function postCommand({
 	abstractCommand,
@@ -25,6 +26,8 @@ export async function postCommand({
 	isContinue: boolean;
 	inhibited: boolean;
 }): Promise<string | undefined> {
+	globalTransactions.get(userID)?.finish();
+	globalTransactions.delete(userID);
 	setTimeout(() => modifyBusyCounter(userID, -1), 1000);
 	debugLog('Postcommand', {
 		type: 'RUN_COMMAND',

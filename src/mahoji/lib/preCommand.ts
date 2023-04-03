@@ -1,3 +1,4 @@
+import { startTransaction } from '@sentry/node';
 import { InteractionReplyOptions, TextChannel, User } from 'discord.js';
 import { CommandOptions } from 'mahoji/dist/lib/types';
 
@@ -52,6 +53,8 @@ async function fetchPrecommandUser(userID: string) {
 
 export type PrecommandUser = Awaited<ReturnType<typeof fetchPrecommandUser>>;
 
+export const globalTransactions = new Map<string, ReturnType<typeof startTransaction>>();
+
 export async function preCommand({
 	abstractCommand,
 	userID,
@@ -76,6 +79,14 @@ export async function preCommand({
 			dontRunPostCommand?: boolean;
 	  }
 > {
+	const tx = startTransaction({
+		name: `${abstractCommand.name} Command`,
+		tags: {
+			user_id: userID,
+			guild_id: guildID
+		}
+	});
+	globalTransactions.set(userID, tx);
 	debugLog('Attempt to run command', {
 		type: 'RUN_COMMAND',
 		command_name: abstractCommand.name,

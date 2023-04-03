@@ -7,6 +7,7 @@ import './lib/util/transactItemsFromBank';
 import './lib/util/logger';
 
 import * as Sentry from '@sentry/node';
+import { ProfilingIntegration } from '@sentry/profiling-node';
 import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { GatewayIntentBits, InteractionType, Options, Partials, TextChannel } from 'discord.js';
@@ -22,6 +23,7 @@ import { Channel, Events, gitHash, globalConfig } from './lib/constants';
 import { onMessage } from './lib/events';
 import { makeServer } from './lib/http';
 import { modalInteractionHook } from './lib/modals';
+import { prisma } from './lib/settings/prisma';
 import { runStartupScripts } from './lib/startupScripts';
 import { OldSchoolBotClient } from './lib/structures/OldSchoolBotClient';
 import { syncActivityCache } from './lib/Task';
@@ -51,7 +53,19 @@ Chart.register(ChartDataLabels);
 
 if (SENTRY_DSN) {
 	Sentry.init({
-		dsn: SENTRY_DSN
+		dsn: SENTRY_DSN,
+		tracesSampleRate: 1.0,
+		profilesSampleRate: 1.0, // Profiling sample rate is relative to tracesSampleRate
+		integrations: [
+			// Add profiling integration to list of integrations
+			new ProfilingIntegration(),
+			new Sentry.Integrations.Postgres({
+				usePgNative: true // Default: false
+			}),
+			new Sentry.Integrations.Undici(),
+			new Sentry.Integrations.Prisma({ client: prisma }),
+			new Sentry.Integrations.Http()
+		]
 	});
 }
 
