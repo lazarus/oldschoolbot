@@ -2289,7 +2289,17 @@ export const capesCL = resolveItems([
 	'Sinhaza shroud tier 4',
 	'Sinhaza shroud tier 5',
 	'Music cape',
-	'Music cape (t)'
+	'Music cape (t)',
+	'Oceanic shroud (tier 1)',
+	'Oceanic shroud (tier 2)',
+	'Oceanic shroud (tier 3)',
+	'Oceanic shroud (tier 4)',
+	'Oceanic shroud (tier 5)',
+	"Xeric's guard",
+	"Xeric's warrior",
+	"Xeric's sentinel",
+	"Xeric's general",
+	"Xeric's champion"
 ]);
 export const questCL = resolveItems([
 	'Quest point hood',
@@ -2368,7 +2378,8 @@ export const discontinuedCustomPetsCL = resolveItems([
 	'Buzz',
 	'Kuro',
 	'Frosty',
-	'Eggy'
+	'Eggy',
+	'Buggy'
 ]);
 
 export const kingGoldemarCL = resolveItems([
@@ -2485,7 +2496,6 @@ export const seaKrakenCL = resolveItems([
 	// Tangleroot pets
 	'Fish sack',
 	'Pufferfish',
-	'Fishing trophy',
 	'Squid dye'
 ]);
 
