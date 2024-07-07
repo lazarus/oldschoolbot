@@ -10,7 +10,8 @@ async function main() {
 		execSync('docker compose up -d --wait', { stdio: 'inherit' });
 		stopwatch.check('Docker compose finished.');
 
-		await sleep(500);
+		await sleep(3000);
+		stopwatch.check('Finished waiting.');
 
 		const env = { ...process.env, ...config({ path: path.resolve('.env.test') }).parsed };
 		execSync('yarn prisma db push --schema="./prisma/schema.prisma"', { stdio: 'inherit', env });
@@ -31,7 +32,6 @@ async function main() {
 			console.log(`Finished run ${i + 1}/${runs}`);
 		}
 	} catch (err) {
-		console.log(execSync('docker-compose logs', { encoding: 'utf-8' }));
 		console.error(err);
 		throw new Error(err as any);
 	} finally {
