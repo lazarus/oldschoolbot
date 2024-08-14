@@ -1,16 +1,15 @@
-import type { SKRSContext2D } from '@napi-rs/canvas';
-import { Canvas } from '@napi-rs/canvas';
 import { formatItemStackQuantity, generateHexColorForCashStack } from '@oldschoolgg/toolkit';
 import type { CommandResponse } from '@oldschoolgg/toolkit';
+import { Canvas, type CanvasRenderingContext2D } from 'canvas';
 import { calcWhatPercent, objectEntries } from 'e';
 import type { Bank } from 'oldschooljs';
 import { Util } from 'oldschooljs';
 
 import { allCollectionLogs, getCollection, getTotalCl } from '../lib/data/Collections';
 import type { IToReturnCollection } from '../lib/data/CollectionsExport';
-import { fillTextXTimesInCtx, getClippedRegion, measureTextWidth } from '../lib/util/canvasUtil';
+import { encodeCanvas, fillTextXTimesInCtx, getClippedRegion, measureTextWidth } from '../lib/util/canvasUtil';
 import getOSItem from '../lib/util/getOSItem';
-import type { IBgSprite } from './bankImage';
+import { Font, type IBgSprite } from './bankImage';
 import type { MUserStats } from './structures/MUserStats';
 
 export const collectionLogTypes = [
@@ -28,11 +27,19 @@ export const CollectionLogFlags = [
 class CollectionLogTask {
 	run() {}
 
-	drawBorder(ctx: SKRSContext2D, sprite: IBgSprite) {
+	drawBorder(ctx: CanvasRenderingContext2D, sprite: IBgSprite) {
 		return bankImageGenerator.drawBorder(ctx, sprite);
 	}
 
-	drawSquare(ctx: SKRSContext2D, x: number, y: number, w: number, h: number, pixelSize = 1, hollow = true) {
+	drawSquare(
+		ctx: CanvasRenderingContext2D,
+		x: number,
+		y: number,
+		w: number,
+		h: number,
+		pixelSize = 1,
+		hollow = true
+	) {
 		ctx.save();
 		if (hollow) {
 			ctx.translate(0.5, 0.5);
@@ -50,7 +57,7 @@ class CollectionLogTask {
 		ctx.restore();
 	}
 
-	drawText(ctx: SKRSContext2D, text: string, x: number, y: number) {
+	drawText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number) {
 		const baseFill = ctx.fillStyle;
 		ctx.fillStyle = '#000000';
 		fillTextXTimesInCtx(ctx, text, x + 1, y + 1);
@@ -73,7 +80,7 @@ class CollectionLogTask {
 		const canvasList = new Canvas(200, leftHeight);
 		// Get the canvas context
 		const ctxl = canvasList.getContext('2d');
-		ctxl.font = '16px OSRSFontCompact';
+		ctxl.font = `16px ${Font.OSRSFontCompact}`;
 		ctxl.imageSmoothingEnabled = false;
 		let index = 0;
 		let widestName = 0;
@@ -198,7 +205,7 @@ class CollectionLogTask {
 		const canvas = new Canvas(canvasWidth, canvasHeight);
 		// Get the canvas context
 		const ctx = canvas.getContext('2d');
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		ctx.imageSmoothingEnabled = false;
 
 		// 69 = top border height + bottom border height + title space + tab space
@@ -222,7 +229,7 @@ class CollectionLogTask {
 
 		// Draw Title
 		ctx.save();
-		ctx.font = '16px RuneScape Bold 12';
+		ctx.font = `16px ${Font.OSRSBold}`;
 		ctx.fillStyle = '#FF981F';
 		const title = `${user.rawUsername}'s ${
 			type === 'sacrifice' ? 'Sacrifice' : type === 'collection' ? 'Collection' : 'Bank'
@@ -315,7 +322,7 @@ class CollectionLogTask {
 		}
 
 		// Collection title
-		ctx.font = '16px RuneScape Bold 12';
+		ctx.font = `16px ${Font.OSRSBold}`;
 		ctx.fillStyle = '#FF981F';
 		let effectiveName = collectionLog.name;
 		if (!collectionLog.counts) {
@@ -324,7 +331,7 @@ class CollectionLogTask {
 		this.drawText(ctx, effectiveName, 0, 0);
 
 		// Collection obtained items
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		const toDraw = flags.missing ? 'Missing: ' : type === 'sacrifice' ? 'Sacrificed: ' : 'Obtained: ';
 		const obtainableMeasure = ctx.measureText(toDraw);
 		this.drawText(ctx, toDraw, 0, 13);
@@ -349,7 +356,7 @@ class CollectionLogTask {
 		if (collectionLog.completions && ['collection', 'bank'].includes(type)) {
 			let drawnSoFar = '';
 			// Times done/killed
-			ctx.font = '16px OSRSFontCompact';
+			ctx.font = `16px ${Font.OSRSFontCompact}`;
 			ctx.fillStyle = '#FF981F';
 			this.drawText(ctx, (drawnSoFar = collectionLog.isActivity ? 'Completions: ' : 'Kills: '), 0, 25);
 			let pixelLevel = 25;
@@ -390,7 +397,7 @@ class CollectionLogTask {
 		ctx.restore();
 
 		ctx.save();
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		ctx.fillStyle = generateHexColorForCashStack(totalPrice);
 		const value = Util.toKMB(totalPrice);
 		this.drawText(ctx, value, ctx.canvas.width - 15 - ctx.measureText(value).width, 75 + 25);
@@ -456,7 +463,7 @@ class CollectionLogTask {
 		}
 
 		return {
-			files: [{ attachment: await canvas.encode('png'), name: `${type}_log_${new Date().valueOf()}.png` }]
+			files: [{ attachment: await encodeCanvas(canvas, 'png'), name: `${type}_log_${new Date().valueOf()}.png` }]
 		};
 	}
 

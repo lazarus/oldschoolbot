@@ -1,7 +1,8 @@
-import { Canvas } from '@napi-rs/canvas';
+import { Canvas } from 'canvas';
 import { AttachmentBuilder } from 'discord.js';
 
-import { loadAndCacheLocalImage, printWrappedText } from './canvasUtil';
+import { Font } from '../bankImage';
+import { encodeCanvas, loadAndCacheLocalImage, printWrappedText } from './canvasUtil';
 
 const textBoxFile = loadAndCacheLocalImage('./src/lib/resources/images/textbox.png');
 const mejJalChatHead = loadAndCacheLocalImage('./src/lib/resources/images/mejJal.png');
@@ -50,15 +51,14 @@ export async function newChatHeadImage({ content, head }: { content: string; hea
 
 	ctx.drawImage(bg, 0, 0);
 	ctx.drawImage(headImage, 28, bg.height / 2 - headImage.height / 2);
-	ctx.font = '16px RuneScape Quill 8';
+	ctx.font = `16px ${Font.OSRSQuill}`;
 
 	ctx.fillStyle = '#810303';
 	const nameWidth = Math.floor(ctx.measureText(names[head]).width);
 	ctx.fillText(names[head], Math.floor(307 - nameWidth / 2), 36);
 	ctx.fillStyle = '#000';
 	printWrappedText(ctx, content, 307, 58, 361);
-
-	return canvas.encode('png');
+	return encodeCanvas(canvas, 'png');
 }
 
 export default async function chatHeadImage({ content, head }: { content: string; head: keyof typeof chatHeads }) {

@@ -1,11 +1,11 @@
 import * as fs from 'node:fs';
 import path from 'node:path';
-import type { Image, SKRSContext2D } from '@napi-rs/canvas';
-import { Canvas, loadImage } from '@napi-rs/canvas';
+import type { CanvasRenderingContext2D, Image } from 'canvas';
+import { Canvas, loadImage } from 'canvas';
 import { objectEntries, randInt } from 'e';
 
 import { DUNGEON_FLOOR_Y, GROUND_FLOOR_Y, HOUSE_WIDTH, Placeholders, TOP_FLOOR_Y } from './poh';
-import { loadAndCacheLocalImage } from './util/canvasUtil';
+import { encodeCanvas, loadAndCacheLocalImage } from './util/canvasUtil';
 import { getActivityOfUser } from './util/minionIsBusy';
 import type { PlayerOwnedHouse } from '.prisma/client';
 
@@ -53,7 +53,7 @@ class PoHImage {
 		this.initFinished = true;
 	}
 
-	generateCanvas(bgId: number): [Canvas, SKRSContext2D] {
+	generateCanvas(bgId: number): [Canvas, CanvasRenderingContext2D] {
 		const bgImage = this.bgImages[bgId - 1]!;
 		const canvas = new Canvas(bgImage.width, bgImage.height);
 
@@ -124,7 +124,7 @@ class PoHImage {
 			const [x, y] = this.randMinionCoords();
 			ctx.drawImage(image, x - image.width, y - image.height, image.width, image.height);
 		}
-		return canvas.encode('png');
+		return encodeCanvas(canvas, 'png');
 	}
 }
 

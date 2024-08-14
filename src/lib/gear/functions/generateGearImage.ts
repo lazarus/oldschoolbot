@@ -1,11 +1,13 @@
-import { Canvas } from '@napi-rs/canvas';
 import { toTitleCase } from '@oldschoolgg/toolkit';
+import { Canvas } from 'canvas';
 import { EquipmentSlot } from 'oldschooljs/dist/meta/types';
 
+import { Font } from '../../bankImage';
 import { Gear, maxDefenceStats, maxOffenceStats } from '../../structures/Gear';
 import {
 	drawItemQuantityText,
 	drawTitleText,
+	encodeCanvas,
 	fillTextXTimesInCtx,
 	loadAndCacheLocalImage
 } from '../../util/canvasUtil';
@@ -109,7 +111,7 @@ export async function generateGearImage(
 
 	if (!userBgImage.transparent) bankImageGenerator.drawBorder(ctx, sprite, false);
 
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	// Draw preset title
 	if (gearType) {
 		drawTitleText(ctx, toTitleCase(gearType), Math.floor(176 / 2), 25);
@@ -118,10 +120,10 @@ export async function generateGearImage(
 	// Draw stats
 	ctx.save();
 	ctx.translate(225, 0);
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 	ctx.textAlign = 'start';
 	drawText(canvas, 'Attack bonus', 0, 25);
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	drawText(canvas, `Stab: ${gearStats.attack_stab}`, 0, 50, maxOffenceStats.attack_stab === gearStats.attack_stab);
 	drawText(
 		canvas,
@@ -154,10 +156,10 @@ export async function generateGearImage(
 	ctx.restore();
 	ctx.save();
 	ctx.translate(canvas.width - 6 * 2, 0);
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 	ctx.textAlign = 'end';
 	drawText(canvas, 'Defence bonus', 0, 25);
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	drawText(canvas, `Stab: ${gearStats.defence_stab}`, 0, 50, maxDefenceStats.defence_stab === gearStats.defence_stab);
 	drawText(
 		canvas,
@@ -193,7 +195,7 @@ export async function generateGearImage(
 	ctx.restore();
 	ctx.save();
 	ctx.translate(225, 0);
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	ctx.textAlign = 'start';
 	drawText(canvas, `Melee Str.: ${gearStats.melee_strength}`, 0, 165, false);
 	drawText(canvas, `Ranged Str.: ${gearStats.ranged_strength}`, 0, 183, false);
@@ -201,7 +203,7 @@ export async function generateGearImage(
 	ctx.restore();
 	ctx.save();
 	ctx.translate(canvas.width - 6 * 2, 0);
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	ctx.textAlign = 'end';
 	drawText(canvas, `Magic Dmg.: ${gearStats.magic_damage.toFixed(1)}%`, 0, 165, false);
 	drawText(canvas, `Prayer: ${gearStats.prayer}`, 0, 183, false);
@@ -234,7 +236,7 @@ export async function generateGearImage(
 		}
 	}
 
-	return canvas.encode('png');
+	return encodeCanvas(canvas, 'png');
 }
 
 export async function generateAllGearImage(user: MUser) {
@@ -287,7 +289,7 @@ export async function generateAllGearImage(user: MUser) {
 		const gear = user.gear[type];
 		ctx.save();
 		ctx.translate(15 + i * (gearTemplateImage.width + 10), y);
-		ctx.font = '16px RuneScape Bold 12';
+		ctx.font = `16px ${Font.OSRSBold}`;
 		ctx.textAlign = 'center';
 		drawText(canvas, toTitleCase(type), gearTemplateImage.width / 2, -7);
 		ctx.drawImage(gearTemplateImage, 0, 0, gearTemplateImage.width, gearTemplateImage.height);
@@ -308,7 +310,7 @@ export async function generateAllGearImage(user: MUser) {
 		ctx.restore();
 	}
 
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 	const petX = canvas.width - 50;
 	const petY = canvas.height / 2 + 20;
 	drawText(canvas, 'Pet', petX + 5, petY - 5);
@@ -321,5 +323,5 @@ export async function generateAllGearImage(user: MUser) {
 
 	if (!userBg.transparent) bankImageGenerator.drawBorder(ctx, bgSprite, false);
 
-	return canvas.encode('png');
+	return encodeCanvas(canvas, 'png');
 }

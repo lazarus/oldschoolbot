@@ -1,8 +1,9 @@
-import { Canvas } from '@napi-rs/canvas';
 import type { CommandRunOptions } from '@oldschoolgg/toolkit';
+import { Canvas } from 'canvas';
 import { ApplicationCommandOptionType } from 'discord.js';
 
-import { loadAndCacheLocalImage } from '../../lib/util/canvasUtil';
+import { Font } from '../../lib/bankImage';
+import { encodeCanvas, loadAndCacheLocalImage } from '../../lib/util/canvasUtil';
 import type { OSBMahojiCommand } from '../lib/util';
 
 const bg = loadAndCacheLocalImage('./src/lib/resources/images/pm-bg.png');
@@ -27,7 +28,7 @@ export const fakepmCommand: OSBMahojiCommand = {
 	run: async ({ options }: CommandRunOptions<{ message: string; username: string }>) => {
 		const canvas = new Canvas(376, 174);
 		const ctx = canvas.getContext('2d');
-		ctx.font = '16px OSRSFont';
+		ctx.font = `16px ${Font.OSRSFont}`;
 		const img = await bg;
 		ctx.drawImage(img, 0, 0, img.width, img.height);
 
@@ -37,7 +38,9 @@ export const fakepmCommand: OSBMahojiCommand = {
 		ctx.fillText(`From ${options.username}: ${options.message}`, 5, 97);
 
 		return {
-			files: [{ attachment: await canvas.encode('png'), name: `${Math.round(Math.random() * 10_000)}.jpg` }]
+			files: [
+				{ attachment: await encodeCanvas(canvas, 'png'), name: `${Math.round(Math.random() * 10_000)}.jpg` }
+			]
 		};
 	}
 };

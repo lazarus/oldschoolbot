@@ -1,17 +1,18 @@
-import type { Image, SKRSContext2D } from '@napi-rs/canvas';
-import { Canvas, loadImage } from '@napi-rs/canvas';
 import { formatItemStackQuantity, generateHexColorForCashStack } from '@oldschoolgg/toolkit';
+import type { CanvasRenderingContext2D, Image } from 'canvas';
+import { Canvas, loadImage } from 'canvas';
 
+import { Font } from '../bankImage';
 import { assert } from '../util';
 
-export function fillTextXTimesInCtx(ctx: SKRSContext2D, text: string, x: number, y: number) {
+export function fillTextXTimesInCtx(ctx: CanvasRenderingContext2D, text: string, x: number, y: number) {
 	ctx.fillText(text, x, y);
 }
 
-export function drawItemQuantityText(ctx: SKRSContext2D, quantity: number, x: number, y: number) {
+export function drawItemQuantityText(ctx: CanvasRenderingContext2D, quantity: number, x: number, y: number) {
 	const quantityColor = generateHexColorForCashStack(quantity);
 	const formattedQuantity = formatItemStackQuantity(quantity);
-	ctx.font = '16px OSRSFontCompact';
+	ctx.font = `16px ${Font.OSRSFontCompact}`;
 	ctx.textAlign = 'start';
 
 	ctx.fillStyle = '#000000';
@@ -21,9 +22,9 @@ export function drawItemQuantityText(ctx: SKRSContext2D, quantity: number, x: nu
 	fillTextXTimesInCtx(ctx, formattedQuantity, x, y);
 }
 
-export function drawTitleText(ctx: SKRSContext2D, title: string, x: number, y: number) {
+export function drawTitleText(ctx: CanvasRenderingContext2D, title: string, x: number, y: number) {
 	ctx.textAlign = 'center';
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 
 	ctx.fillStyle = '#000000';
 	fillTextXTimesInCtx(ctx, title, x + 1, y + 1);
@@ -33,7 +34,7 @@ export function drawTitleText(ctx: SKRSContext2D, title: string, x: number, y: n
 }
 
 export function drawImageWithOutline(
-	ctx: SKRSContext2D,
+	ctx: CanvasRenderingContext2D,
 	image: Canvas | Image,
 	dx: number,
 	dy: number,
@@ -56,7 +57,7 @@ export function drawImageWithOutline(
 	ctx.drawImage(image, dx, dy, dw, dh);
 }
 
-function printMultilineText(ctx: SKRSContext2D, text: string, x: number, y: number) {
+function printMultilineText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number) {
 	const lines = text.split(/\r?\n/);
 
 	let linePositionY = y;
@@ -70,7 +71,7 @@ function printMultilineText(ctx: SKRSContext2D, text: string, x: number, y: numb
 }
 
 // MIT Copyright (c) 2017 Antonio Román
-const textWrap = (ctx: SKRSContext2D, text: string, wrapWidth: number): string => {
+const textWrap = (ctx: CanvasRenderingContext2D, text: string, wrapWidth: number): string => {
 	const result = [];
 	const buffer = [];
 
@@ -106,7 +107,7 @@ const textWrap = (ctx: SKRSContext2D, text: string, wrapWidth: number): string =
 	return result.join('\n');
 };
 
-export function printWrappedText(ctx: SKRSContext2D, text: string, x: number, y: number, wrapWidth: number) {
+export function printWrappedText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, wrapWidth: number) {
 	const wrappedText = textWrap(ctx, text, wrapWidth);
 	return printMultilineText(ctx, wrappedText, x, y);
 }
@@ -131,10 +132,10 @@ export async function getClippedRegionImage(
 	const canvas = new Canvas(width, height);
 	const ctx = canvas.getContext('2d');
 	ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
-	return loadImage(await canvas.encode('png'));
+	return loadImage(await encodeCanvas(canvas, 'png'));
 }
 
-export function measureTextWidth(ctx: SKRSContext2D, text: string) {
+export function measureTextWidth(ctx: CanvasRenderingContext2D, text: string) {
 	const num = ctx.measureText(text).width as number;
 	assert(typeof num === 'number');
 	return num;
@@ -147,4 +148,17 @@ export async function loadAndCacheLocalImage(path: string) {
 	if (cached) return cached;
 	const image = await loadImage(path);
 	return image;
+}
+
+export function encodeCanvas(canvas: Canvas, type: 'png' | 'jpeg') {
+	return new Promise<Buffer>((resolve, reject) => {
+		canvas.toBuffer(
+			// @ts-ignore
+			(err: any, buf: any) => {
+				if (err) return reject(err);
+				resolve(buf);
+			},
+			type === 'png' ? 'image/png' : 'image/jpeg'
+		);
+	});
 }

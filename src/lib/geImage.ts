@@ -1,17 +1,18 @@
 import * as fs from 'node:fs/promises';
-import type { Image, SKRSContext2D } from '@napi-rs/canvas';
-import { Canvas, loadImage } from '@napi-rs/canvas';
 import { formatItemStackQuantity, generateHexColorForCashStack, toTitleCase } from '@oldschoolgg/toolkit';
 import type { GEListing, GETransaction } from '@prisma/client';
+import type { CanvasRenderingContext2D, Image } from 'canvas';
+import { Canvas, loadImage } from 'canvas';
 
 import type { GEListingWithTransactions } from './../mahoji/commands/ge';
+import { Font } from './bankImage';
 import { GrandExchange } from './grandExchange';
-import { fillTextXTimesInCtx } from './util/canvasUtil';
+import { encodeCanvas, fillTextXTimesInCtx } from './util/canvasUtil';
 import getOSItem from './util/getOSItem';
 
-function drawTitle(ctx: SKRSContext2D, title: string, canvas: Canvas) {
+function drawTitle(ctx: CanvasRenderingContext2D, title: string, canvas: Canvas) {
 	// Draw Page Title
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 	const titleWidthPx = ctx.measureText(title);
 	const titleX = Math.floor(Math.floor(canvas.width) * 0.95 - titleWidthPx.width);
 	ctx.fillStyle = '#000000';
@@ -58,7 +59,14 @@ class GeImageTask {
 		);
 	}
 
-	drawText(ctx: SKRSContext2D, text: string, x: number, y: number, maxWidth: number | undefined, lineHeight: number) {
+	drawText(
+		ctx: CanvasRenderingContext2D,
+		text: string,
+		x: number,
+		y: number,
+		maxWidth: number | undefined,
+		lineHeight: number
+	) {
 		// If max width is set, we have to line break the text
 		const textLines = [];
 		const measuredText = ctx.measureText(text);
@@ -85,7 +93,7 @@ class GeImageTask {
 	}
 
 	async getSlotImage(
-		ctx: SKRSContext2D,
+		ctx: CanvasRenderingContext2D,
 		slot: number,
 		locked: boolean,
 		listing: GEListingWithTransactions | undefined
@@ -95,7 +103,7 @@ class GeImageTask {
 
 		// Draw Bank Title
 		ctx.textAlign = 'center';
-		ctx.font = '16px RuneScape Bold 12';
+		ctx.font = `16px ${Font.OSRSBold}`;
 		const type = listing ? ` - ${toTitleCase(listing.type.toString())}` : ' - Empty';
 		this.drawText(
 			ctx,
@@ -112,7 +120,7 @@ class GeImageTask {
 
 			// Draw item
 			ctx.textAlign = 'left';
-			ctx.font = '16px OSRSFontCompact';
+			ctx.font = `16px ${Font.OSRSFontCompact}`;
 			ctx.save();
 
 			ctx.translate(8, 34);
@@ -132,14 +140,14 @@ class GeImageTask {
 			ctx.translate(39, 11);
 			const itemName = getOSItem(listing.item_id).name;
 			ctx.fillStyle = '#FFB83F';
-			ctx.font = '16px OSRSFontCompact';
+			ctx.font = `16px ${Font.OSRSFontCompact}`;
 			this.drawText(ctx, itemName, 0, 0, ctx.measureText('Elysian spirit').width, 10);
 			ctx.restore();
 
 			ctx.save();
 			// Draw item value of the transaction
 			ctx.translate(0, 87);
-			ctx.font = '16px OSRSFontCompact';
+			ctx.font = `16px ${Font.OSRSFontCompact}`;
 			ctx.textAlign = 'center';
 
 			ctx.fillStyle = '#ff981f';
@@ -194,7 +202,7 @@ class GeImageTask {
 		const canvasImage = this.geInterface!;
 		const canvas = new Canvas(canvasImage.width, canvasImage.height);
 		const ctx = canvas.getContext('2d');
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		ctx.imageSmoothingEnabled = false;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.drawImage(canvasImage, 0, 0, canvas.width, canvas.height);
@@ -224,7 +232,7 @@ class GeImageTask {
 			x++;
 			if (i > (page - 1) * chunkSize + 8) break;
 		}
-		const image = await canvas.encode('png');
+		const image = await encodeCanvas(canvas, 'png');
 
 		return image;
 	}

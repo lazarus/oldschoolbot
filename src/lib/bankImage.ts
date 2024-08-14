@@ -1,10 +1,9 @@
 import { existsSync } from 'node:fs';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
-import type { SKRSContext2D } from '@napi-rs/canvas';
-import { Canvas, GlobalFonts, Image, loadImage } from '@napi-rs/canvas';
 import { cleanString, formatItemStackQuantity, generateHexColorForCashStack } from '@oldschoolgg/toolkit';
 import { UserError } from '@oldschoolgg/toolkit';
+import { Canvas, type CanvasRenderingContext2D, Image, loadImage, registerFont } from 'canvas';
 import { AttachmentBuilder } from 'discord.js';
 import { chunk, randInt, sumArr } from 'e';
 import fetch from 'node-fetch';
@@ -21,23 +20,30 @@ import type { BankBackground, FlagMap, Flags } from '../lib/minions/types';
 import type { BankSortMethod } from '../lib/sorts';
 import { BankSortMethods, sorts } from '../lib/sorts';
 import type { ItemBank } from '../lib/types';
-import { drawImageWithOutline, fillTextXTimesInCtx, getClippedRegionImage } from '../lib/util/canvasUtil';
+import { drawImageWithOutline, encodeCanvas, fillTextXTimesInCtx, getClippedRegionImage } from '../lib/util/canvasUtil';
 import itemID from '../lib/util/itemID';
 import { logError } from '../lib/util/logError';
 import { XPLamps } from '../mahoji/lib/abstracted_commands/lampCommand';
 import { TOBUniques } from './data/tob';
 import { marketPriceOfBank, marketPriceOrBotPrice } from './marketPrices';
 
+export const Font = {
+	OSRSFont: 'OSRSFont',
+	OSRSFontCompact: 'OSRSFontCompact',
+	OSRSBold: '"RuneScape Bold 12"',
+	SmallestPixel7: '"Smallest Pixel-7"',
+	OSRSQuill: '"RuneScape Quill 8"'
+};
 const fonts = {
-	OSRSFont: './src/lib/resources/osrs-font.ttf',
-	OSRSFontCompact: './src/lib/resources/osrs-font-compact.otf',
-	'RuneScape Bold 12': './src/lib/resources/osrs-font-bold.ttf',
-	'Smallest Pixel-7': './src/lib/resources/small-pixel.ttf',
-	'RuneScape Quill 8': './src/lib/resources/osrs-font-quill-8.ttf'
+	[Font.OSRSFont]: './src/lib/resources/osrs-font.ttf',
+	[Font.OSRSFontCompact]: './src/lib/resources/osrs-font-compact.otf',
+	[Font.OSRSBold]: './src/lib/resources/osrs-font-bold.ttf',
+	[Font.SmallestPixel7]: './src/lib/resources/small-pixel.ttf',
+	[Font.OSRSQuill]: './src/lib/resources/osrs-font-quill-8.ttf'
 } as const;
 
 for (const [key, val] of Object.entries(fonts)) {
-	GlobalFonts.registerFromPath(val, key);
+	registerFont(val, { family: key });
 }
 
 interface BankImageResult {
@@ -241,9 +247,9 @@ const forcedShortNameMap = new Map<number, string>([
 	[27_693, 'VM Pack']
 ]);
 
-function drawTitle(ctx: SKRSContext2D, title: string, canvas: Canvas) {
+function drawTitle(ctx: CanvasRenderingContext2D, title: string, canvas: Canvas) {
 	// Draw Bank Title
-	ctx.font = '16px RuneScape Bold 12';
+	ctx.font = `16px ${Font.OSRSBold}`;
 	const titleWidthPx = ctx.measureText(title);
 	const titleX = Math.floor(floor(canvas.width / 2) - titleWidthPx.width / 2);
 
@@ -424,7 +430,7 @@ export class BankImageTask {
 		this.itemIconImagesCache.set(itemID, image);
 	}
 
-	drawBorder(ctx: SKRSContext2D, sprite: IBgSprite, titleLine = true) {
+	drawBorder(ctx: CanvasRenderingContext2D, sprite: IBgSprite, titleLine = true) {
 		// Top border
 		ctx.save();
 		ctx.fillStyle = ctx.createPattern(sprite.border, 'repeat-x')!;
@@ -517,7 +523,7 @@ export class BankImageTask {
 	}
 
 	async drawItems(
-		ctx: SKRSContext2D,
+		ctx: CanvasRenderingContext2D,
 		compact: boolean,
 		spacer: number,
 		itemsPerRow: number,
@@ -533,7 +539,7 @@ export class BankImageTask {
 		// Draw Items
 		ctx.textAlign = 'start';
 		ctx.fillStyle = '#494034';
-		const font = compact ? '14px OSRSFontCompact' : '16px OSRSFontCompact';
+		const font = compact ? '14px OSRSFontCompact' : `16px ${Font.OSRSFontCompact}`;
 
 		let xLoc = 0;
 		let yLoc = compact ? 5 : 0;
@@ -592,7 +598,7 @@ export class BankImageTask {
 
 			const forcedShortName = forcedShortNameMap.get(item.id);
 			if (forcedShortName && !bottomItemText) {
-				ctx.font = '10px Smallest Pixel-7';
+				ctx.font = `10px ${Font.SmallestPixel7}`;
 				bottomItemText = forcedShortName.toUpperCase();
 			}
 
@@ -738,7 +744,7 @@ export class BankImageTask {
 		}
 
 		const ctx = canvas.getContext('2d');
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		ctx.imageSmoothingEnabled = false;
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -789,7 +795,7 @@ export class BankImageTask {
 			user
 		);
 
-		const image = await canvas.encode('png');
+		const image = await encodeCanvas(canvas, 'png');
 
 		return {
 			image,
@@ -889,7 +895,7 @@ export async function drawChestLootImage(options: {
 		const [x, y] = type.position(canvas, image);
 		ctx.drawImage(image, x, y);
 		drawTitle(ctx, `${user.rawUsername} (${toKMB(loot.value())})`, canvas);
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		bankImageGenerator.drawBorder(ctx, sprite, true);
 
 		const xOffset = 10;
@@ -915,7 +921,7 @@ export async function drawChestLootImage(options: {
 		ctx.drawImage(itemCanvas, iX - xOffset, iY - yOffset);
 
 		ctx.fillStyle = '#FFFF00';
-		ctx.font = '16px OSRSFontCompact';
+		ctx.font = `16px ${Font.OSRSFontCompact}`;
 		for (const text of customTexts) {
 			fillTextXTimesInCtx(ctx, text.text, text.x, text.y);
 		}
@@ -925,7 +931,7 @@ export async function drawChestLootImage(options: {
 	const fileName = `${anyoneGotPurple ? 'SPOILER_' : ''}toaloot-${randInt(1, 1000)}.png`;
 
 	if (canvases.length === 1) {
-		return new AttachmentBuilder(await canvases[0].encode('png'), {
+		return new AttachmentBuilder(await encodeCanvas(canvases[0], 'png'), {
 			name: fileName
 		});
 	}
@@ -939,7 +945,7 @@ export async function drawChestLootImage(options: {
 		const index = canvases.indexOf(c);
 		combinedCtx.drawImage(c, index * c.width + spaceBetweenImages * index, 0);
 	}
-	return new AttachmentBuilder(await combinedCanvas.encode('png'), {
+	return new AttachmentBuilder(await encodeCanvas(combinedCanvas, 'png'), {
 		name: fileName
 	});
 }
